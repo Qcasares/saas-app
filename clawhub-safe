@@ -1,0 +1,98 @@
+#!/bin/bash
+# Safe ClawHub wrapper - Auto-scans skills before install
+# Usage: clawhub-safe install <skill-name>
+# Or replace 'clawhub' alias with this script
+
+set -euo pipefail
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+PREINSTALL_CHECK="$SCRIPT_DIR/skill-preinstall-check.sh"
+
+# Colors
+RED='\033[0;31m'
+YELLOW='\033[1;33m'
+GREEN='\033[0;32m'
+BLUE='\033[0;34m'
+NC='\033[0m'
+
+show_help() {
+    echo "Safe ClawHub Wrapper"
+    echo ""
+    echo "Usage: clawhub-safe <command> [args]"
+    echo ""
+    echo "Commands:"
+    echo "  install <skill>   Install skill with security pre-check"
+    echo "  install --force <skill>  Skip security check (not recommended)"
+    echo "  check <skill>     Run security check only"
+    echo "  *                 Pass through to clawhub CLI"
+    echo ""
+    echo "Environment:"
+    echo "  CLAWHUB_SAFE_SKIP=1   Skip security checks (not recommended)"
+}
+
+# Check if we're being called as 'install'
+if [[ "${1:-}" == "install" ]]; then
+    shift
+    FORCE=false
+    SKILL=""
+    
+    # Parse args
+    for arg in "$@"; do
+        if [[ "$arg" == "--force" ]] || [[ "$arg" == "-f" ]]; then
+            FORCE=true
+        elif [[ -z "$SKILL" ]] && [[ ! "$arg" =~ ^- ]]; then
+            SKILL="$arg"
+        fi
+    done
+    
+    if [[ -z "$SKILL" ]]; then
+        echo "Usage: clawhub-safe install [--force] <skill-name>"
+        exit 1
+    fi
+    
+    # Skip check if forced
+    if [[ "$FORCE" == true ]] || [[ "${CLAWHUB_SAFE_SKIP:-}" == "1" ]]; then
+        echo -e "${YELLOW}⚠ Security check skipped${NC}"
+        exec clawhub install "$SKILL"
+    fi
+    
+    # Run security check
+    echo -e "${BLUE}🔒 Running security pre-check for '$SKILL'...${NC}"
+    echo ""
+    
+    if "$PREINSTALL_CHECK" "$SKILL"; then
+        echo ""
+        echo -e "${GREEN}✓ Security check passed${NC}"
+        echo -e "${BLUE}📦 Proceeding with installation...${NC}"
+        echo ""
+        exec clawhub install "$SKILL"
+    else
+        echo ""
+        echo -e "${RED}✗ Security check FAILED${NC}"
+        echo ""
+        echo "This skill was flagged as potentially suspicious."
+        echo ""
+        echo "Options:"
+        echo "  1. Review the warnings above"
+        echo "  2. Inspect the skill manually: clawhub show $SKILL"
+        echo "  3. Force install (not recommended): clawhub-safe install --force $SKILL"
+        echo ""
+        exit 1
+    fi
+    
+elif [[ "${1:-}" == "check" ]]; then
+    shift
+    if [[ $# -eq 0 ]]; then
+        echo "Usage: clawhub-safe check <skill-name>"
+        exit 1
+    fi
+    exec "$PREINSTALL_CHECK" "$1"
+    
+elif [[ "${1:-}" == "--help" ]] || [[ "${1:-}" == "-h" ]]; then
+    show_help
+    exit 0
+    
+else
+    # Pass through to real clawhub
+    exec clawhub "$@"
+fi

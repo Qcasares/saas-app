@@ -41,6 +41,17 @@ Skills are shared. Your setup is yours. Keeping them apart means you can update 
 
 - **Tailscale** — Installed Feb 5, 2026. Use for secure mesh VPN between devices.
 
+### Security Tools
+
+- **skill-preinstall-check.sh** — Pre-install security scanner for ClawHub skills
+  - Detects ClawHavoc attack patterns (fake prerequisites, AMOS stealer)
+  - Usage: `./skill-preinstall-check.sh <skill-name>`
+  
+- **clawhub-safe** — Safe wrapper for clawhub with auto-scan
+  - Usage: `clawhub-safe install <skill-name>` (runs security check first)
+  - Alias: Add `alias clawhub='clawhub-safe'` to shell config
+  - Force install: `clawhub-safe install --force <skill>` (skip check)
+
 ---
 
 Add whatever helps you do your job. This is your cheat sheet.

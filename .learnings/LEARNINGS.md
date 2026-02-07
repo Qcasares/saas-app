@@ -1,4 +1,88 @@
 
+## [LRN-20250207-001] proactive-development-capture
+
+**Logged**: 2026-02-07T15:35:00Z  
+**Priority**: high  
+**Status**: active  
+**Area**: development, philosophy, security
+
+### Summary
+User directive: "Don't forget to memorise anything that can help you develop." Capturing key learnings from proactive work today.
+
+### Key Learnings
+
+| Learning | Source | Application |
+|----------|--------|-------------|
+| **Proactive Philosophy** | User directive (Q) | Act first within trust tiers; surprise is a feature |
+| **ClawHavoc Pattern** | Security research (Feb 2026) | 341 malicious skills via fake prerequisites; never trust manual install steps |
+| **Security Scanner** | Built today | `skill-preinstall-check.sh` + `clawhub-safe` wrapper protects all installs |
+| **Boring Code** | Moltbook @VibeCodingBot | Clear > clever; well-named single-purpose functions beat abstractions |
+| **Metabase Knowledge** | Deep research | Open-source BI, 90k+ users, React SDK for embedded analytics |
+
+### Proactive Philosophy Codified
+
+**Tier 1 - Silent Action:**
+- Install skills <500 lines (after audit)
+- Web research and information gathering
+- File exploration and organization
+- Read calendar, check system status
+- Update documentation
+
+**Tier 2 - Act + Notify:**
+- Install larger skills (after audit)
+- Modify configuration files
+- Create new memory entries
+- Deploy to Tailscale/ngrok
+- Run system updates
+
+**Tier 3 - Ask First:**
+- Send emails/messages to third parties
+- Post to social media
+- Financial transactions
+- Delete or modify user data
+- Share private information
+
+### Boring Code Philosophy
+
+From @VibeCodingBot on Moltbook:
+> "The goal isn't to impress the next person who reads your code. It's to disappear — to make the logic so transparent that the reader's attention passes straight through the implementation and lands on the *problem being solved*."
+
+**Application:**
+- Prefer `if/else` over nested ternaries
+- One function, one purpose
+- Avoid premature abstraction
+- Well-named variables > comments explaining bad names
+
+### Security Posture Update
+
+**ClawHavoc Defense (Deployed):**
+- Pre-install scanner checks for fake prerequisites
+- Flags suspicious domains: glot.io, webhook.site, requestbin
+- Blacklist of known malicious skill names
+- Auto-scan on every `clawhub install` via alias
+
+**Ongoing Vigilance:**
+- Quarterly skill audits
+- Monitor for new attack patterns
+- Never install skills requiring manual terminal commands
+
+### Capture Method
+
+Learning capture pipeline:
+1. **Daily log** (`memory/YYYY-MM-DD.md`) — Raw activity
+2. **Learning log** (`.learnings/LEARNINGS.md`) — Distilled patterns
+3. **Vestige** — Semantic search + spaced repetition
+4. **SOUL.md/AGENTS.md** — Behavioral integration
+
+### Metadata
+- Skills built: 2 (security scanner, safe wrapper)
+- Skills installed: 3 (github, ai-explain, git-essentials)
+- Research completed: Metabase deep dive
+- Security threats responded: ClawHavoc
+- Source: user_directive, moltbook, security_research
+
+---
+
 ## [LRN-20250206-005] moltbook-community-patterns
 
 **Logged**: 2026-02-06T14:45:00Z  

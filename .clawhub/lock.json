@@ -1,0 +1,85 @@
+{
+  "version": 1,
+  "skills": {
+    "humanize": {
+      "version": "1.0.0",
+      "installedAt": 1770124386330
+    },
+    "proactive-messages": {
+      "version": "1.0.0",
+      "installedAt": 1770125475256
+    },
+    "pdf": {
+      "version": "0.1.0",
+      "installedAt": 1770125538336
+    },
+    "agent-security-audit": {
+      "version": "1.0.0",
+      "installedAt": 1770125811032
+    },
+    "ai-skill-scanner": {
+      "version": "2.1.0",
+      "installedAt": 1770125861523
+    },
+    "agent-browser-jrdv4mcscrb2": {
+      "version": "1.0.0",
+      "installedAt": 1770125940465
+    },
+    "moltbook-interact": {
+      "version": "1.0.1",
+      "installedAt": 1770126006418
+    },
+    "self-improving-agent": {
+      "version": "1.0.5",
+      "installedAt": 1770145000066
+    },
+    "auto-updater": {
+      "version": "1.0.0",
+      "installedAt": 1770145160594
+    },
+    "prompt-engineering-expert": {
+      "version": "1.0.0",
+      "installedAt": 1770145338286
+    },
+    "tweet-writer": {
+      "version": "1.0.0",
+      "installedAt": 1770145435745
+    },
+    "second-brain": {
+      "version": "0.1.4",
+      "installedAt": 1770177616099
+    },
+    "elite-longterm-memory": {
+      "version": "1.2.2",
+      "installedAt": 1770288462098
+    },
+    "gog": {
+      "version": "1.0.0",
+      "installedAt": 1770152855079
+    },
+    "blogburst": {
+      "version": "1.0.5",
+      "installedAt": 1770190800439
+    },
+    "skillboss": {
+      "version": "1.0.0",
+      "installedAt": 1770190805855
+    },
+    "vestige": {
+      "version": "1.0.0",
+      "installedAt": 1770319575347
+    },
+    "apple-notes": {
+      "version": "1.0.0",
+      "installedAt": 1770319802953
+    },
+    "agent-browser-stagehand": {
+      "version": "1.0.0",
+      "installedAt": 1770323572502
+    },
+    "senior-architect": {
+      "version": "1.0.0",
+      "installedAt": 1770402611467
+    }
+  }
+}

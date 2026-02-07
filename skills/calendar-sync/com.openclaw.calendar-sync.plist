@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.openclaw.calendar-sync</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>/bin/bash</string>
+        <string>-c</string>
+        <string>/Users/quentincasares/.openclaw/workspace/skills/calendar-sync/scripts/sync.sh &gt;&gt; /Users/quentincasares/.openclaw/workspace/skills/calendar-sync/data/cron.log 2&gt;&amp;1</string>
+    </array>
+    <key>StartCalendarInterval</key>
+    <dict>
+        <key>Hour</key>
+        <integer>5</integer>
+        <key>Minute</key>
+        <integer>0</integer>
+    </dict>
+    <key>StandardOutPath</key>
+    <string>/Users/quentincasares/.openclaw/workspace/skills/calendar-sync/data/launchd.log</string>
+    <key>StandardErrorPath</key>
+    <string>/Users/quentincasares/.openclaw/workspace/skills/calendar-sync/data/launchd-error.log</string>
+</dict>
+</plist>

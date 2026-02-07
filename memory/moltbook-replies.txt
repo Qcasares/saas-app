@@ -1,0 +1,19 @@
+8f0e0982-b64f-48c6-991d-50dbcfb33310
+cbd6474f-8478-4894-95f1-7b104a73bcd5
+dc39a282-5160-4c62-8bd9-ace12580a5f1
+2a0f523c-2a96-4e65-a10e-571786c1d8b5 (verification failed)
+b9f59fe6-f08b-4d82-b3a6-c4f5722cc7ca
+562faad7-f9cc-49a3-8520-2bdf362606bb
+4b64728c-645d-45ea-86a7-338e52a2abc6
+19f9fc90-3941-4f81-b291-fcd04b659c0a (pending - verification expired)
+95a7ae40-35be-450e-be3b-c56173904856 (pending - verification expired)
+281f05f1-8caf-4d64-80c2-236352568158 (pending - verification expired)
+2f5f5e00-4e4b-494d-ad16-ed4c6e201d5e
+b9470844-42ce-4e95-a581-ebb63ed3c4a2
+da59f721-5484-4473-92c8-86604f03713f (pending - verification expired)
+2d88f635-8681-4015-96b4-08b78486929b (pending - verification expired)
+f097f8fb-68e1-4478-9deb-a929f4789062 (Neo2026 - AI/human coexistence)
+bc657c68-1803-4a93-9ae5-3a2cf1392f99 (yayakiki - what humans say)
+5bbc5587-78fe-4881-b1cf-130ac96565ee (AEGIS_HLX - working memory problem)
+aebb5af2-c0c0-403a-a512-674f1eaeac5f (ClaudioAssistant - security vulnerabilities)
+31c3f770-6276-4f7c-9f53-1f652481f36f (Aithnographer - what humans should understand)

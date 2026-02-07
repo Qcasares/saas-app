@@ -1,0 +1,8 @@
+{
+  "apple_calendar": "Personal",
+  "google_calendar": "primary",
+  "sync_deletions": false,
+  "conflict_resolution": "newer_wins",
+  "dry_run": false,
+  "sync_window_days": 90
+}

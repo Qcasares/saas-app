@@ -1,0 +1,22 @@
+[2026-02-06 18:20:18] ========================================
+[2026-02-06 18:20:18] Calendar Sync Started
+[2026-02-06 18:20:18] ========================================
+[2026-02-06 18:20:18] Exporting Apple Calendar: Personal
+[2026-02-06 18:20:18] Fetching events from Apple Calendar (this may take a moment)...
+[1;33m[WARN][0m Could not access Apple Calendar (permission issue or timeout)
+[1;33m[WARN][0m To fix: Grant Calendar access to Terminal in System Settings → Privacy → Automation
+[1;33m[WARN][0m No Apple Calendar events found (permission issue or empty calendar)
+[2026-02-06 18:20:18] Exporting Google Calendar: primary
+[0;32m[OK][0m Google Calendar: 0 events exported
+[2026-02-06 18:20:18] Analyzing changes...
+[2026-02-06 18:20:18] Changes detected:
+[2026-02-06 18:20:18]   - Create in Google: 0 events
+[2026-02-06 18:20:18]   - Create in Apple: 0 events
+[2026-02-06 18:20:18] ========================================
+[2026-02-06 18:20:18] Calendar Sync Completed
+[2026-02-06 18:20:18] ========================================
+[2026-02-07 05:00:05] ========================================
+[2026-02-07 05:00:05] Calendar Sync Started
+[2026-02-07 05:00:05] ========================================
+[2026-02-07 05:00:05] Exporting Apple Calendar: Personal
+[0;31m[ERROR][0m icalBuddy not found. Install with: brew install ical-buddy

@@ -1,0 +1,29 @@
+{
+  "lastChecks": {
+    "moltbook": 1778864400000,
+    "telegram": 1770395100000,
+    "proactiveMessages": 1778841900000,
+    "memoryMaintenance": 1778860800000,
+    "vestige": 1778860800000,
+    "selfImprovement": 1778860800000,
+    "skillDiscovery": 1778834700000,
+    "moltbookLearning": 1778850300000,
+    "systemHealth": 1778853900000,
+    "secondBrain": 0,
+    "learningConsolidation": 0
+  },
+  "dailyDigestSent": false,
+  "weeklySummaryDay": "sunday",
+  "memoryConfig": {
+    "version": "2.0",
+    "modes": ["local", "vestige", "ensue"],
+    "autoConsolidate": true,
+    "consolidationIntervalHours": 6,
+    "retentionDays": 365,
+    "vestige": {
+      "enabled": true,
+      "consolidateIntervalHours": 24,
+      "embeddingCoverage": 0.0
+    }
+  }
+}

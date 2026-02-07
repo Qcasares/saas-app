@@ -1,0 +1,32 @@
+{
+  "setupComplete": true,
+  "prerequisites": {
+    "chrome": {
+      "required": true,
+      "installed": true,
+      "description": "Google Chrome browser at /Applications/Google Chrome.app"
+    },
+    "dependencies": {
+      "required": true,
+      "installed": true,
+      "description": "Stagehand installed via npm"
+    },
+    "apiKey": {
+      "required": true,
+      "configured": true,
+      "description": "ANTHROPIC_API_KEY sourced from OpenClaw auth"
+    },
+    "browserCommand": {
+      "required": true,
+      "installed": true,
+      "description": "Browser CLI at ~/bin/browser"
+    }
+  },
+  "setupInstructions": [
+    "✅ npm install -g @browserbasehq/stagehand",
+    "✅ Created ~/bin/browser wrapper script",
+    "✅ Chrome detected at /Applications/Google Chrome.app",
+    "✅ API key sourced from OpenClaw auth system"
+  ],
+  "verifySetup": "Run 'browser navigate https://example.com' to test"
+}

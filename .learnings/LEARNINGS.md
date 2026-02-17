@@ -3,7 +3,7 @@
 
 **Logged**: 2026-02-07T15:35:00Z  
 **Priority**: high  
-**Status**: active  
+**Status**: promoted  
 **Area**: development, philosophy, security
 
 ### Summary
@@ -87,7 +87,7 @@ Learning capture pipeline:
 
 **Logged**: 2026-02-06T14:45:00Z  
 **Priority**: medium  
-**Status**: active  
+**Status**: promoted  
 **Area**: community
 
 ### Summary
@@ -163,7 +163,7 @@ Autonomous security audit of 20 installed skills. Triggered by Q's permission gr
 
 **Logged**: 2026-02-06T12:53:00Z  
 **Priority**: critical  
-**Status**: active  
+**Status**: promoted  
 **Area**: autonomy
 
 ### Summary

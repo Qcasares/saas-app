@@ -1,16 +1,16 @@
 {
   "lastChecks": {
-    "moltbook": 1778864400000,
-    "telegram": 1770395100000,
-    "proactiveMessages": 1778841900000,
-    "memoryMaintenance": 1778860800000,
-    "vestige": 1778860800000,
-    "selfImprovement": 1778860800000,
-    "skillDiscovery": 1778834700000,
-    "moltbookLearning": 1778850300000,
-    "systemHealth": 1778853900000,
-    "secondBrain": 0,
-    "learningConsolidation": 0
+    "moltbook": 1771279140000,
+    "telegram": 1771279140000,
+    "proactiveMessages": 1771215480000,
+    "memoryMaintenance": 1739824140000,
+    "vestige": 1739824140000,
+    "selfImprovement": 1739824140000,
+    "skillDiscovery": 1739771880000,
+    "moltbookLearning": 1771339080000,
+    "systemHealth": 1771246680000,
+    "secondBrain": 1770633780000,
+    "learningConsolidation": 1739762280000
   },
   "dailyDigestSent": false,
   "weeklySummaryDay": "sunday",
@@ -23,7 +23,23 @@
     "vestige": {
       "enabled": true,
       "consolidateIntervalHours": 24,
-      "embeddingCoverage": 0.0
+      "embeddingCoverage": 100.0
     }
+  },
+  "securityStatus": {
+    "lastAudit": "2026-02-12T08:00:00Z",
+    "clawhubSupplyChainAttack": {
+      "riskLevel": "LOW",
+      "attackWindow": "2026-01-27 to 2026-02-02",
+      "skillsInstalledDuringWindow": 0,
+      "postWindowSkillsAudited": 5,
+      "findings": "None"
+    }
+  },
+  "lastHeartbeat": "2026-02-17T17:29:00Z",
+  "notes": {
+    "moltbookAuth": "401 - requires valid session/auth token",
+    "vestige": "17 memories, 32.2% retention, 100% embedding coverage",
+    "skillDiscoveryTrend": "News/trend monitoring skills dominating ClawHub"
   }
 }

@@ -52,6 +52,42 @@ Skills are shared. Your setup is yours. Keeping them apart means you can update 
   - Alias: Add `alias clawhub='clawhub-safe'` to shell config
   - Force install: `clawhub-safe install --force <skill>` (skip check)
 
+### Data Analysis
+
+- **data-analyst** — Data visualization, SQL queries, spreadsheet analysis
+  - Workspace: `/data-analysis/`
+  - Data files: `data-analysis/data/`
+  - Queries: `data-analysis/queries/`
+  - Reports: `data-analysis/reports/`
+  - Template script: `data-analysis/scripts/analyze_template.py`
+
+### Image Generation
+
+- **image-cog** — AI image generation via CellCog
+  - Create images, edit photos, consistent characters, product photography
+  - Requires: `cellcog` skill for SDK setup
+  - Usage: Single images, character series, style transfer, product shots
+
+### Voice & Audio
+
+- **elevenlabs-stt** — Speech-to-text transcription
+  - Transcribe voice notes, meeting recordings, podcasts
+  - Supports speaker diarization, 90+ languages
+  - Requires: `ELEVENLABS_API_KEY`
+
+### Calendar
+
+- **accli** — Apple Calendar CLI for macOS
+  - List calendars, view/create/update events, check availability
+  - Usage: `accli events Work --json`, `accli create Work --summary "Meeting" --start ...`
+
+### Web Scraping
+
+- **firecrawl-skills** — Structured web scraping and crawling
+  - Scrape single pages, crawl entire sites, search with content extraction
+  - Returns clean markdown optimized for LLMs
+  - Usage: `firecrawl search "query"`, `firecrawl scrape https://example.com`
+
 ---
 
 Add whatever helps you do your job. This is your cheat sheet.

@@ -80,6 +80,38 @@
     "senior-architect": {
       "version": "1.0.0",
       "installedAt": 1770402611467
+    },
+    "github": {
+      "version": "1.0.0",
+      "installedAt": 1770451908059
+    },
+    "ai-explain": {
+      "version": "1.0.1",
+      "installedAt": 1770451913325
+    },
+    "git-essentials": {
+      "version": "1.0.0",
+      "installedAt": 1770451914582
+    },
+    "data-analyst": {
+      "version": "1.0.0",
+      "installedAt": 1770669363133
+    },
+    "image-cog": {
+      "version": "1.0.1",
+      "installedAt": 1770669831529
+    },
+    "elevenlabs-stt": {
+      "version": "1.0.0",
+      "installedAt": 1770669833224
+    },
+    "accli": {
+      "version": "1.0.0",
+      "installedAt": 1770669834762
+    },
+    "firecrawl-skills": {
+      "version": "1.0.0",
+      "installedAt": 1770669836315
     }
   }
 }

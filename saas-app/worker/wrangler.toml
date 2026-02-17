@@ -1,0 +1,45 @@
+name = "saas-app-worker"
+main = "src/index.ts"
+compatibility_date = "2024-03-20"
+compatibility_flags = ["nodejs_compat"]
+
+# D1 Database binding
+[[d1_databases]]
+binding = "DB"
+database_name = "saas-app-db"
+database_id = "your-database-id-here"
+
+# Environment variables
+[vars]
+ENVIRONMENT = "production"
+
+[env.development]
+name = "saas-app-worker-dev"
+
+[env.development.vars]
+ENVIRONMENT = "development"
+
+# Cron triggers - runs every minute to check for scheduled posts
+[[triggers]]
+crons = ["* * * * *"]
+
+# Secrets (set via wrangler secret put <name>)
+# JWT_SECRET
+# STRIPE_SECRET_KEY
+# STRIPE_WEBHOOK_SECRET
+# STRIPE_PUBLISHABLE_KEY
+# GOOGLE_CLIENT_ID
+# GOOGLE_CLIENT_SECRET
+# TWITTER_CLIENT_ID
+# TWITTER_CLIENT_SECRET
+# INSTAGRAM_CLIENT_ID
+# INSTAGRAM_CLIENT_SECRET
+# LINKEDIN_CLIENT_ID
+# LINKEDIN_CLIENT_SECRET
+# TIKTOK_CLIENT_KEY
+# TIKTOK_CLIENT_SECRET
+# RESEND_API_KEY
+# R2_BUCKET_NAME
+# R2_ACCESS_KEY_ID
+# R2_SECRET_ACCESS_KEY
+# R2_ENDPOINT

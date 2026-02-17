@@ -1,0 +1,62 @@
+{
+  "name": "saas-app",
+  "version": "1.0.0",
+  "type": "nextjs-worker",
+  "frontend": {
+    "framework": "nextjs",
+    "buildCommand": "npm run build",
+    "outputDir": "dist",
+    "rootDir": "."
+  },
+  "worker": {
+    "entry": "worker/src/index.ts",
+    "wranglerConfig": "worker/wrangler.toml"
+  },
+  "database": {
+    "type": "d1",
+    "name": "saas-app-db",
+    "schema": "db/schema.sql"
+  },
+  "env": {
+    "JWT_SECRET": {
+      "generate": true,
+      "length": 32
+    },
+    "STRIPE_PUBLISHABLE_KEY": {
+      "required": true,
+      "description": "Stripe publishable key"
+    },
+    "STRIPE_SECRET_KEY": {
+      "required": true,
+      "secret": true,
+      "description": "Stripe secret key"
+    },
+    "STRIPE_WEBHOOK_SECRET": {
+      "required": true,
+      "secret": true,
+      "description": "Stripe webhook secret"
+    },
+    "GOOGLE_CLIENT_ID": {
+      "required": true,
+      "description": "Google OAuth client ID"
+    },
+    "GOOGLE_CLIENT_SECRET": {
+      "required": true,
+      "secret": true,
+      "description": "Google OAuth client secret"
+    },
+    "RESEND_API_KEY": {
+      "required": true,
+      "secret": true,
+      "description": "Resend API key for emails"
+    }
+  },
+  "routes": {
+    "api/*": {
+      "worker": true
+    },
+    "*": {
+      "static": true
+    }
+  }
+}

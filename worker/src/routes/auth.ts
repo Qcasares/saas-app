@@ -233,6 +233,35 @@ authRoutes.post('/otp/verify',
   }
 );
 
+// Sync user (find or create) - called by NextAuth on the frontend
+authRoutes.post('/sync-user',
+  zValidator('json', z.object({
+    email: z.string().email(),
+    name: z.string().nullable().optional(),
+    image: z.string().nullable().optional(),
+  })),
+  async (c) => {
+    const { email, name, image } = c.req.valid('json');
+
+    try {
+      let user = await getUserByEmail(c.env.DB, email);
+
+      if (!user) {
+        user = await createUser(c.env.DB, {
+          email,
+          name: name || null,
+          image: image || null,
+        });
+      }
+
+      return c.json({ user });
+    } catch (error) {
+      console.error('Sync user error:', error);
+      return c.json({ error: 'Failed to sync user' }, 500);
+    }
+  }
+);
+
 // Get current user
 authRoutes.get('/me', async (c) => {
   const authHeader = c.req.header('Authorization');

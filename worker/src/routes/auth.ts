@@ -15,7 +15,7 @@ authRoutes.get('/google', async (c) => {
   const clientId = c.env.GOOGLE_CLIENT_ID;
   const redirectUri = `${new URL(c.req.url).origin}/auth/google/callback`;
   const state = crypto.randomUUID();
-  
+
   const params = new URLSearchParams({
     client_id: clientId,
     redirect_uri: redirectUri,
@@ -23,8 +23,14 @@ authRoutes.get('/google', async (c) => {
     scope: 'openid email profile',
     state,
   });
-  
-  return c.redirect(`https://accounts.google.com/o/oauth2/v2/auth?${params}`);
+
+  // Store state in a secure cookie for CSRF validation on callback
+  const response = c.redirect(`https://accounts.google.com/o/oauth2/v2/auth?${params}`);
+  response.headers.append(
+    'Set-Cookie',
+    `oauth_state=${state}; HttpOnly; Secure; SameSite=Lax; Path=/; Max-Age=600`
+  );
+  return response;
 });
 
 // Google OAuth callback
@@ -32,15 +38,27 @@ authRoutes.get('/google/callback', async (c) => {
   const code = c.req.query('code');
   const state = c.req.query('state');
   const error = c.req.query('error');
-  
+
   if (error) {
     return c.json({ error: 'OAuth denied' }, 400);
   }
-  
+
   if (!code) {
     return c.json({ error: 'Missing authorization code' }, 400);
   }
-  
+
+  // Validate CSRF state parameter against stored cookie
+  const cookieHeader = c.req.header('Cookie') || '';
+  const storedState = cookieHeader
+    .split(';')
+    .map((c) => c.trim())
+    .find((c) => c.startsWith('oauth_state='))
+    ?.split('=')[1];
+
+  if (!state || !storedState || state !== storedState) {
+    return c.json({ error: 'Invalid state parameter' }, 400);
+  }
+
   try {
     // Exchange code for tokens
     const tokenResponse = await fetch('https://oauth2.googleapis.com/token', {
@@ -54,27 +72,47 @@ authRoutes.get('/google/callback', async (c) => {
         grant_type: 'authorization_code',
       }),
     });
-    
+
+    if (!tokenResponse.ok) {
+      console.error('Token exchange failed:', await tokenResponse.text());
+      return c.json({ error: 'Failed to exchange authorization code' }, 400);
+    }
+
     const tokens = await tokenResponse.json() as {
-      access_token: string;
-      id_token: string;
+      access_token?: string;
+      id_token?: string;
+      error?: string;
     };
-    
+
+    if (tokens.error || !tokens.access_token) {
+      console.error('Token exchange error:', tokens.error);
+      return c.json({ error: 'Failed to obtain access token' }, 400);
+    }
+
     // Get user info
     const userResponse = await fetch('https://www.googleapis.com/oauth2/v2/userinfo', {
       headers: { Authorization: `Bearer ${tokens.access_token}` },
     });
-    
+
+    if (!userResponse.ok) {
+      console.error('Failed to fetch user info:', await userResponse.text());
+      return c.json({ error: 'Failed to retrieve user information' }, 500);
+    }
+
     const googleUser = await userResponse.json() as {
       id: string;
       email: string;
       name: string;
       picture: string;
     };
-    
+
+    if (!googleUser.email) {
+      return c.json({ error: 'No email returned from Google' }, 400);
+    }
+
     // Find or create user
     let user = await getUserByEmail(c.env.DB, googleUser.email);
-    
+
     if (!user) {
       user = await createUser(c.env.DB, {
         email: googleUser.email,
@@ -82,22 +120,29 @@ authRoutes.get('/google/callback', async (c) => {
         image: googleUser.picture,
       });
     }
-    
+
     // Generate JWT
     const token = await sign(
-      { 
-        userId: user.id, 
+      {
+        userId: user.id,
         email: user.email,
         exp: Math.floor(Date.now() / 1000) + 60 * 60 * 24 * 7, // 7 days
       },
       c.env.JWT_SECRET
     );
-    
-    // Redirect to frontend with token
-    const redirectUrl = new URL('/auth/callback', c.req.header('referer') || 'http://localhost:3000');
+
+    // Redirect to frontend callback page
+    // Note: app/(auth)/callback/page.tsx maps to /callback (route group doesn't affect URL)
+    const redirectUrl = new URL('/callback', c.req.header('referer') || 'http://localhost:3000');
     redirectUrl.searchParams.set('token', token);
-    
-    return c.redirect(redirectUrl.toString());
+
+    // Clear the oauth_state cookie
+    const response = c.redirect(redirectUrl.toString());
+    response.headers.append(
+      'Set-Cookie',
+      'oauth_state=; HttpOnly; Secure; SameSite=Lax; Path=/; Max-Age=0'
+    );
+    return response;
   } catch (error) {
     console.error('Google OAuth error:', error);
     return c.json({ error: 'Authentication failed' }, 500);

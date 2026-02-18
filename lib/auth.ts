@@ -215,12 +215,145 @@ export const authConfig: NextAuthConfig = {
     maxAge: 30 * 24 * 60 * 60, // 30 days
   },
   callbacks: {
+    async signIn({ user, account }) {
+      // For Google OAuth, ensure user exists in local database
+      if (account?.provider === "google" && user?.email) {
+        const env = process.env as any;
+        const db = env.DB as any | undefined;
+
+        if (db) {
+          try {
+            let dbUser = await db
+              .prepare("SELECT * FROM users WHERE email = ?")
+              .bind(user.email)
+              .first();
+
+            if (!dbUser) {
+              const id = crypto.randomUUID();
+              const now = new Date().toISOString();
+              await db
+                .prepare(
+                  "INSERT INTO users (id, email, name, image, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?)"
+                )
+                .bind(
+                  id,
+                  user.email,
+                  user.name || null,
+                  user.image || null,
+                  now,
+                  now
+                )
+                .run();
+
+              // Create default subscription for new Google OAuth users
+              await db
+                .prepare(
+                  "INSERT INTO subscriptions (id, user_id, plan, status, created_at) VALUES (?, ?, 'free', 'active', ?)"
+                )
+                .bind(crypto.randomUUID(), id, now)
+                .run();
+
+              dbUser = {
+                id,
+                email: user.email,
+                name: user.name || null,
+                image: user.image || null,
+              };
+            } else {
+              // Update profile from Google if local fields are empty
+              const needsUpdate =
+                (!dbUser.name && user.name) || (!dbUser.image && user.image);
+              if (needsUpdate) {
+                await db
+                  .prepare(
+                    "UPDATE users SET name = COALESCE(name, ?), image = COALESCE(image, ?) WHERE id = ?"
+                  )
+                  .bind(
+                    user.name || null,
+                    user.image || null,
+                    (dbUser as any).id
+                  )
+                  .run();
+              }
+            }
+
+            // Store OAuth account link if not already present
+            const existingAccount = await db
+              .prepare(
+                "SELECT id FROM accounts WHERE provider = ? AND provider_account_id = ?"
+              )
+              .bind("google", account.providerAccountId)
+              .first();
+
+            if (!existingAccount) {
+              await db
+                .prepare(
+                  "INSERT INTO accounts (id, user_id, type, provider, provider_account_id, access_token, refresh_token, expires_at, token_type, scope, id_token) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
+                )
+                .bind(
+                  crypto.randomUUID(),
+                  (dbUser as any).id,
+                  account.type || "oauth",
+                  "google",
+                  account.providerAccountId,
+                  (account as any).access_token || null,
+                  (account as any).refresh_token || null,
+                  account.expires_at || null,
+                  (account as any).token_type || null,
+                  account.scope || null,
+                  (account as any).id_token || null
+                )
+                .run();
+            }
+          } catch (error) {
+            console.error(
+              "Error creating/finding Google OAuth user in DB:",
+              error
+            );
+            // Allow sign-in to proceed even if DB operations fail
+          }
+        }
+      }
+      return true;
+    },
     async jwt({ token, user, account }) {
       if (user) {
-        token.id = user.id;
-        token.email = user.email;
-        token.name = user.name;
-        token.image = user.image;
+        if (account?.provider === "google" && user.email) {
+          // For Google OAuth, resolve the local database user ID
+          const env = process.env as any;
+          const db = env.DB as any | undefined;
+
+          if (db) {
+            try {
+              const dbUser = await db
+                .prepare("SELECT id, name, image FROM users WHERE email = ?")
+                .bind(user.email)
+                .first();
+
+              if (dbUser) {
+                token.id = (dbUser as any).id;
+                token.email = user.email;
+                token.name = (dbUser as any).name || user.name;
+                token.image = (dbUser as any).image || user.image;
+                return token;
+              }
+            } catch (error) {
+              console.error("Error looking up Google OAuth user:", error);
+            }
+          }
+
+          // Fallback: use Google profile data directly
+          token.id = user.id;
+          token.email = user.email;
+          token.name = user.name;
+          token.image = user.image;
+        } else {
+          // For OTP credentials, user.id is already the local DB ID
+          token.id = user.id;
+          token.email = user.email;
+          token.name = user.name;
+          token.image = user.image;
+        }
       }
       return token;
     },

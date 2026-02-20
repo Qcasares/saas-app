@@ -1,1 +1,3 @@
 .env
+saas-app/.env*.local
+saas-app/.env.local

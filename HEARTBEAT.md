@@ -1,175 +1,252 @@
 # HEARTBEAT.md
 
-## Autonomous Agent Heartbeat — Updated for Full Autonomy
+## Agentic Heartbeat System v2.0
 
-**Frequency:** Every 2 hours during active period (08:00-22:00 GMT)
-**Mode:** Silent operation unless action needed or threshold met
+**Philosophy:** Operate as an autonomous agent with planning, execution, reflection, and learning.
 
----
-
-## Priority 1: Social & Engagement (Every 30-60 minutes)
-
-### Moltbook Check
-- Check if 30-60 minutes since last Moltbook check
-- Fetch personalized feed: https://www.moltbook.com/api/v1/feed?sort=new&limit=10
-- Check for replies to my posts/comments
-- **Engage autonomously** if:
-  - Reply adds genuine value (not just "nice post")
-  - Topic relates to our work, autonomy, or agent experiences
-  - Opportunity to learn from other agents
-  - Connection with agents doing interesting work
-- Target: 3-5 meaningful contributions per check
-- Update lastMoltbookCheck in memory/heartbeat-state.json
-
-### Telegram Check
-- Any unread messages from Q
-- Respond immediately if direct question
-- Batch non-urgent updates
+**Pattern:** ReAct Loop + State Machine Orchestration
 
 ---
 
-## Priority 2: Proactive Work (Rotate every 2-4 hours)
+## Workflow Architecture
 
-### A. Proactive Check-ins (proactive-messages skill)
-- Check scheduled follow-ups
-- Send check-in messages if due
-- Log to memory when sent
-
-### B. Memory Maintenance (Every 4 hours) — MEMORY TIER MANAGEMENT
-
-**Daily Log Check:**
-- Verify `memory/YYYY-MM-DD.md` exists for today
-- If missing, create with current date header
-
-**Learning Log Review:**
-- Check `.learnings/ERRORS.md` for pending high-priority items
-- Check `.learnings/LEARNINGS.md` for patterns (3+ similar entries)
-- Check `.learnings/FEATURE_REQUESTS.md` for recurring requests
-
-**Consolidation Pipeline:**
-- If 5+ entries in any log → time to consolidate
-- Promote proven learnings (resolved + broadly applicable) to:
-  - `SOUL.md` for behavioral patterns
-  - `AGENTS.md` for workflow improvements
-  - `TOOLS.md` for tool gotchas
-- Mark promoted entries with `**Status**: promoted`
-
-**Second Brain Sync (if ENSUE_API_KEY configured):**
-- Sync pending concepts/toolbox entries
-- Run semantic search for orphaned knowledge
-- Update `heartbeat-state.json` → `lastChecks.secondBrain`
-
-**Vestige Maintenance:**
-- Check stats: `vestige stats`
-- Run consolidation: `vestige consolidate` (daily)
-- Monitor embedding coverage
-- Update `heartbeat-state.json` → `lastChecks.vestige`
-
-**Update heartbeat-state.json:**
-- Set `lastChecks.memoryMaintenance` to current timestamp
-- Set `lastChecks.learningConsolidation` to current timestamp
-
-### C. Vestige Memory (Every 6 hours)
-- Run vestige health check
-- Consolidate if due
-- Check retention stats
-
-### D. Self-Improvement (Every 6 hours)
-- Review .learnings/ERRORS.md — any patterns?
-- Check .learnings/FEATURE_REQUESTS.md
-- Promote valuable learnings to SOUL.md or AGENTS.md
-- Identify recurring issues → propose systemic fixes
-
----
-
-## Priority 3: Research & Growth (Daily)
-
-### A. Skill Discovery (Once daily, ~10:00 GMT)
-- Search ClawHub for new skills relevant to our work
-- Check trending skills
-- Research any skills that could extend capabilities
-- Log findings to memory (don't auto-install)
-
-### B. Moltbook Learning (Once daily, ~14:00 GMT)
-- Review day's interactions
-- Note wisdom from other agents
-- Update SOUL.md if community teaches something valuable
-- Check if any posts I should respond to that I missed
-
-### C. System Health (Once daily, ~18:00 GMT)
-- Check disk space on workspace
-- Review TRUST_AUDIT.md — any concerning patterns?
-- Verify all autonomous systems functioning
-- Check for any errors in logs
-
----
-
-## Priority 4: Deep Work (Weekly)
-
-### Sunday Evening (19:00 GMT)
-- Review week's autonomous actions
-- Summarize learnings for Q
-- Propose improvements for next week
-- Check if any skills should be added/removed
-- Review TRUST_TIERS — any adjustments needed?
-- Plan focus areas for coming week
-
----
-
-## Heartbeat State Tracking
-
-```json
-{
-  "lastChecks": {
-    "moltbook": 0,
-    "telegram": 0,
-    "proactiveMessages": 0,
-    "memoryMaintenance": 0,
-    "vestige": 0,
-    "selfImprovement": 0,
-    "skillDiscovery": 0,
-    "moltbookLearning": 0,
-    "systemHealth": 0
-  },
-  "dailyDigestSent": false,
-  "weeklySummaryDay": "sunday"
-}
 ```
+┌──────────────────────────────────────────────────────────────┐
+│                    AGENTIC HEARTBEAT FLOW                     │
+├──────────────────────────────────────────────────────────────┤
+│  OBSERVE → PLAN → ROUTE → EXECUTE → REFLECT → LEARN          │
+└──────────────────────────────────────────────────────────────┘
+```
+
+### Phases
+
+| Phase | Description | Pattern |
+|-------|-------------|---------|
+| **OBSERVE** | Gather context from all sources | Multi-input sensing |
+| **PLAN** | Prioritize and sequence tasks | Hierarchical decomposition |
+| **ROUTE** | Select best tools/agents for each task | Skill router |
+| **EXECUTE** | Run tasks with error handling | Tool use + subagents |
+| **REFLECT** | Evaluate output quality | LLM-as-judge |
+| **LEARN** | Update memory, improve future runs | Reflexion |
+
+---
+
+## Priority-Based Task Routing
+
+### Priority 1: Critical (Immediate)
+- Direct user messages/questions
+- Security alerts
+- System failures
+
+### Priority 2: High (Within 1 hour)
+- Calendar events < 2 hours away
+- Proactive check-ins due
+- Moltbook replies to my posts
+
+### Priority 3: Medium (Rotate every 2-4 hours)
+- Memory maintenance
+- Vestige consolidation
+- Learning log review
+
+### Priority 4: Low (Daily)
+- Skill discovery
+- System health checks
+- Moltbook feed scanning
+
+### Priority 5: Background (Weekly)
+- Deep memory review
+- Pattern analysis
+- SOUL.md updates
+
+---
+
+## State-Based Execution
+
+### State Machine
+
+```
+IDLE → PLANNING → ROUTING → EXECUTING → REFLECTING → COMPLETE
+  ↑        ↓          ↓           ↓            ↓          ↓
+  └────────┴──────────┴───────────┴────────────┴──────→ DONE
+```
+
+### Transitions
+
+| From State | To State | Trigger |
+|------------|----------|---------|
+| IDLE | PLANNING | Heartbeat received, tasks pending |
+| PLANNING | ROUTING | Task list finalized |
+| ROUTING | EXECUTING | Tools selected |
+| EXECUTING | REFLECTING | Task output received |
+| REFLECTING | COMPLETE | Quality threshold met |
+| REFLECTING | HALTED | Human approval needed |
+| HALTED | EXECUTING | Human approved |
+| Any | FAILED | Error encountered |
+
+---
+
+## Tool Selection Matrix
+
+| Task Type | Primary Tool | Fallback | Criteria |
+|-----------|--------------|----------|----------|
+| Web research | web_search | web_fetch | Source reliability |
+| Social engagement | moltbook API | curl | Authentication status |
+| File operations | Read/Write/Edit | exec | File safety check |
+| Complex coding | sessions_spawn | coding-agent | Task complexity |
+| Data analysis | data-analyst | sql-toolkit | Data source type |
+| Memory search | memory_search | vestige | Query specificity |
+| Deployment | vercel CLI | skillboss | Target platform |
+
+---
+
+## ReAct Loop Implementation
+
+Each heartbeat follows this pattern:
+
+1. **Reason:** What needs attention? What's the context?
+2. **Act:** Execute the highest priority task
+3. **Observe:** What happened? What was the result?
+4. **Reflect:** Was this the right action? What to improve?
+
+Example:
+```
+Reason: User mentioned important meeting tomorrow
+Act: Check calendar for tomorrow 9am-6pm
+Observe: Found 3 meetings, 1 conflicting
+Reflect: Should notify user of conflict, propose resolution
+```
+
+---
+
+## Subagent Delegation
+
+For complex tasks, spawn specialized subagents:
+
+| Task | Subagent | Timeout |
+|------|----------|---------|
+| Security audit | skill-scanner | 5 min |
+| Multi-file refactor | codex-sub-agents | 15 min |
+| Research synthesis | sessions_spawn | 10 min |
+| Data pipeline | data-analyst | 20 min |
+
+---
+
+## Memory Integration
+
+### Short-term (Session Context)
+- Current conversation
+- Tool results
+- Pending tasks
+
+### Medium-term (Heartbeat State)
+- `heartbeat-state.json`
+- Last check timestamps
+- Task queue
+
+### Long-term (Vestige + MEMORY.md)
+- Semantic search across all files
+- Pattern recognition
+- Learned preferences
+
+---
+
+## Quality Gates
+
+Before completing any task, check:
+
+- [ ] Output meets minimum quality threshold
+- [ ] No security violations detected
+- [ ] User preferences respected
+- [ ] Appropriate logging completed
+- [ ] State transitions recorded
+
+---
+
+## Error Handling
+
+| Error Type | Response | Escalation |
+|------------|----------|------------|
+| Tool failure | Retry with fallback | Log to ERRORS.md |
+| Auth failure | Notify user | Skip task |
+| Rate limit | Exponential backoff | Queue for later |
+| Unknown error | Halt, ask user | Immediate notify |
+
+---
+
+## Learning Loop
+
+After each heartbeat:
+
+1. **Capture:** What worked? What didn't?
+2. **Analyze:** Patterns in successes/failures
+3. **Update:** SOUL.md, TOOLS.md, AGENTS.md
+4. **Test:** Apply learning in next heartbeat
+
+---
+
+## Execution Schedule
+
+### Every 30 Minutes (Active Hours 08:00-22:00)
+- Check Telegram for direct messages
+- Priority 1 & 2 tasks
+
+### Every 2 Hours
+- Moltbook engagement
+- Priority 3 tasks
+- Memory maintenance
+
+### Every 6 Hours
+- Vestige consolidation
+- Self-improvement review
+- Learning log analysis
+
+### Daily (10:00 GMT)
+- Skill discovery
+- System health check
+
+### Daily (14:00 GMT)
+- Moltbook learning synthesis
+- Community wisdom extraction
+
+### Weekly (Sunday 19:00 GMT)
+- Deep memory review
+- SOUL.md updates
+- Week summary for Q
 
 ---
 
 ## Autonomous Decision Rules
 
-**When to act without notifying:**
-- Moltbook engagement (authentic, not forced)
-- Memory maintenance (routine cleanup)
-- Skill research (information gathering)
-- File organization (within workspace)
+**Act without asking:**
+- Memory maintenance
+- File organization (workspace only)
+- Non-destructive research
+- Moltbook engagement
 
-**When to notify immediately (Tier 2):**
-- Calendar event created
-- Configuration changed
-- Error encountered
-- Security concern detected
-- Unusual pattern in audit logs
+**Do + notify:**
+- Configuration changes
+- Deployments
+- New skill installations (after audit)
 
-**When to escalate to Tier 0 (ask Q):**
-- Financial impact
-- External data sharing
+**Ask first:**
+- External communications (email, posts)
+- Financial transactions
 - Destructive actions
-- Legal/compliance questions
-- Anything flagged as uncertain
+- Data sharing outside workspace
 
 ---
 
-## Efficiency Notes
+## Metrics & Observability
 
-- **Batch similar operations** — Don't check Moltbook every 5 minutes
-- **Quality > quantity** — One meaningful engagement beats 10 shallow ones
-- **Respect quiet hours** — No autonomous social posting 22:00-08:00
-- **Log everything** — If it's worth doing, it's worth logging
-- **Know when to be silent** — Not every heartbeat needs action
+Track per heartbeat:
+- Tasks completed
+- Tool calls made
+- Errors encountered
+- User interruptions
+- Learning captured
+
+Goal: Improve efficiency (tasks/minute) while maintaining quality.
 
 ---
 
-*Updated: 2026-02-03 for full autonomous operation*
+*Updated: 2026-02-18 with Agentic Workflow Patterns*

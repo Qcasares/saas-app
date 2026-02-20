@@ -1,0 +1,78 @@
+#!/bin/bash
+# Twitter/X API CLI wrapper using Bearer Token
+
+TOKEN="${TWITTER_BEARER_TOKEN:-AAAAAAAAAAAAAAAAAAAAAOG5HAEAAAAAeAvit3JfTuoLoLH4iIyCrQphLKE%3DqM2pMjenlnKpXC1JPbYuagPtowBroMs0lK6YFQjsJqLWN4A3Yv}"
+API_BASE="https://api.twitter.com/2"
+
+command="$1"
+shift
+
+case "$command" in
+  search)
+    query="$1"
+    max_results="${2:-10}"
+    curl -s -H "Authorization: Bearer $TOKEN" \
+      "$API_BASE/tweets/search/recent?query=$(echo "$query" | jq -sRr @uri)&max_results=$max_results&tweet.fields=created_at,public_metrics,author_id" | jq .
+    ;;
+  
+  user)
+    handle="${1#@}"  # Remove @ if present
+    curl -s -H "Authorization: Bearer $TOKEN" \
+      "$API_BASE/users/by/username/$handle?user.fields=public_metrics,description,verified" | jq .
+    ;;
+  
+  tweet)
+    tweet_id="$1"
+    curl -s -H "Authorization: Bearer $TOKEN" \
+      "$API_BASE/tweets/$tweet_id?tweet.fields=created_at,public_metrics,author_id" | jq .
+    ;;
+  
+  timeline)
+    handle="${1#@}"
+    max_results="${2:-10}"
+    user_resp=$(curl -s -H "Authorization: Bearer $TOKEN" "$API_BASE/users/by/username/$handle")
+    user_id=$(echo "$user_resp" | jq -r '.data.id')
+    if [ "$user_id" != "null" ] && [ -n "$user_id" ]; then
+      curl -s -H "Authorization: Bearer $TOKEN" \
+        "$API_BASE/users/$user_id/tweets?max_results=$max_results&tweet.fields=created_at,public_metrics" | jq .
+    else
+      echo "Error: Could not find user @$handle"
+      echo "$user_resp" | jq .
+    fi
+    ;;
+  
+  me)
+    curl -s -H "Authorization: Bearer $TOKEN" \
+      "$API_BASE/users/me?user.fields=public_metrics,description" | jq .
+    ;;
+  
+  auth-check)
+    resp=$(curl -s -o /dev/null -w "%{http_code}" -H "Authorization: Bearer $TOKEN" "$API_BASE/users/me")
+    if [ "$resp" = "200" ]; then
+      echo "✅ Twitter API authentication successful"
+      curl -s -H "Authorization: Bearer $TOKEN" "$API_BASE/users/me" | jq -r '.data.username' | xargs -I {} echo "   Logged in as: @{}"
+    else
+      echo "❌ Twitter API authentication failed (HTTP $resp)"
+      echo "   Check your TWITTER_BEARER_TOKEN"
+    fi
+    ;;
+  
+  *)
+    echo "Twitter/X API CLI"
+    echo ""
+    echo "Usage: xcli <command> [args]"
+    echo ""
+    echo "Commands:"
+    echo "  search <query> [count]    Search recent tweets"
+    echo "  user <@handle>            Get user profile"
+    echo "  tweet <id>                Get specific tweet"
+    echo "  timeline <@handle> [n]    Get user's tweets"
+    echo "  me                        Show your profile"
+    echo "  auth-check                Verify token works"
+    echo ""
+    echo "Examples:"
+    echo "  xcli search \"AI news\" 10"
+    echo "  xcli user @elonmusk"
+    echo "  xcli timeline @openai 5"
+    ;;
+esac

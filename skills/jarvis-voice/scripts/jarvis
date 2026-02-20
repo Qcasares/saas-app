@@ -1,0 +1,57 @@
+#!/bin/bash
+# Jarvis Voice - Metallic TTS with sherpa-onnx
+# Requires: sherpa-onnx, ffmpeg, aplay
+
+set -e
+
+# Configuration
+SHERPA_DIR="${SHERPA_DIR:-$HOME/.openclaw/tools/sherpa-onnx-tts}"
+MODEL_PATH="${SHERPA_DIR}/en_GB-alan-medium.onnx"
+TOKENS_PATH="${SHERPA_DIR}/tokens.txt"
+AUDIO_DEVICE="${AUDIO_DEVICE:-plughw:0,0}"
+
+# Text to speak
+TEXT="$1"
+
+if [ -z "$TEXT" ]; then
+    echo "Usage: jarvis <text>"
+    exit 1
+fi
+
+# Check dependencies
+if ! command -v ffmpeg &> /dev/null; then
+    echo "Error: ffmpeg not found. Install with: brew install ffmpeg"
+    exit 1
+fi
+
+if ! command -v aplay &> /dev/null; then
+    echo "Error: aplay not found. Install ALSA utilities."
+    exit 1
+fi
+
+if [ ! -f "$SHERPA_DIR/sherpa-onnx-offline-tts" ]; then
+    echo "Error: sherpa-onnx not found at $SHERPA_DIR"
+    echo "Download from: https://github.com/k2-fsa/sherpa-onnx"
+    exit 1
+fi
+
+# Generate raw TTS audio to temp file
+TEMP_WAV=$(mktemp /tmp/jarvis_XXXXXX.wav)
+trap "rm -f $TEMP_WAV" EXIT
+
+# Generate base TTS
+"$SHERPA_DIR/sherpa-onnx-offline-tts" \
+    --vits-model="$MODEL_PATH" \
+    --vits-tokens="$TOKENS_PATH" \
+    --vits-length-scale=0.6 \
+    --output-filename="$TEMP_WAV" \
+    "$TEXT"
+
+# Apply metallic effects with ffmpeg and play
+ffmpeg -i "$TEMP_WAV" -af \
+    "highpass=f=200,\
+     lowpass=f=4000,\
+     aecho=0.6:0.6:10|20:0.3|0.2,\
+     chorus=0.5:0.5:1|1:0.1|0.1:2|2:0.1|0.1,\
+     treble=g=2" \
+    -f wav - | aplay -D "$AUDIO_DEVICE" -q

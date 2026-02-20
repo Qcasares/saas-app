@@ -1,0 +1,29 @@
+
+ ⛅️ wrangler 4.66.0 (update available 4.67.0)
+─────────────────────────────────────────────
+[33m▲ [43;33m[[43;30mWARNING[43;33m][0m [1mProcessing wrangler.toml configuration:[0m
+
+    - Unexpected fields found in triggers field: "0"
+
+
+Total Upload: 897.87 KiB / gzip: 149.15 KiB
+Worker Startup Time: 25 ms
+Your Worker has access to the following bindings:
+Binding                             Resource                  
+env.DB (saas-app-db)                D1 Database               
+env.ENVIRONMENT ("production")      Environment Variable      
+
+Uploaded socialflow-api (10.76 sec)
+[33m▲ [43;33m[[43;30mWARNING[43;33m][0m [1mBecause 'workers_dev' is not in your Wrangler file, it will be enabled for this deployment by default.[0m
+
+  To override this setting, you can disable workers.dev by explicitly setting 'workers_dev = false' in your Wrangler file.
+
+
+[33m▲ [43;33m[[43;30mWARNING[43;33m][0m [1mBecause your 'workers.dev' route is enabled and your 'preview_urls' setting is not in your Wrangler file, Preview URLs will be enabled for this deployment by default.[0m
+
+  To override this setting, you can disable Preview URLs by explicitly setting 'preview_urls = false' in your Wrangler file.
+
+
+Deployed socialflow-api triggers (4.71 sec)
+  https://socialflow-api.qcasares.workers.dev
+Current Version ID: c511fe3a-dba1-4cf8-882a-5086fd44584f

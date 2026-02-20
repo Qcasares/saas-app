@@ -1,4 +1,4 @@
-name = "saas-app-worker"
+name = "socialflow-api"
 main = "src/index.ts"
 compatibility_date = "2024-03-20"
 compatibility_flags = ["nodejs_compat"]
@@ -7,7 +7,7 @@ compatibility_flags = ["nodejs_compat"]
 [[d1_databases]]
 binding = "DB"
 database_name = "saas-app-db"
-database_id = "your-database-id-here"
+database_id = "f7b0ce6e-692f-4fcc-b6c6-2e7bc03b2523"
 
 # Environment variables
 [vars]

@@ -1,0 +1,24 @@
+{
+  "workflow_id": "wf_1771429191_51d2d801",
+  "task": "Review saas-app Google OAuth implementation and identify why invalid_client error persists",
+  "state": "FAILED",
+  "created_at": "2026-02-18T15:39:51Z",
+  "state_history": [
+    {
+      "state": "IDLE",
+      "timestamp": "2026-02-18T15:39:51Z"
+    },
+    {
+      "state": "PLANNING",
+      "timestamp": "2026-02-18T15:39:51Z"
+    },
+    {
+      "state": "FAILED",
+      "timestamp": "2026-02-18T15:39:51Z"
+    }
+  ],
+  "plan": [],
+  "current_step": 0,
+  "total_steps": 0,
+  "results": []
+}

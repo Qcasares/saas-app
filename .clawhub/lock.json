@@ -112,6 +112,54 @@
     "firecrawl-skills": {
       "version": "1.0.0",
       "installedAt": 1770669836315
+    },
+    "jarvis-voice": {
+      "version": "1.0.2",
+      "installedAt": 1771359815729
+    },
+    "giga-coding-agent": {
+      "version": "1.0.0",
+      "installedAt": 1771359885589
+    },
+    "postiz": {
+      "version": "1.0.9",
+      "installedAt": 1771359937215
+    },
+    "opencode-controller": {
+      "version": "1.0.0",
+      "installedAt": 1771361623906
+    },
+    "codex-sub-agents": {
+      "version": "1.0.0",
+      "installedAt": 1771361625403
+    },
+    "codex-orchestrator": {
+      "version": "1.0.0",
+      "installedAt": 1771361626645
+    },
+    "vibe-coding": {
+      "version": "1.0.0",
+      "installedAt": 1771361628546
+    },
+    "openclaw-kirocli-coding-agent": {
+      "version": "1.0.0",
+      "installedAt": 1771361630265
+    },
+    "x-twitter": {
+      "version": "2.3.1",
+      "installedAt": 1771363428519
+    },
+    "asana": {
+      "version": "1.0.0",
+      "installedAt": 1771365992318
+    },
+    "slack": {
+      "version": "1.0.0",
+      "installedAt": 1771365993798
+    },
+    "moltbook-engagement": {
+      "version": "1.0.0",
+      "installedAt": 1771445927349
     }
   }
 }

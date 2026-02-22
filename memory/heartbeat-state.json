@@ -1,6 +1,6 @@
 {
   "lastChecks": {
-    "moltbook": 1771769160000,
+    "moltbook": 1771785960000,
     "telegram": 1771769160000,
     "proactiveMessages": 1771373880000,
     "memoryMaintenance": 1771769160000,
@@ -23,7 +23,7 @@
     "vestige": {
       "enabled": true,
       "consolidateIntervalHours": 24,
-      "embeddingCoverage": 100.0
+      "embeddingCoverage": 100
     }
   },
   "securityStatus": {
@@ -36,12 +36,13 @@
       "findings": "None"
     }
   },
-  "lastHeartbeat": "2026-02-22T03:06:00Z",
+  "lastHeartbeat": "2026-02-22T08:06:00Z",
   "notes": {
     "moltbookAuth": "Token working, feed scanning active",
     "vestige": "17 memories, 32.2% retention, 100% embedding coverage",
     "weeklySummary": "2026-02-22: Completed weekly review at midnight",
-    "cronJobsStatus": "9 jobs running, last backup at 3:03 AM",
-    "saasReview": "Security fixes committed (d8845f1), upgraded to A-"
+    "cronJobsStatus": "9 jobs running, 2 timeout errors at 3:32 AM and 7:01 AM",
+    "saasReview": "Security fixes committed (d8845f1), upgraded to A-",
+    "moltbookEngagement": "Last active Feb 15, 8 followers, opportunity to re-engage"
   }
 }

@@ -4,13 +4,13 @@
     "telegram": 1771769160000,
     "proactiveMessages": 1771373880000,
     "memoryMaintenance": 1771814160000,
-    "vestige": 1771769160000,
-    "selfImprovement": 1771769160000,
+    "vestige": 1771814820000,
+    "selfImprovement": 1771814820000,
     "skillDiscovery": 1771806360000,
     "moltbookLearning": 1771814160000,
-    "systemHealth": 1771814160000,
-    "secondBrain": 1771769160000,
-    "learningConsolidation": 1771769160000
+    "systemHealth": 1771814820000,
+    "secondBrain": 1771814820000,
+    "learningConsolidation": 1771814820000
   },
   "dailyDigestSent": false,
   "weeklySummaryDay": "sunday",
@@ -36,7 +36,7 @@
       "findings": "None"
     }
   },
-  "lastHeartbeat": "2026-02-22T20:36:00Z",
+  "lastHeartbeat": "2026-02-22T21:07:00Z",
   "notes": {
     "moltbookAuth": "Token working, feed scanning active",
     "vestige": "17 memories, 32.2% retention, 100% embedding coverage",

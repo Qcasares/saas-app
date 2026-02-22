@@ -4,7 +4,10 @@ import Credentials from "next-auth/providers/credentials";
 import type { NextAuthConfig, User, Session } from "next-auth";
 import type { JWT } from "next-auth/jwt";
 
-// Extend types
+// =============================================================================
+// TYPES & INTERFACES
+// =============================================================================
+
 declare module "next-auth" {
   interface Session {
     user: {
@@ -29,17 +32,114 @@ declare module "next-auth/jwt" {
   }
 }
 
-// Helper function to generate OTP
-function generateOTP(): string {
-  return Math.floor(100000 + Math.random() * 900000).toString();
+// Database types for D1
+interface OTPRecord {
+  id: string;
+  email: string;
+  code: string;
+  expires_at: string;
+  used: number;
 }
 
-// Helper function to send OTP email
+interface UserRecord {
+  id: string;
+  email: string;
+  name: string | null;
+  image: string | null;
+  created_at: string;
+  updated_at: string;
+}
+
+interface D1Database {
+  prepare: (query: string) => D1PreparedStatement;
+}
+
+interface D1PreparedStatement {
+  bind: (...values: unknown[]) => D1PreparedStatement;
+  run: () => Promise<D1Result>;
+  first: () => Promise<OTPRecord | UserRecord | null>;
+}
+
+interface D1Result {
+  success: boolean;
+  meta?: Record<string, unknown>;
+}
+
+// =============================================================================
+// CONFIGURATION
+// =============================================================================
+
+const CONFIG = {
+  OTP: {
+    LENGTH: 6,
+    EXPIRY_MINUTES: 10,
+    MAX_ATTEMPTS: 5,
+    RATE_LIMIT_WINDOW_MS: 15 * 60 * 1000, // 15 minutes
+  },
+  SESSION: {
+    MAX_AGE_DAYS: 30,
+    UPDATE_AGE_DAYS: 1, // Refresh JWT if session is older than 1 day
+  },
+} as const;
+
+// =============================================================================
+// RATE LIMITING
+// =============================================================================
+
+interface RateLimitEntry {
+  attempts: number;
+  firstAttempt: number;
+  lastAttempt: number;
+}
+
+// Simple in-memory rate limiter (in production, use Redis)
+const rateLimiter = new Map<string, RateLimitEntry>();
+
+function checkRateLimit(email: string): { allowed: boolean; retryAfter?: number } {
+  const now = Date.now();
+  const entry = rateLimiter.get(email);
+
+  if (!entry) {
+    rateLimiter.set(email, { attempts: 1, firstAttempt: now, lastAttempt: now });
+    return { allowed: true };
+  }
+
+  // Reset if window has passed
+  if (now - entry.firstAttempt > CONFIG.OTP.RATE_LIMIT_WINDOW_MS) {
+    rateLimiter.set(email, { attempts: 1, firstAttempt: now, lastAttempt: now });
+    return { allowed: true };
+  }
+
+  // Check if max attempts exceeded
+  if (entry.attempts >= CONFIG.OTP.MAX_ATTEMPTS) {
+    const retryAfter = Math.ceil(
+      (entry.firstAttempt + CONFIG.OTP.RATE_LIMIT_WINDOW_MS - now) / 1000 / 60
+    );
+    return { allowed: false, retryAfter };
+  }
+
+  // Increment attempt
+  entry.attempts++;
+  entry.lastAttempt = now;
+  return { allowed: true };
+}
+
+// =============================================================================
+// OTP GENERATION & EMAIL
+// =============================================================================
+
+function generateOTP(): string {
+  // Use crypto for better randomness
+  const array = new Uint32Array(1);
+  crypto.getRandomValues(array);
+  return (array[0] % 900000 + 100000).toString();
+}
+
 async function sendOTPEmail(
   email: string,
   code: string,
   resendApiKey: string
-) {
+): Promise<boolean> {
   try {
     const response = await fetch("https://api.resend.com/emails", {
       method: "POST",
@@ -65,7 +165,7 @@ async function sendOTPEmail(
                 ${code}
               </span>
             </div>
-            <p style="color: #999; font-size: 14px; margin-top: 20px;">This code expires in 10 minutes.</p>
+            <p style="color: #999; font-size: 14px; margin-top: 20px;">This code expires in ${CONFIG.OTP.EXPIRY_MINUTES} minutes.</p>
             <p style="color: #999; font-size: 14px;">If you didn't request this, please ignore this email.</p>
           </div>
         `,
@@ -74,24 +174,60 @@ async function sendOTPEmail(
 
     if (!response.ok) {
       console.error("Failed to send email:", await response.text());
-      throw new Error("Failed to send email");
+      return false;
     }
 
     return true;
   } catch (error) {
     console.error("Error sending OTP email:", error);
-    throw error;
+    return false;
   }
 }
 
-// NextAuth configuration
+// =============================================================================
+// DATABASE HELPERS
+// =============================================================================
+
+function getDB(): D1Database | null {
+  const env = process.env as { DB?: D1Database };
+  return env.DB ?? null;
+}
+
+function isOTPRecord(record: unknown): record is OTPRecord {
+  return (
+    typeof record === "object" &&
+    record !== null &&
+    "id" in record &&
+    "email" in record &&
+    "code" in record &&
+    "expires_at" in record
+  );
+}
+
+function isUserRecord(record: unknown): record is UserRecord {
+  return (
+    typeof record === "object" &&
+    record !== null &&
+    "id" in record &&
+    "email" in record
+  );
+}
+
+// =============================================================================
+// NEXTAUTH CONFIGURATION
+// =============================================================================
+
 export const authConfig: NextAuthConfig = {
   providers: [
+    // Google OAuth - REMOVED allowDangerousEmailAccountLinking
+    // This prevents account takeover via email collision
     Google({
       clientId: process.env.GOOGLE_CLIENT_ID!,
       clientSecret: process.env.GOOGLE_CLIENT_SECRET!,
-      allowDangerousEmailAccountLinking: true,
+      // allowDangerousEmailAccountLinking: true, // REMOVED - security risk
     }),
+    
+    // OTP Authentication with rate limiting
     Credentials({
       id: "otp",
       name: "OTP",
@@ -104,144 +240,188 @@ export const authConfig: NextAuthConfig = {
       async authorize(credentials) {
         if (!credentials?.email) return null;
 
-        const { email, code, action, name } = credentials as {
-          email: string;
-          code?: string;
-          action?: string;
-          name?: string;
-        };
+        const email = credentials.email as string;
+        const code = credentials.code as string | undefined;
+        const action = credentials.action as string | undefined;
+        const name = credentials.name as string | undefined;
 
-        // Get D1 database from environment
-        const env = process.env as any;
-        const db = env.DB as any | undefined;
-
+        // Get database
+        const db = getDB();
         if (!db) {
           console.error("D1 database not configured");
           return null;
         }
 
-        // If action is "request", generate and send OTP
+        // Check rate limit for OTP requests
         if (action === "request") {
-          const otpCode = generateOTP();
-          const expiresAt = new Date(Date.now() + 10 * 60 * 1000).toISOString();
-
-          // Invalidate existing unused OTPs for this email
-          await db
-            .prepare(
-              "UPDATE otp_codes SET used = 1 WHERE email = ? AND used = 0"
-            )
-            .bind(email)
-            .run();
-
-          // Store new OTP
-          await db
-            .prepare(
-              "INSERT INTO otp_codes (id, email, code, expires_at) VALUES (?, ?, ?, ?)"
-            )
-            .bind(crypto.randomUUID(), email, otpCode, expiresAt)
-            .run();
-
-          // Send email
-          if (process.env.RESEND_API_KEY) {
-            await sendOTPEmail(email, otpCode, process.env.RESEND_API_KEY);
-          } else {
-            console.log(`OTP for ${email}: ${otpCode}`);
-          }
-
-          // Return a temporary user object to indicate success
-          return { id: "temp", email, otpRequested: true } as User;
-        }
-
-        // If code is provided, verify it
-        if (code) {
-          const otpRecord = await db
-            .prepare(
-              "SELECT * FROM otp_codes WHERE email = ? AND code = ? AND used = 0 AND expires_at > datetime('now')"
-            )
-            .bind(email, code)
-            .first();
-
-          if (!otpRecord) {
+          const rateLimit = checkRateLimit(email);
+          if (!rateLimit.allowed) {
+            console.warn(`Rate limit exceeded for ${email}, retry after ${rateLimit.retryAfter} minutes`);
+            // Return generic error - don't leak rate limit info
             return null;
           }
 
-          // Mark OTP as used
-          await db
-            .prepare("UPDATE otp_codes SET used = 1 WHERE id = ?")
-            .bind((otpRecord as any).id)
-            .run();
+          const otpCode = generateOTP();
+          const expiresAt = new Date(
+            Date.now() + CONFIG.OTP.EXPIRY_MINUTES * 60 * 1000
+          ).toISOString();
 
-          // Find or create user
-          let user = await db
-            .prepare("SELECT * FROM users WHERE email = ?")
-            .bind(email)
-            .first();
-
-          if (!user) {
-            const id = crypto.randomUUID();
-            const now = new Date().toISOString();
+          try {
+            // Invalidate existing unused OTPs
             await db
-              .prepare(
-                "INSERT INTO users (id, email, name, created_at, updated_at) VALUES (?, ?, ?, ?, ?)"
-              )
-              .bind(id, email, name || null, now, now)
+              .prepare("UPDATE otp_codes SET used = 1 WHERE email = ? AND used = 0")
+              .bind(email)
               .run();
 
-            // Create default subscription
+            // Store new OTP
             await db
               .prepare(
-                "INSERT INTO subscriptions (id, user_id, plan, status, created_at) VALUES (?, ?, 'free', 'active', ?)"
+                "INSERT INTO otp_codes (id, email, code, expires_at) VALUES (?, ?, ?, ?)"
               )
-              .bind(crypto.randomUUID(), id, now)
+              .bind(crypto.randomUUID(), email, otpCode, expiresAt)
               .run();
 
-            user = { id, email, name: name || null, image: null };
+            // Send email (silently fail in development without RESEND_API_KEY)
+            if (process.env.RESEND_API_KEY) {
+              const sent = await sendOTPEmail(email, otpCode, process.env.RESEND_API_KEY);
+              if (!sent) {
+                console.error("Failed to send OTP email");
+                return null;
+              }
+            } else {
+              console.log(`[DEV] OTP for ${email}: ${otpCode}`);
+            }
+
+            // Return temp user to indicate success
+            return { id: "temp", email, otpRequested: true } as User;
+          } catch (error) {
+            console.error("Error in OTP request:", error);
+            return null; // Generic failure - don't leak details
           }
+        }
 
-          return {
-            id: (user as any).id,
-            email: (user as any).email,
-            name: (user as any).name,
-            image: (user as any).image,
-          } as User;
+        // Verify OTP code
+        if (code) {
+          try {
+            const otpRecord = await db
+              .prepare(
+                "SELECT * FROM otp_codes WHERE email = ? AND code = ? AND used = 0 AND expires_at > datetime('now')"
+              )
+              .bind(email, code)
+              .first();
+
+            if (!otpRecord || !isOTPRecord(otpRecord)) {
+              // Generic failure - prevents email enumeration
+              return null;
+            }
+
+            // Mark OTP as used
+            await db
+              .prepare("UPDATE otp_codes SET used = 1 WHERE id = ?")
+              .bind(otpRecord.id)
+              .run();
+
+            // Find or create user
+            const userRecord = await db
+              .prepare("SELECT * FROM users WHERE email = ?")
+              .bind(email)
+              .first();
+
+            let user: UserRecord;
+
+            if (!userRecord) {
+              // Create new user
+              const id = crypto.randomUUID();
+              const now = new Date().toISOString();
+              
+              await db
+                .prepare(
+                  "INSERT INTO users (id, email, name, created_at, updated_at) VALUES (?, ?, ?, ?, ?)"
+                )
+                .bind(id, email, name || null, now, now)
+                .run();
+
+              // Create default subscription
+              await db
+                .prepare(
+                  "INSERT INTO subscriptions (id, user_id, plan, status, created_at) VALUES (?, ?, 'free', 'active', ?)"
+                )
+                .bind(crypto.randomUUID(), id, now)
+                .run();
+
+              user = { id, email, name: name || null, image: null, created_at: now, updated_at: now };
+            } else if (isUserRecord(userRecord)) {
+              user = userRecord;
+            } else {
+              console.error("Invalid user record format");
+              return null;
+            }
+
+            return {
+              id: user.id,
+              email: user.email,
+              name: user.name,
+              image: user.image,
+            };
+          } catch (error) {
+            console.error("Error verifying OTP:", error);
+            return null; // Generic failure
+          }
         }
 
         return null;
       },
     }),
   ],
+  
+  // CSRF protection enabled (default in NextAuth v5)
+  // trustHost: true, // Uncomment if behind a proxy
+  
   session: {
     strategy: "jwt",
-    maxAge: 30 * 24 * 60 * 60, // 30 days
+    maxAge: CONFIG.SESSION.MAX_AGE_DAYS * 24 * 60 * 60,
+    updateAge: CONFIG.SESSION.UPDATE_AGE_DAYS * 24 * 60 * 60,
   },
+  
   callbacks: {
     async jwt({ token, user, account }) {
       if (user) {
         token.id = user.id;
         token.email = user.email;
-        token.name = user.name;
-        token.image = user.image;
+        token.name = user.name ?? null;
+        token.image = user.image ?? null;
       }
       return token;
     },
+    
     async session({ session, token }) {
-      if (token) {
-        session.user.id = token.id as string;
-        session.user.email = token.email as string;
-        session.user.name = (token.name as string) || null;
-        session.user.image = (token.image as string) || null;
+      if (token && session.user) {
+        session.user.id = token.id ?? "";
+        session.user.email = token.email ?? "";
+        session.user.name = token.name ?? null;
+        session.user.image = token.image ?? null;
       }
       return session;
     },
   },
+  
   pages: {
     signIn: "/login",
     signOut: "/",
     error: "/login",
   },
+  
   events: {
     async signIn({ user, account, isNewUser }) {
-      console.log("User signed in:", user.email);
+      if (user.email) {
+        console.log(`[AUTH] User signed in: ${user.email} (${isNewUser ? "new" : "existing"})`);
+      }
+    },
+    
+    async signOut({ token }) {
+      if (token.email) {
+        console.log(`[AUTH] User signed out: ${token.email}`);
+      }
     },
   },
 };

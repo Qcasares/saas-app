@@ -1,6 +1,6 @@
 # 🔒 Trust Dashboard Report
 
-Generated: 2026-02-13 21:28:40
+Generated: 2026-02-22 10:00:09
 
 ## Skill Status
 
@@ -34,6 +34,13 @@ Risk Score: 40/100
 
 Risk Score: 10/100
 
+### ⚪ [UNVERIFIED] asana
+
+⚠️ **Security Notes:**
+- Accesses .env files
+
+Risk Score: 100/100
+
 ### 🔵 [VERIFIED] auto-updater
 
 Risk Score: 25/100
@@ -49,6 +56,14 @@ Risk Score: 10/100
 ### 🟢 [TRUSTED] calendar-sync
 
 Risk Score: 10/100
+
+### ⚪ [UNVERIFIED] codex-orchestrator
+
+Risk Score: 70/100
+
+### ⚪ [UNVERIFIED] codex-sub-agents
+
+Risk Score: 70/100
 
 ### 🟢 [TRUSTED] data-analyst
 
@@ -68,6 +83,10 @@ Risk Score: 55/100
 ### 🟢 [TRUSTED] firecrawl-skills
 
 Risk Score: 10/100
+
+### ⚪ [UNVERIFIED] giga-coding-agent
+
+Risk Score: 70/100
 
 ### 🟢 [TRUSTED] git-essentials
 
@@ -89,13 +108,36 @@ Risk Score: 25/100
 
 Risk Score: 25/100
 
+### ⚪ [UNVERIFIED] jarvis-voice
+
+Risk Score: 70/100
+
+### ⚪ [UNVERIFIED] moltbook-engagement
+
+⚠️ **Security Notes:**
+- Accesses .env files
+
+Risk Score: 100/100
+
 ### 🟢 [TRUSTED] moltbook-interact
 
 Risk Score: 10/100
 
+### ⚪ [UNVERIFIED] openclaw-kirocli-coding-agent
+
+Risk Score: 70/100
+
+### ⚪ [UNVERIFIED] opencode-controller
+
+Risk Score: 70/100
+
 ### 🟢 [TRUSTED] pdf
 
 Risk Score: 10/100
+
+### ⚪ [UNVERIFIED] postiz
+
+Risk Score: 70/100
 
 ### 🟢 [TRUSTED] proactive-messages
 
@@ -124,6 +166,10 @@ Risk Score: 25/100
 
 Risk Score: 55/100
 
+### ⚪ [UNVERIFIED] slack
+
+Risk Score: 70/100
+
 ### 🔵 [VERIFIED] sql-toolkit
 
 Risk Score: 25/100
@@ -144,19 +190,30 @@ Risk Score: 25/100
 
 Risk Score: 10/100
 
+### ⚪ [UNVERIFIED] vibe-coding
+
+Risk Score: 70/100
+
+### ⚪ [UNVERIFIED] x-twitter
+
+⚠️ **Security Notes:**
+- Accesses .env files
+
+Risk Score: 100/100
+
 ---
 
 ## 📊 Summary
 
 | Metric | Value |
 |--------|-------|
-| Total Skills | 31 |
+| Total Skills | 43 |
 | 🟢 Trusted | 17 |
 | 🔵 Verified | 11 |
 | 🟡 Audited | 2 |
-| ⚪ Unverified | 1 |
-| ⚠️ With Issues | 5 |
-| Avg Risk Score | 24/100 |
+| ⚪ Unverified | 13 |
+| ⚠️ With Issues | 8 |
+| Avg Risk Score | 38/100 |
 
 ## Overall Assessment
 

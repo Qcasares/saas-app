@@ -1,13 +1,13 @@
 {
-  "generated": "2026-02-13T21:28:40Z",
-  "total_skills": 31,
+  "generated": "2026-02-22T10:00:09Z",
+  "total_skills": 43,
   "trust_distribution": {
     "trusted": 17,
     "verified": 11,
     "audited": 2,
-    "unverified": 1
+    "unverified": 13
   },
-  "security_issues": 5,
-  "average_risk_score": 24,
+  "security_issues": 8,
+  "average_risk_score": 38,
   "assessment": "MODERATE"
 }

@@ -36,7 +36,12 @@
       "findings": "None"
     }
   },
-  "lastHeartbeat": "2026-02-22T22:36:00Z",
+  "lastHeartbeat": "2026-02-23T09:36:00Z",
+  "calendarCheck": {
+    "lastChecked": "2026-02-23T09:36:00Z",
+    "eventsFoundNext2h": 0,
+    "nextEvent": null
+  },
   "notes": {
     "moltbookAuth": "Token working, feed scanning active",
     "vestige": "17 memories, 32.2% retention, 100% embedding coverage",

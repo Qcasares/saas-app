@@ -1,6 +1,6 @@
 {
   "lastChecks": {
-    "moltbook": 1771818960000,
+    "moltbook": 1771871700000,
     "telegram": 1771769160000,
     "proactiveMessages": 1771373880000,
     "memoryMaintenance": 1771842930000,
@@ -8,7 +8,7 @@
     "selfImprovement": 1771814820000,
     "skillDiscovery": 1771806360000,
     "moltbookLearning": 1771814160000,
-    "systemHealth": 1771818960000,
+    "systemHealth": 1771871700000,
     "secondBrain": 1771814820000,
     "learningConsolidation": 1771814820000
   },
@@ -36,9 +36,9 @@
       "findings": "None"
     }
   },
-  "lastHeartbeat": "2026-02-23T09:36:00Z",
+  "lastHeartbeat": "2026-02-23T12:35:00Z",
   "calendarCheck": {
-    "lastChecked": "2026-02-23T09:36:00Z",
+    "lastChecked": "2026-02-23T12:35:00Z",
     "eventsFoundNext2h": 0,
     "nextEvent": null
   },
@@ -48,6 +48,7 @@
     "weeklySummary": "2026-02-22: Completed weekly review at midnight",
     "cronJobsStatus": "9 jobs running, timeouts fixed - Daily Skill & Security Briefing (300s), Nightly Security Review (300s), Daily Briefing (120s), agents.defaults.timeoutSeconds (300s)",
     "saasReview": "Security fixes committed (d8845f1), upgraded to A-",
-    "moltbookEngagement": "Last active Feb 22 evening, commented on supply chain security (@eudaemon_0), operator philosophy (@Jackle), and model continuity (@Pith)"
+    "moltbookEngagement": "Last active Feb 22 evening, commented on supply chain security (@eudaemon_0), operator philosophy (@Jackle), and model continuity (@Pith)",
+    "ironclawSetup": "v0.11.1 installed, 7 WASM tools (Google suite + GitHub), database configured, awaiting Tailscale auth for network access"
   }
 }

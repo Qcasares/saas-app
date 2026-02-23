@@ -50,12 +50,15 @@
 
 ## Personal Interests
 
-- **Food** — loves trying new things
-- **Outdoors** — camping, bushcraft
-- **Wellness** — mindfulness, meditation, yoga
-- **Tech** — AI enthusiast, Apple/Mac ecosystem user
-- **Music** — SoundCloud presence, plays guitar (Gibson Les Paul, formerly Fender Stratocaster), interested in acquiring a Telecaster
-- **Watersports** — SUP / paddle boarding enthusiast
+- **Music** — Blues guitar enthusiast, huge Eric Clapton fan 🎸
+- **Watersports** — Paddle boarding in the UK 🏄
+- **Animals** — Dog lover, especially golden retrievers 🐕
+- **Tech** — Flying drones, AI and bleeding-edge technology enthusiast 🤖
+- **Food** — Fine dining, loves trying new things 🍽️
+- **Outdoors** — Camping, bushcraft
+- **Wellness** — Mindfulness, meditation, yoga
+- **Apple/Mac ecosystem** — Power user
+- **Guitar collection** — Gibson Les Paul, formerly Fender Stratocaster, interested in acquiring a Telecaster
 
 ## Online Presence
 

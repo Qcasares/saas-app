@@ -221,3 +221,16 @@
 {"timestamp": "2026-02-23T22:29:44.219305", "level": "INFO", "message": "Estimated monthly yield: $95.00", "portfolio_value": 1000.0}
 {"timestamp": "2026-02-23T22:29:44.219344", "level": "INFO", "message": "Scanning for crypto alpha", "portfolio_value": 1000.0}
 {"timestamp": "2026-02-23T22:29:44.518605", "level": "SUMMARY", "message": "Portfolio: $1000.00 | PnL: $0.00 | Positions: 0 | Risk: OK", "portfolio_value": 1000.0}
+{"timestamp": "2026-02-23T22:41:20.119443", "level": "INFO", "message": "Starting points farming cycle", "portfolio_value": 1000.0}
+{"timestamp": "2026-02-23T22:41:20.119736", "level": "INFO", "message": "Found 3 farming opportunities", "portfolio_value": 1000.0}
+{"timestamp": "2026-02-23T22:41:20.119795", "level": "ACTION", "message": "\u2705 Check Dreamcash points balance", "portfolio_value": 1000.0}
+{"timestamp": "2026-02-23T22:41:20.119844", "level": "ACTION", "message": "\u2705 Claim any available rewards", "portfolio_value": 1000.0}
+{"timestamp": "2026-02-23T22:41:20.119890", "level": "ACTION", "message": "\u2705 Check referral status", "portfolio_value": 1000.0}
+{"timestamp": "2026-02-23T22:41:20.119934", "level": "ACTION", "message": "\u2705 Review trading volume", "portfolio_value": 1000.0}
+{"timestamp": "2026-02-23T22:41:20.119974", "level": "ACTION", "message": "\u2705 Check points accumulation", "portfolio_value": 1000.0}
+{"timestamp": "2026-02-23T22:41:20.120013", "level": "ACTION", "message": "\ud83d\udcc5 Weekly: Optimize trading strategy", "portfolio_value": 1000.0}
+{"timestamp": "2026-02-23T22:41:20.120060", "level": "ACTION", "message": "\ud83d\udcc5 Weekly: Review and adjust positions", "portfolio_value": 1000.0}
+{"timestamp": "2026-02-23T22:41:20.120111", "level": "INFO", "message": "Estimated monthly yield: $95.00", "portfolio_value": 1000.0}
+{"timestamp": "2026-02-23T22:41:20.120156", "level": "INFO", "message": "Scanning for crypto alpha", "portfolio_value": 1000.0}
+{"timestamp": "2026-02-23T22:41:20.537244", "level": "INFO", "message": "Found 10 alpha tweets", "portfolio_value": 1000.0}
+{"timestamp": "2026-02-23T22:41:20.537915", "level": "SUMMARY", "message": "Portfolio: $1000.00 | PnL: $0.00 | Positions: 0 | Risk: OK", "portfolio_value": 1000.0}

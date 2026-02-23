@@ -12,7 +12,7 @@
     "secondBrain": 1771814820000,
     "learningConsolidation": 1771814820000
   },
-  "dailyDigestSent": false,
+  "dailyDigestSent": true,
   "weeklySummaryDay": "sunday",
   "memoryConfig": {
     "version": "2.0",

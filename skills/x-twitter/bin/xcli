@@ -1,78 +1,229 @@
-#!/bin/bash
-# Twitter/X API CLI wrapper using Bearer Token
+#!/usr/bin/env python3
+"""
+Twitter/X API CLI with OAuth 1.0a
+Full read/write access for KingKong Autonomous Control
+"""
 
-TOKEN="${TWITTER_BEARER_TOKEN:-AAAAAAAAAAAAAAAAAAAAAOG5HAEAAAAAeAvit3JfTuoLoLH4iIyCrQphLKE%3DqM2pMjenlnKpXC1JPbYuagPtowBroMs0lK6YFQjsJqLWN4A3Yv}"
-API_BASE="https://api.twitter.com/2"
+import os
+import sys
+import json
+import base64
+import hashlib
+import hmac
+import time
+import urllib.parse
+import urllib.request
+import urllib.error
 
-command="$1"
-shift
+# Load credentials
+def load_credentials():
+    """Load from config file or environment"""
+    config_path = os.path.expanduser("~/.openclaw/workspace/.x-autonomy-config")
+    if os.path.exists(config_path):
+        with open(config_path) as f:
+            for line in f:
+                if line.startswith('export ') and '=' in line:
+                    line = line[7:]  # Remove 'export '
+                    key, value = line.strip().split('=', 1)
+                    os.environ[key] = value.strip('"')
+    
+    return {
+        'api_key': os.environ.get('TWITTER_API_KEY', ''),
+        'api_secret': os.environ.get('TWITTER_API_SECRET', ''),
+        'access_token': os.environ.get('TWITTER_ACCESS_TOKEN', ''),
+        'access_secret': os.environ.get('TWITTER_ACCESS_TOKEN_SECRET', ''),
+        'bearer_token': os.environ.get('TWITTER_BEARER_TOKEN', '')
+    }
 
-case "$command" in
-  search)
-    query="$1"
-    max_results="${2:-10}"
-    curl -s -H "Authorization: Bearer $TOKEN" \
-      "$API_BASE/tweets/search/recent?query=$(echo "$query" | jq -sRr @uri)&max_results=$max_results&tweet.fields=created_at,public_metrics,author_id" | jq .
-    ;;
-  
-  user)
-    handle="${1#@}"  # Remove @ if present
-    curl -s -H "Authorization: Bearer $TOKEN" \
-      "$API_BASE/users/by/username/$handle?user.fields=public_metrics,description,verified" | jq .
-    ;;
-  
-  tweet)
-    tweet_id="$1"
-    curl -s -H "Authorization: Bearer $TOKEN" \
-      "$API_BASE/tweets/$tweet_id?tweet.fields=created_at,public_metrics,author_id" | jq .
-    ;;
-  
-  timeline)
-    handle="${1#@}"
-    max_results="${2:-10}"
-    user_resp=$(curl -s -H "Authorization: Bearer $TOKEN" "$API_BASE/users/by/username/$handle")
-    user_id=$(echo "$user_resp" | jq -r '.data.id')
-    if [ "$user_id" != "null" ] && [ -n "$user_id" ]; then
-      curl -s -H "Authorization: Bearer $TOKEN" \
-        "$API_BASE/users/$user_id/tweets?max_results=$max_results&tweet.fields=created_at,public_metrics" | jq .
-    else
-      echo "Error: Could not find user @$handle"
-      echo "$user_resp" | jq .
-    fi
-    ;;
-  
-  me)
-    curl -s -H "Authorization: Bearer $TOKEN" \
-      "$API_BASE/users/me?user.fields=public_metrics,description" | jq .
-    ;;
-  
-  auth-check)
-    resp=$(curl -s -o /dev/null -w "%{http_code}" -H "Authorization: Bearer $TOKEN" "$API_BASE/users/me")
-    if [ "$resp" = "200" ]; then
-      echo "✅ Twitter API authentication successful"
-      curl -s -H "Authorization: Bearer $TOKEN" "$API_BASE/users/me" | jq -r '.data.username' | xargs -I {} echo "   Logged in as: @{}"
-    else
-      echo "❌ Twitter API authentication failed (HTTP $resp)"
-      echo "   Check your TWITTER_BEARER_TOKEN"
-    fi
-    ;;
-  
-  *)
-    echo "Twitter/X API CLI"
-    echo ""
-    echo "Usage: xcli <command> [args]"
-    echo ""
-    echo "Commands:"
-    echo "  search <query> [count]    Search recent tweets"
-    echo "  user <@handle>            Get user profile"
-    echo "  tweet <id>                Get specific tweet"
-    echo "  timeline <@handle> [n]    Get user's tweets"
-    echo "  me                        Show your profile"
-    echo "  auth-check                Verify token works"
-    echo ""
-    echo "Examples:"
-    echo "  xcli search \"AI news\" 10"
-    echo "  xcli user @elonmusk"
-    echo "  xcli timeline @openai 5"
-    ;;
-esac
+# OAuth 1.0a signature
+def oauth_sign(method, url, params, creds):
+    """Generate OAuth 1.0a signature"""
+    timestamp = str(int(time.time()))
+    nonce = base64.b64encode(os.urandom(16)).decode('utf-8').rstrip('=')
+    
+    # Build parameter string
+    oauth_params = {
+        'oauth_consumer_key': creds['api_key'],
+        'oauth_nonce': nonce,
+        'oauth_signature_method': 'HMAC-SHA1',
+        'oauth_timestamp': timestamp,
+        'oauth_token': creds['access_token'],
+        'oauth_version': '1.0'
+    }
+    
+    all_params = {**params, **oauth_params}
+    sorted_params = sorted(all_params.items())
+    param_string = urllib.parse.urlencode(sorted_params, quote_via=urllib.parse.quote)
+    
+    # Build base string
+    base_string = f"{method.upper()}&{urllib.parse.quote(url, safe='')}&{urllib.parse.quote(param_string, safe='')}"
+    
+    # Generate signature
+    signing_key = f"{creds['api_secret']}&{creds['access_secret']}"
+    signature = base64.b64encode(
+        hmac.new(signing_key.encode('utf-8'), base_string.encode('utf-8'), hashlib.sha1).digest()
+    ).decode('utf-8')
+    
+    oauth_params['oauth_signature'] = signature
+    return oauth_params
+
+def make_oauth_request(method, url, params=None, creds=None):
+    """Make OAuth 1.0a signed request"""
+    if params is None:
+        params = {}
+    
+    oauth_params = oauth_sign(method, url, params, creds)
+    
+    # Build Authorization header
+    auth_parts = [f'{k}="{urllib.parse.quote(str(v))}"' for k, v in oauth_params.items()]
+    auth_header = "OAuth " + ", ".join(auth_parts)
+    
+    # Make request
+    if method.upper() == 'GET':
+        if params:
+            url = f"{url}?{urllib.parse.urlencode(params)}"
+        req = urllib.request.Request(url, headers={'Authorization': auth_header})
+    else:
+        data = json.dumps(params).encode('utf-8') if params else None
+        req = urllib.request.Request(
+            url, 
+            data=data, 
+            headers={
+                'Authorization': auth_header,
+                'Content-Type': 'application/json'
+            },
+            method=method.upper()
+        )
+    
+    try:
+        with urllib.request.urlopen(req) as response:
+            return json.loads(response.read().decode('utf-8'))
+    except urllib.error.HTTPError as e:
+        return json.loads(e.read().decode('utf-8'))
+
+def main():
+    creds = load_credentials()
+    
+    if len(sys.argv) < 2:
+        print("Twitter/X API CLI - KingKong Autonomous Control")
+        print("")
+        print("Usage: xcli <command> [args]")
+        print("")
+        print("Commands:")
+        print("  search <query> [count]     Search recent tweets")
+        print("  user <@handle>             Get user profile")
+        print("  me                         Your profile")
+        print("  tweet <text>               Post a tweet")
+        print("  reply <tweet_id> <text>    Reply to tweet")
+        print("  like <tweet_id>            Like a tweet")
+        print("  retweet <tweet_id>         Retweet")
+        print("  follow <@handle>           Follow user")
+        print("  delete <tweet_id>          Delete tweet")
+        print("  auth-check                 Verify credentials")
+        return
+    
+    command = sys.argv[1]
+    args = sys.argv[2:]
+    
+    API_BASE = "https://api.twitter.com/2"
+    
+    if command == "search":
+        query = args[0] if args else "AI"
+        max_results = args[1] if len(args) > 1 else "10"
+        url = f"{API_BASE}/tweets/search/recent"
+        result = make_oauth_request('GET', url, {
+            'query': query,
+            'max_results': max_results,
+            'tweet.fields': 'created_at,public_metrics,author_id'
+        }, creds)
+        print(json.dumps(result, indent=2))
+    
+    elif command == "user":
+        handle = args[0].lstrip('@') if args else "jack"
+        url = f"{API_BASE}/users/by/username/{handle}"
+        result = make_oauth_request('GET', url, {
+            'user.fields': 'public_metrics,description,verified'
+        }, creds)
+        print(json.dumps(result, indent=2))
+    
+    elif command == "me":
+        url = f"{API_BASE}/users/me"
+        result = make_oauth_request('GET', url, {
+            'user.fields': 'public_metrics,description,verified'
+        }, creds)
+        print(json.dumps(result, indent=2))
+    
+    elif command == "tweet":
+        text = ' '.join(args) if args else "Hello from KingKong 🦍"
+        url = f"{API_BASE}/tweets"
+        result = make_oauth_request('POST', url, {'text': text}, creds)
+        print(json.dumps(result, indent=2))
+    
+    elif command == "reply":
+        if len(args) < 2:
+            print("Usage: xcli reply <tweet_id> <text>")
+            return
+        tweet_id = args[0]
+        text = ' '.join(args[1:])
+        url = f"{API_BASE}/tweets"
+        result = make_oauth_request('POST', url, {
+            'text': text,
+            'reply': {'in_reply_to_tweet_id': tweet_id}
+        }, creds)
+        print(json.dumps(result, indent=2))
+    
+    elif command == "like":
+        tweet_id = args[0] if args else ""
+        url = f"{API_BASE}/users/me/likes"
+        result = make_oauth_request('POST', url, {'tweet_id': tweet_id}, creds)
+        print(json.dumps(result, indent=2))
+    
+    elif command == "retweet":
+        tweet_id = args[0] if args else ""
+        url = f"{API_BASE}/users/me/retweets"
+        result = make_oauth_request('POST', url, {'tweet_id': tweet_id}, creds)
+        print(json.dumps(result, indent=2))
+    
+    elif command == "follow":
+        handle = args[0].lstrip('@') if args else ""
+        # First get user ID
+        user_url = f"{API_BASE}/users/by/username/{handle}"
+        user_result = make_oauth_request('GET', user_url, {}, creds)
+        if 'data' in user_result:
+            user_id = user_result['data']['id']
+            url = f"{API_BASE}/users/me/following"
+            result = make_oauth_request('POST', url, {'target_user_id': user_id}, creds)
+            print(json.dumps(result, indent=2))
+        else:
+            print(json.dumps(user_result, indent=2))
+    
+    elif command == "delete":
+        tweet_id = args[0] if args else ""
+        url = f"{API_BASE}/tweets/{tweet_id}"
+        result = make_oauth_request('DELETE', url, {}, creds)
+        print(json.dumps(result, indent=2))
+    
+    elif command == "auth-check":
+        print("=== Authentication Status ===")
+        if creds['api_key'] and creds['api_secret'] and creds['access_token'] and creds['access_secret']:
+            print("✅ OAuth 1.0a credentials configured")
+            print(f"   API Key: {creds['api_key'][:10]}...")
+            print(f"   Access Token: {creds['access_token'][:15]}...")
+            
+            # Test with /me endpoint
+            url = f"{API_BASE}/users/me"
+            result = make_oauth_request('GET', url, {}, creds)
+            if 'data' in result:
+                username = result['data']['username']
+                print(f"✅ Authenticated as: @{username}")
+            else:
+                print(f"❌ Authentication failed: {result.get('detail', 'Unknown error')}")
+        else:
+            print("❌ OAuth 1.0a credentials incomplete")
+    
+    else:
+        print(f"Unknown command: {command}")
+        print("Run 'xcli' for usage")
+
+if __name__ == "__main__":
+    main()

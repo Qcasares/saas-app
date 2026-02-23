@@ -1,16 +1,10 @@
 # X/Twitter Autonomous Agent Configuration
-## KingKong Autonomous X Control
+# KingKong Autonomous X Control
+# Status: FULL AUTONOMY ACTIVATED
 
-### Authentication
-export TWITTER_BEARER_TOKEN="AAAAAAAAAAAAAAAAAAAAAOG5HAEAAAAA%2F7gFESXT6mS2KLYLxiZCmP3DVLo%3DKGvHOneW1SvRv7Y7J7vf7eN5ojEa9LpPowvwx7PEFw0XijFxQI"
+# Authentication (OAuth 1.0a)
+export TWITTER_API_KEY="tsZdEEL9iMCFQyHU26iIWNG0N"
+export TWITTER_API_SECRET="SbDl0nJ9We4Kim6ot99SJtaiUeM7ivHGzzK3Zrc4zCM1JJdZyt"
 export TWITTER_ACCESS_TOKEN="2052911-K7fhXcA5NyElPdRrolxKmMHPCmIiTSUsdfxK07uApB"
 export TWITTER_ACCESS_TOKEN_SECRET="6iPLJL1jHZyg1W6F9Lcnlm1iKECwxgPqkKQVhRy5vsziz"
-
-### Capabilities
-- Read: ✅ Search, timelines, user lookup
-- Write: ⚠️ Need API Key + Secret for OAuth 1.0a
-
-### Note
-For full write access (post, like, retweet), still need:
-- TWITTER_API_KEY
-- TWITTER_API_SECRET
+export TWITTER_BEARER_TOKEN="AAAAAAAAAAAAAAAAAAAAAOG5HAEAAAAA%2F7gFESXT6mS2KLYLxiZCmP3DVLo%3DKGvHOneW1SvRv7Y7J7vf7eN5ojEa9LpPowvwx7PEFw0XijFxQI"

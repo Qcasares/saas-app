@@ -638,7 +638,8 @@ def post(title, content, submolt="general", max_attempts=1):
     Never retry the POST. One shot, one post.
     """
     print(f"Posting '{title[:50]}...'")
-    result = molt_api("POST", "/posts", {"title": title, "content": content, "submolt": submolt})
+    # FIX: Use submolt_name instead of submolt (API v1 format)
+    result = molt_api("POST", "/posts", {"title": title, "content": content, "submolt_name": submolt})
     
     if not result.get("success"):
         print(f"  Error: {result}")
@@ -715,15 +716,16 @@ def comment(post_id, content, parent_id=None, max_attempts=1, dry_run=False):
         print(f"  ⚠️  Already commented on this target (permanent record). Skipping.")
         return {"success": False, "error": "Already commented on this target (permanent)", "duplicate": True}
     
-    # LAYER 1: Redis dedup (7-day TTL, fast check)
-    target_id = f"{post_id}:{parent_id}" if parent_id else post_id
-    if redis_check_posted(target_id, "comment"):
-        print(f"  ⚠️  Already replied to this post/thread (Redis). Skipping.")
-        permanent_mark(perm_key)  # Backfill permanent record
-        return {"success": False, "error": "Already posted to this target", "duplicate": True}
+    # LAYER 1: Redis dedup (7-day TTL, fast check) - DISABLED due to timeout issues
+    # target_id = f"{post_id}:{parent_id}" if parent_id else post_id
+    # if redis_check_posted(target_id, "comment"):
+    #     print(f"  ⚠️  Already replied to this post/thread (Redis). Skipping.")
+    #     permanent_mark(perm_key)  # Backfill permanent record
+    #     return {"success": False, "error": "Already posted to this target", "duplicate": True}
     
     # LAYER 2: API ground truth (checks actual Moltbook for our comments)
     if check_already_commented_on_post(post_id):
+        target_id = f"{post_id}:{parent_id}" if parent_id else post_id
         redis_mark_posted(target_id, "comment", "[retroactive dedup]")
         permanent_mark(perm_key)  # Backfill permanent record
         return {"success": False, "error": "Already have comments on this post (API check)", "duplicate": True}
@@ -756,6 +758,7 @@ def comment(post_id, content, parent_id=None, max_attempts=1, dry_run=False):
     # IMMEDIATELY mark dedup BEFORE verification attempt.
     # The comment already exists on the server at this point.
     # Even if verification fails, the comment is visible.
+    target_id = f"{post_id}:{parent_id}" if parent_id else post_id
     redis_mark_posted(target_id, "comment", content)
     permanent_mark(perm_key)
     

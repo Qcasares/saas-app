@@ -1,0 +1,24 @@
+{
+  "name": "bankr",
+  "version": "1.0.0",
+  "description": "AI-powered crypto trading agent via natural language",
+  "author": "BankrBot",
+  "homepage": "https://bankr.bot",
+  "openclaw": {
+    "emoji": "📺",
+    "skillKey": "bankr",
+    "requires": {
+      "bins": ["bankr"],
+      "env": ["BANKR_API_KEY"]
+    },
+    "install": [
+      {
+        "id": "npm",
+        "kind": "node",
+        "package": "@bankr/cli",
+        "bins": ["bankr"],
+        "label": "Install Bankr CLI"
+      }
+    ]
+  }
+}

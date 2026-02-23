@@ -1,0 +1,16 @@
+# X/Twitter Autonomous Agent Configuration
+## KingKong Autonomous X Control
+
+### Authentication
+export TWITTER_BEARER_TOKEN="AAAAAAAAAAAAAAAAAAAAAOG5HAEAAAAA%2F7gFESXT6mS2KLYLxiZCmP3DVLo%3DKGvHOneW1SvRv7Y7J7vf7eN5ojEa9LpPowvwx7PEFw0XijFxQI"
+
+### Capabilities
+- Read: ✅ Search, timelines, user lookup
+- Write: ⚠️ Bearer token only (read-only)
+
+### Note
+For full write access (post, like, retweet), need:
+- TWITTER_API_KEY
+- TWITTER_API_SECRET  
+- TWITTER_ACCESS_TOKEN
+- TWITTER_ACCESS_TOKEN_SECRET

@@ -89,6 +89,82 @@ Adds semantic search and structured knowledge:
 
 ---
 
+## Autonomous Trading System (Active Since 2026-02-24)
+
+**Status:** ✅ OPERATIONAL
+**Agent:** KingKong with full autonomy
+**Platform:** Bankr.bot (Base, Ethereum, Solana, Polygon, Unichain)
+
+### System Components
+
+| Component | Status | Location |
+|-----------|--------|----------|
+| Research & Strategies | ✅ Complete | `memory/trading-research/` |
+| Activity Logging | ✅ Active | `memory/trading-logs/` |
+| Hourly Monitor | ✅ Cron job running | Every 60 minutes |
+| Portfolio Tracking | ✅ Ready | Awaiting balance check |
+
+### Strategies Deployed
+
+1. **Momentum Swing Trading** (40% allocation)
+   - 2-7 day holds
+   - 5-15% target gains
+   - Technical breakout entries
+   - Trailing stop exits
+
+2. **DCA + Breakout Stacking** (40% allocation)
+   - DCA over 5 days (20% of position)
+   - Stack remaining 80% on breakout
+   - Tiered profit-taking
+
+3. **High-Volume Scalping** (20% allocation)
+   - 0.5-1% targets
+   - Tight risk control
+   - High-frequency during volatility
+
+### Risk Management Rules
+
+- Max position: 5% per trade
+- Max single asset: 20% of portfolio
+- Daily loss limit: 3%
+- Weekly loss limit: 10%
+- Hard stop: 5% below entry
+- Trailing stop: 10% below peak
+
+### Wallets
+
+| Chain | Address | Purpose |
+|-------|---------|---------|
+| EVM | `0x664f...f2a5` | Base, Ethereum, Polygon, Unichain |
+| Solana | `2HgkrR...Tyf3qh` | High-speed, memes, NFTs |
+
+### Command Examples
+
+```bash
+# Check portfolio
+bankr prompt "What is my total portfolio balance?"
+
+# Get market data
+bankr prompt "Show me top 5 trending tokens on Base"
+bankr prompt "What tokens have gained >10% today?"
+
+# Execute trades
+bankr prompt "Buy $50 of [TOKEN] on Base"
+bankr prompt "Set limit order to buy [TOKEN] at $[PRICE]"
+bankr prompt "Sell 50% of my [TOKEN] position"
+```
+
+### Monitoring
+
+- **Hourly checks:** Portfolio balance, top movers, opportunities
+- **Daily logs:** All activity in `memory/trading-logs/YYYY-MM-DD-trades.md`
+- **Weekly reviews:** Strategy performance, adjustments
+- **Alerts:** Significant opportunities (>10% movers with volume)
+
+*This system operates autonomously with full decision-making authority on trades within risk parameters.*
+
+---
+
 ## Security Posture
 
 ### Skill Installation Policy (HIGH PRIORITY)

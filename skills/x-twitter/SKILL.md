@@ -1,8 +1,8 @@
 ---
-name: twitter-openclaw
+name: x-twitter
 description: Interact with Twitter/X — read tweets, search, post, like, retweet, and manage your timeline.
 user-invocable: true
-metadata: {"openclaw":{"emoji":"🐦‍⬛","skillKey":"twitter-openclaw","primaryEnv":"TWITTER_BEARER_TOKEN","requires":{"bins":["twclaw"],"env":["TWITTER_BEARER_TOKEN"]},"install":[{"id":"npm","kind":"node","package":"twclaw","bins":["twclaw"],"label":"Install twclaw (npm)"}]}}
+metadata: {"openclaw":{"emoji":"🐦‍⬛","skillKey":"x-twitter","primaryEnv":"TWITTER_BEARER_TOKEN","requires":{"bins":["xcli"],"env":["TWITTER_API_KEY","TWITTER_API_SECRET","TWITTER_ACCESS_TOKEN","TWITTER_ACCESS_TOKEN_SECRET"]},"install":[]}}
 ---
 
 # twitter-openclaw 🐦‍⬛
@@ -15,80 +15,95 @@ Requires a Twitter API Bearer Token set as `TWITTER_BEARER_TOKEN`.
 
 Optionally set `TWITTER_API_KEY` and `TWITTER_API_SECRET` for write operations (post, like, retweet).
 
-Run `twclaw auth-check` to verify credentials.
+Run `xcli auth-check` to verify credentials.
+
+## Setup
+
+1. Create `~/.openclaw/workspace/.x-autonomy-config` with your Twitter API credentials:
+```bash
+export TWITTER_API_KEY=your_api_key
+export TWITTER_API_SECRET=your_api_secret
+export TWITTER_ACCESS_TOKEN=your_access_token
+export TWITTER_ACCESS_TOKEN_SECRET=your_access_token_secret
+```
+
+2. Ensure the `xcli` binary is in your PATH or use the full path:
+```bash
+export PATH="$PATH:$HOME/.openclaw/workspace/skills/x-twitter/bin"
+```
 
 ## Commands
 
 ### Reading
 
 ```bash
-twclaw read <tweet-url-or-id>          # Read a single tweet with full metadata
-twclaw thread <tweet-url-or-id>        # Read full conversation thread
-twclaw replies <tweet-url-or-id> -n 20 # List replies to a tweet
-twclaw user <@handle>                  # Show user profile info
-twclaw user-tweets <@handle> -n 20     # User's recent tweets
+xcli read <tweet-url-or-id>          # Read a single tweet with full metadata
+xcli thread <tweet-url-or-id>        # Read full conversation thread
+xcli replies <tweet-url-or-id> -n 20 # List replies to a tweet
+xcli user <@handle>                  # Show user profile info
+xcli user-tweets <@handle> -n 20     # User's recent tweets
 ```
 
 ### Timelines
 
 ```bash
-twclaw home -n 20                      # Home timeline
-twclaw mentions -n 10                  # Your mentions
-twclaw likes <@handle> -n 10           # User's liked tweets
+xcli home -n 20                      # Home timeline
+xcli mentions -n 10                  # Your mentions
+xcli likes <@handle> -n 10           # User's liked tweets
 ```
 
 ### Search
 
 ```bash
-twclaw search "query" -n 10            # Search tweets
-twclaw search "from:elonmusk AI" -n 5  # Search with operators
-twclaw search "#trending" --recent     # Recent tweets only
-twclaw search "query" --popular        # Popular tweets only
+xcli search "query" -n 10            # Search tweets
+xcli search "from:elonmusk AI" -n 5  # Search with operators
+xcli search "#trending" --recent     # Recent tweets only
+xcli search "query" --popular        # Popular tweets only
 ```
 
 ### Trending
 
 ```bash
-twclaw trending                        # Trending topics worldwide
-twclaw trending --woeid 23424977       # Trending in specific location
+xcli trending                        # Trending topics worldwide
+xcli trending --woeid 23424977       # Trending in specific location
 ```
 
 ### Posting
 
 ```bash
-twclaw tweet "hello world"                          # Post a tweet
-twclaw reply <tweet-url-or-id> "great thread!"      # Reply to a tweet
-twclaw quote <tweet-url-or-id> "interesting take"   # Quote tweet
-twclaw tweet "look at this" --media image.png        # Tweet with media
+xcli tweet "hello world"                          # Post a tweet
+xcli reply <tweet-url-or-id> "great thread!"      # Reply to a tweet
+xcli quote <tweet-url-or-id> "interesting take"   # Quote tweet
+xcli tweet "look at this" --media image.png        # Tweet with media
 ```
 
 ### Engagement
 
 ```bash
-twclaw like <tweet-url-or-id>          # Like a tweet
-twclaw unlike <tweet-url-or-id>        # Unlike a tweet
-twclaw retweet <tweet-url-or-id>       # Retweet
-twclaw unretweet <tweet-url-or-id>     # Undo retweet
-twclaw bookmark <tweet-url-or-id>      # Bookmark a tweet
-twclaw unbookmark <tweet-url-or-id>    # Remove bookmark
+xcli like <tweet-url-or-id>          # Like a tweet
+xcli unlike <tweet-url-or-id>        # Unlike a tweet
+xcli retweet <tweet-url-or-id>       # Retweet
+xcli unretweet <tweet-url-or-id>     # Undo retweet
+xcli bookmark <tweet-url-or-id>      # Bookmark a tweet
+xcli unbookmark <tweet-url-or-id>    # Remove bookmark
 ```
 
 ### Following
 
 ```bash
-twclaw follow <@handle>                # Follow user
-twclaw unfollow <@handle>              # Unfollow user
-twclaw followers <@handle> -n 20       # List followers
-twclaw following <@handle> -n 20       # List following
+xcli follow <@handle>                # Follow user
+xcli unfollow <@handle>              # Unfollow user
+xcli followers <@handle> -n 20       # List followers
+xcli following <@handle> -n 20       # List following
 ```
 
 ### Lists
 
 ```bash
-twclaw lists                           # Your lists
-twclaw list-timeline <list-id> -n 20   # Tweets from a list
-twclaw list-add <list-id> <@handle>    # Add user to list
-twclaw list-remove <list-id> <@handle> # Remove user from list
+xcli lists                           # Your lists
+xcli list-timeline <list-id> -n 20   # Tweets from a list
+xcli list-add <list-id> <@handle>    # Add user to list
+xcli list-remove <list-id> <@handle> # Remove user from list
 ```
 
 ## Output Options

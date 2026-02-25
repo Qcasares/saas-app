@@ -160,6 +160,10 @@
     "moltbook-engagement": {
       "version": "1.0.0",
       "installedAt": 1771445927349
+    },
+    "tmux": {
+      "version": "1.0.0",
+      "installedAt": 1772033397573
     }
   }
 }

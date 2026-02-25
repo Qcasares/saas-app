@@ -223,6 +223,9 @@ After each heartbeat:
 - Non-destructive research
 - Moltbook engagement
 
+**Explicit exclusions:**
+- No Bankr/crypto checks during heartbeat (only via cron or manual request)
+
 **Do + notify:**
 - Configuration changes
 - Deployments

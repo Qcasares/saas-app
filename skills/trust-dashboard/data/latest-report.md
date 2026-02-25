@@ -1,6 +1,6 @@
 # 🔒 Trust Dashboard Report
 
-Generated: 2026-02-22 10:00:09
+Generated: 2026-02-25 11:36:25
 
 ## Skill Status
 
@@ -44,6 +44,10 @@ Risk Score: 100/100
 ### 🔵 [VERIFIED] auto-updater
 
 Risk Score: 25/100
+
+### ⚪ [UNVERIFIED] bankr
+
+Risk Score: 70/100
 
 ### 🟡 [AUDITED] blogburst
 
@@ -207,13 +211,13 @@ Risk Score: 100/100
 
 | Metric | Value |
 |--------|-------|
-| Total Skills | 43 |
+| Total Skills | 44 |
 | 🟢 Trusted | 17 |
 | 🔵 Verified | 11 |
 | 🟡 Audited | 2 |
-| ⚪ Unverified | 13 |
+| ⚪ Unverified | 14 |
 | ⚠️ With Issues | 8 |
-| Avg Risk Score | 38/100 |
+| Avg Risk Score | 39/100 |
 
 ## Overall Assessment
 

@@ -164,6 +164,18 @@
     "tmux": {
       "version": "1.0.0",
       "installedAt": 1772033397573
+    },
+    "data-anomaly-detector": {
+      "version": "2.1.0",
+      "installedAt": 1772131119391
+    },
+    "agent-security-monitor": {
+      "version": "1.1.0",
+      "installedAt": 1772131129690
+    },
+    "email-to-calendar": {
+      "version": "1.13.1",
+      "installedAt": 1772131137940
     }
   }
 }

@@ -43,7 +43,9 @@ for service_info in "${SERVICES[@]}"; do
 done
 
 # Check Bankr API
-if ! bankr whoami >/dev/null 2>&1; then
+BANKR_BIN="/opt/homebrew/bin/bankr"
+export PATH="/opt/homebrew/bin:/usr/local/bin:$PATH"
+if ! $BANKR_BIN whoami >/dev/null 2>&1; then
   echo "$(date '+%Y-%m-%d %H:%M:%S') - Bankr API check failed" >> $LOG_FILE
   FAILED+=("Bankr API")
 fi

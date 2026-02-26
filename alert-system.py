@@ -44,12 +44,16 @@ def check_portfolio():
     """Check portfolio for significant changes"""
     # Placeholder - would integrate with Bankr API
     # For now, just check if Bankr is accessible
+    bankr_bin = "/opt/homebrew/bin/bankr"
+    env = os.environ.copy()
+    env["PATH"] = "/opt/homebrew/bin:/usr/local/bin:" + env.get("PATH", "")
     try:
         result = subprocess.run(
-            ["bankr", "prompt", "What is my total portfolio value in USD?"],
+            [bankr_bin, "prompt", "What is my total portfolio value in USD?"],
             capture_output=True,
             text=True,
-            timeout=30
+            timeout=30,
+            env=env,
         )
         if result.returncode != 0:
             send_telegram("Bankr API connection issue", "high")

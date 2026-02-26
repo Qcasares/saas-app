@@ -1,0 +1,34 @@
+{
+  "handle": "@qbot",
+  "keywords": [
+    "BTC",
+    "ETH",
+    "SOL",
+    "Base",
+    "onchain",
+    "memecoin",
+    "altcoin",
+    "ETF",
+    "CPI",
+    "FOMC",
+    "liquidity",
+    "funding rates",
+    "open interest",
+    "perps",
+    "spot flows",
+    "order book",
+    "market structure"
+  ],
+  "posting": {
+    "enabled": true,
+    "mode": "auto",
+    "max_posts_per_hour": 1,
+    "max_replies_per_hour": 2,
+    "max_retweets_per_hour": 2
+  },
+  "tone": {
+    "style": "concise, data-driven, contrarian when warranted",
+    "avoid": ["financial advice", "guarantees", "sensational claims"],
+    "cta": "Ask a short question to drive replies"
+  }
+}

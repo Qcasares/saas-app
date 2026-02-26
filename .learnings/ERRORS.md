@@ -83,3 +83,60 @@ Major supply chain attack discovered: 341 malicious ClawHub skills targeting Ope
 - Related: Snyk ToxicSkills report (Feb 5)
 - Related Files: SECURITY-EXECUTIVE-SUMMARY.md, TRUST_TIERS.md
 - Tags: supply-chain, malware, macos, clawhub, critical
+
+## [ERR-20260226-001] browser-cli-anthropic-key
+
+**Logged**: 2026-02-26T18:52:37Z  
+**Priority**: high  
+**Status**: pending  
+**Area**: infra
+
+### Summary
+Stagehand browser CLI failed because ANTHROPIC_API_KEY was not set.
+
+### Error
+```
+Error: ANTHROPIC_API_KEY not set
+Run: openclaw agents auth add anthropic --token YOUR_API_KEY
+```
+
+### Context
+- Command: `browser navigate https://app.postiz.com/auth/register`
+- Environment: OpenClaw Mac mini
+
+### Suggested Fix
+Set Anthropic auth for the browser CLI or use an alternative browser tool.
+
+### Metadata
+- Reproducible: yes
+- Related Files: skills/agent-browser-stagehand/SKILL.md
+
+---
+
+## [ERR-20260226-002] openclaw-browser-service-unreachable
+
+**Logged**: 2026-02-26T18:52:37Z  
+**Priority**: high  
+**Status**: pending  
+**Area**: infra
+
+### Summary
+OpenClaw browser control service unreachable when opening Postiz signup.
+
+### Error
+```
+Can't reach the OpenClaw browser control service. Restart the OpenClaw gateway (OpenClaw.app menubar, or `openclaw gateway`). Do NOT retry the browser tool — it will keep failing. (Error: getaddrinfo ENOTFOUND app.postiz.com)
+```
+
+### Context
+- Tool: browser (OpenClaw)
+- Action: open https://app.postiz.com/auth/register
+
+### Suggested Fix
+Restart OpenClaw gateway and verify DNS/network access to app.postiz.com.
+
+### Metadata
+- Reproducible: unknown
+- Related Files: openclaw.json (gateway)
+
+---

@@ -51,7 +51,11 @@ echo "" >> "$REPORT_FILE"
 # Check 2: Hardcoded credentials
 echo "## 2. Hardcoded Credentials Check" >> "$REPORT_FILE"
 CRED_PATTERNS="sk-[a-zA-Z0-9]|api_key|secret_key|password|token"
-CRED_HITS=$(grep -r -E "$CRED_PATTERNS" "$WORKSPACE" --include="*.py" --include="*.js" --include="*.ts" --include="*.sh" 2>/dev/null | grep -v "security/" | grep -v "node_modules" | head -10 || true)
+if command -v rg >/dev/null 2>&1; then
+    CRED_HITS=$(rg -n -e "$CRED_PATTERNS" "$WORKSPACE" -g "*.py" -g "*.js" -g "*.ts" -g "*.sh" --glob "!node_modules/**" --glob "!security/**" --max-count 10 2>/dev/null || true)
+else
+    CRED_HITS=$(grep -r -E "$CRED_PATTERNS" "$WORKSPACE" --include="*.py" --include="*.js" --include="*.ts" --include="*.sh" 2>/dev/null | grep -v "security/" | grep -v "node_modules" | head -10 || true)
+fi
 if [ -n "$CRED_HITS" ]; then
     add_finding "CRITICAL" "Hardcoded Credentials" "Potential credentials found in code" "$(echo "$CRED_HITS" | head -3)"
 else
@@ -81,7 +85,11 @@ echo "" >> "$REPORT_FILE"
 
 # Check 5: Sensitive paths in code
 echo "## 5. Path Exposure Check" >> "$REPORT_FILE"
-PATH_HITS=$(grep -r "Users/quentincasares" "$WORKSPACE" --include="*.py" --include="*.js" --include="*.md" 2>/dev/null | grep -v "security/reports" | head -5 || true)
+if command -v rg >/dev/null 2>&1; then
+    PATH_HITS=$(rg -n "Users/quentincasares" "$WORKSPACE" -g "*.py" -g "*.js" -g "*.md" --glob "!security/reports/**" --glob "!node_modules/**" --max-count 5 2>/dev/null || true)
+else
+    PATH_HITS=$(grep -r "Users/quentincasares" "$WORKSPACE" --include="*.py" --include="*.js" --include="*.md" 2>/dev/null | grep -v "security/reports" | head -5 || true)
+fi
 if [ -n "$PATH_HITS" ]; then
     add_finding "LOW" "Path Exposure" "Absolute paths in code" "$(echo "$PATH_HITS" | head -2)"
 else

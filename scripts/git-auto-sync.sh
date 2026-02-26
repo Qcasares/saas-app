@@ -4,6 +4,8 @@
 
 set -e
 
+export GIT_TERMINAL_PROMPT=0
+
 cd "$HOME/.openclaw/workspace"
 
 # Check if git repo
@@ -37,6 +39,10 @@ if git diff --cached --name-only | grep -qE '\.env|secret|token|key|password'; t
     echo "⚠️  WARNING: Potential sensitive files detected:"
     git diff --cached --name-only | grep -E '\.env|secret|token|key|password'
     echo ""
+    if [ ! -t 0 ]; then
+        echo "❌ Non-interactive session; aborting to avoid committing sensitive data"
+        exit 1
+    fi
     read -p "Continue anyway? (y/N) " -n 1 -r
     echo
     if [[ ! $REPLY =~ ^[Yy]$ ]]; then

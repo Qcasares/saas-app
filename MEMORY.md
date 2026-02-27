@@ -212,6 +212,25 @@ bankr prompt "Sell 50% of my [TOKEN] position"
 
 ## Usage Patterns
 
+### Ontology Graph (Structured Memory)
+Use the **ontology** skill to store structured entities and relationships alongside free-text memory.
+
+**Default storage:**
+- Graph: `memory/ontology/graph.jsonl`
+- Schema: `memory/ontology/schema.yaml`
+
+**Common entity types:** Person, Project, Task, Event, Document
+
+**Example commands:**
+```bash
+python3 skills/ontology/scripts/ontology.py create --type Person --props '{"name":"Jane Doe","role":"CTO"}'
+python3 skills/ontology/scripts/ontology.py create --type Project --props '{"name":"Risk Data Platform"}'
+python3 skills/ontology/scripts/ontology.py relate --from proj_1234abcd --rel has_owner --to pers_5678efgh
+python3 skills/ontology/scripts/ontology.py query --type Task --where '{"status":"open"}'
+```
+
+Use the graph when the user says “remember,” “link X to Y,” “show dependencies,” or asks for structured recall.
+
 ### "Remember this"
 Saves to Second Brain (concepts) or LEARNINGS.md:
 > "Remember that Git LFS is needed for large files in this repo"

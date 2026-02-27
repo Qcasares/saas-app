@@ -176,6 +176,10 @@
     "email-to-calendar": {
       "version": "1.13.1",
       "installedAt": 1772131137940
+    },
+    "ontology": {
+      "version": "0.1.2",
+      "installedAt": 1772216187967
     }
   }
 }

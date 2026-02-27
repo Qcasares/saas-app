@@ -98,3 +98,8 @@
 [2026-02-26 05:13:32] ========================================
 [2026-02-26 05:13:32] Exporting Apple Calendar: Personal
 [0;31m[ERROR][0m icalBuddy not found. Install with: brew install ical-buddy
+[2026-02-27 05:09:37] ========================================
+[2026-02-27 05:09:37] Calendar Sync Started
+[2026-02-27 05:09:37] ========================================
+[2026-02-27 05:09:37] Exporting Apple Calendar: Personal
+[0;31m[ERROR][0m icalBuddy not found. Install with: brew install ical-buddy

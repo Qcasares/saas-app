@@ -1,0 +1,45 @@
+types:
+  Person:
+    required: [name]
+  Project:
+    required: [name]
+    status_enum: [planning, active, paused, completed, archived]
+  Task:
+    required: [title, status]
+    status_enum: [open, in_progress, blocked, done, cancelled]
+    priority_enum: [low, medium, high, urgent]
+  Event:
+    required: [title, start]
+  Document:
+    required: [title]
+
+relations:
+  has_task:
+    from_types: [Project]
+    to_types: [Task]
+    cardinality: one_to_many
+  assigned_to:
+    from_types: [Task]
+    to_types: [Person]
+    cardinality: many_to_one
+  has_owner:
+    from_types: [Project, Task, Document]
+    to_types: [Person]
+    cardinality: many_to_one
+  part_of:
+    from_types: [Task, Event, Document]
+    to_types: [Project]
+    cardinality: many_to_one
+  related_doc:
+    from_types: [Project, Task, Event]
+    to_types: [Document]
+    cardinality: many_to_many
+  attendee_of:
+    from_types: [Person]
+    to_types: [Event]
+    cardinality: many_to_many
+
+constraints:
+  - type: Event
+    rule: "if end exists: end >= start"
+    message: "Event end time must be after start"

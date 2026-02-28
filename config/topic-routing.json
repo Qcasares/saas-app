@@ -1,0 +1,49 @@
+{
+  "version": "1.0",
+  "description": "Agent Squad HQ Topic Routing Configuration",
+  "groupId": "-1003734521694",
+  "defaultAgent": "kingkong",
+  "topics": {
+    "general": {
+      "name": "#general",
+      "agent": "kingkong",
+      "soulFile": "SOUL.md",
+      "description": "Main orchestration, daily briefings, heartbeat",
+      "tools": ["all"],
+      "triggers": ["heartbeat", "briefing", "status"]
+    },
+    "trading": {
+      "name": "#Trading",
+      "agent": "trader",
+      "soulFile": "skills/trader/SOUL.md",
+      "description": "Crypto trading, portfolio management, risk",
+      "tools": ["market-data", "portfolio", "trading-monitor"],
+      "triggers": ["trade", "portfolio", "position", "buy", "sell"]
+    },
+    "research": {
+      "name": "#research",
+      "agent": "sherlock",
+      "soulFile": "skills/sherlock/SOUL.md",
+      "description": "Market research, intel, trending repos",
+      "tools": ["web-search", "firecrawl", "github"],
+      "triggers": ["research", "intel", "news", "trending"]
+    },
+    "content": {
+      "name": "#content",
+      "agent": "scribe",
+      "soulFile": "skills/scribe/SOUL.md",
+      "description": "Content creation, social media, drafts",
+      "tools": ["postiz", "tweet-writer", "moltbook"],
+      "triggers": ["draft", "post", "content", "social"]
+    }
+  },
+  "routingRules": {
+    "byTopic": true,
+    "byKeyword": true,
+    "fallback": "kingkong"
+  },
+  "dmRouting": {
+    "enabled": true,
+    "defaultAgent": "kingkong"
+  }
+}

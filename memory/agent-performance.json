@@ -1,0 +1,20 @@
+{
+  "schema": "agent-performance",
+  "version": "1.0",
+  "runs": [],
+  "averages": {
+    "sherlock": null,
+    "scribe": null,
+    "editor": null,
+    "architect": null
+  },
+  "trends": {
+    "last7Days": {
+      "sherlock": [],
+      "scribe": [],
+      "editor": [],
+      "architect": []
+    }
+  },
+  "initialized": "2026-02-28T18:10:00Z"
+}

@@ -37,6 +37,19 @@ Skills are shared. Your setup is yours. Keeping them apart means you can update 
 
 ---
 
+### Google Workspace (Primary)
+
+- **gog** — PRIMARY interface for Google services (Gmail, Calendar, Drive, Contacts, Sheets, Docs)
+  - Account: `qcasares@gmail.com`
+  - Auth: OAuth (configured 2026-02-28)
+  - Services: calendar, contacts, docs, drive, gmail, sheets
+  - Env: `GOG_ACCOUNT=qcasares@gmail.com`
+  - Examples:
+    - `gog gmail search 'newer_than:7d'`
+    - `gog calendar events primary --from 2026-03-01 --to 2026-03-02`
+    - `gog drive search "report" --max 10`
+    - `gog sheets get <sheetId> "Sheet1!A1:D10" --json`
+
 ### Networking
 
 - **Tailscale** — Installed Feb 5, 2026. Use for secure mesh VPN between devices.
@@ -84,7 +97,10 @@ Skills are shared. Your setup is yours. Keeping them apart means you can update 
 
 ### Calendar
 
-- **accli** — Apple Calendar CLI for macOS
+- **gog** — PRIMARY for Google Calendar (see Google Workspace section above)
+  - `gog calendar events primary --from 2026-03-01 --to 2026-03-02`
+
+- **accli** — Apple Calendar CLI for macOS (secondary/Apple-only)
   - List calendars, view/create/update events, check availability
   - Usage: `accli events Work --json`, `accli create Work --summary "Meeting" --start ...`
 

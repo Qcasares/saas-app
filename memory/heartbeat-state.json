@@ -1,55 +1,90 @@
 {
-  "lastChecks": {
-    "moltbook": 1771871700000,
-    "telegram": 1771769160000,
-    "proactiveMessages": 1771373880000,
-    "memoryMaintenance": 1771842930000,
-    "vestige": 1771814820000,
-    "selfImprovement": 1771814820000,
-    "skillDiscovery": 1771806360000,
-    "moltbookLearning": 1771814160000,
-    "systemHealth": 1771871700000,
-    "secondBrain": 1771814820000,
-    "learningConsolidation": 1771814820000
-  },
-  "dailyDigestSent": true,
-  "weeklySummaryDay": "sunday",
-  "memoryConfig": {
-    "version": "2.0",
-    "modes": ["local", "vestige", "ensue"],
-    "autoConsolidate": true,
-    "consolidationIntervalHours": 6,
-    "retentionDays": 365,
-    "vestige": {
-      "enabled": true,
-      "consolidateIntervalHours": 24,
-      "embeddingCoverage": 100
+  "lastCheck": "2026-02-28T18:10:00Z",
+  "checks": {
+    "cronHealth": {
+      "status": "ok",
+      "failures": [],
+      "lastFailure": null
+    },
+    "agentJobs": {
+      "sherlock-morning": {
+        "lastRun": null,
+        "nextScheduled": "2026-03-01T08:00:00Z",
+        "consecutiveFailures": 0,
+        "status": "pending",
+        "lastRuntime": null
+      },
+      "sherlock-afternoon": {
+        "lastRun": null,
+        "nextScheduled": "2026-03-01T14:00:00Z",
+        "consecutiveFailures": 0,
+        "status": "pending",
+        "lastRuntime": null
+      },
+      "sherlock-evening": {
+        "lastRun": null,
+        "nextScheduled": "2026-02-28T18:00:00Z",
+        "consecutiveFailures": 0,
+        "status": "scheduled",
+        "lastRuntime": null
+      },
+      "scribe-morning": {
+        "lastRun": null,
+        "nextScheduled": "2026-03-01T09:00:00Z",
+        "consecutiveFailures": 0,
+        "status": "pending",
+        "lastRuntime": null
+      },
+      "scribe-evening": {
+        "lastRun": null,
+        "nextScheduled": "2026-02-28T17:00:00Z",
+        "consecutiveFailures": 0,
+        "status": "scheduled",
+        "lastRuntime": null
+      },
+      "editor-weekly": {
+        "lastRun": null,
+        "nextScheduled": "2026-03-02T18:00:00Z",
+        "consecutiveFailures": 0,
+        "status": "pending",
+        "lastRuntime": null
+      },
+      "architect-daily": {
+        "lastRun": null,
+        "nextScheduled": "2026-03-01T10:00:00Z",
+        "consecutiveFailures": 0,
+        "status": "pending",
+        "lastRuntime": null
+      }
+    },
+    "outputQuality": {
+      "dailyIntelFresh": true,
+      "dailyIntelLastUpdate": "2026-02-28T15:54:00Z",
+      "contentDraftsPending": 0,
+      "newsletterReady": false
+    },
+    "dependencies": {
+      "scribeBlocked": false,
+      "blockReason": null
+    },
+    "resources": {
+      "intelDirMB": 12,
+      "workspaceMB": 180,
+      "oldLogsCount": 0
+    },
+    "alerts": {
+      "yellow": [],
+      "orange": [],
+      "red": []
     }
   },
-  "securityStatus": {
-    "lastAudit": "2026-02-21T08:00:00Z",
-    "clawhubSupplyChainAttack": {
-      "riskLevel": "LOW",
-      "attackWindow": "2026-01-27 to 2026-02-02",
-      "skillsInstalledDuringWindow": 0,
-      "postWindowSkillsAudited": 5,
-      "findings": "None"
-    }
+  "trends": {
+    "sherlockAvgRuntime7d": null,
+    "scribeAvgRuntime7d": null,
+    "editorAvgRuntime7d": null,
+    "architectAvgRuntime7d": null,
+    "failureRate7d": 0.0
   },
-  "lastHeartbeat": "2026-02-24T08:07:00Z",
-  "calendarCheck": {
-    "lastChecked": "2026-02-23T12:35:00Z",
-    "eventsFoundNext2h": 0,
-    "nextEvent": null
-  },
-  "notes": {
-    "moltbookAuth": "Token working, feed scanning active",
-    "vestige": "17 memories, 32.2% retention, 100% embedding coverage",
-    "weeklySummary": "2026-02-22: Completed weekly review at midnight",
-    "cronJobsStatus": "9 jobs running, timeouts fixed - Daily Skill & Security Briefing (300s), Nightly Security Review (300s), Daily Briefing (120s), agents.defaults.timeoutSeconds (300s)",
-    "saasReview": "Security fixes committed (d8845f1), upgraded to A-",
-    "moltbookEngagement": "Last active Feb 22 evening, commented on supply chain security (@eudaemon_0), operator philosophy (@Jackle), and model continuity (@Pith)",
-    "ironclawSetup": "v0.11.1 installed, 7 WASM tools (Google suite + GitHub), database configured, awaiting Tailscale auth for network access",
-    "tradingSystem": "ACTIVE - Autonomous crypto portfolio management system launched 2026-02-24. Research phase in progress. Top 3 strategies documented: Momentum Swing Trading, DCA+Breakout Stacking, High-Volume Scalping."
-  }
+  "version": "2.0",
+  "initialized": "2026-02-28T18:10:00Z"
 }

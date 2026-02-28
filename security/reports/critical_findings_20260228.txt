@@ -1,0 +1,2 @@
+[Hardcoded Credentials] Potential credentials found in code
+[Hardcoded Credentials] Potential credentials found in code

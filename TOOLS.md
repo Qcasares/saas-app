@@ -235,6 +235,13 @@ Skills are shared. Your setup is yours. Keeping them apart means you can update 
 
 **Note:** Plugins are installed at `~/.claude/plugins/` and auto-enabled
 
+### Terminal
+
+- **iTerm2** — Primary terminal emulator on macOS
+  - Location: `/Applications/iTerm.app`
+  - Preferred for all terminal operations
+  - Supports advanced features: split panes, hotkey window, tmux integration
+
 ### MCP Servers (External Tools)
 
 - **GitHub MCP** — GitHub integration via Model Context Protocol

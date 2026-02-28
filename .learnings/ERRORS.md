@@ -140,3 +140,6 @@ Restart OpenClaw gateway and verify DNS/network access to app.postiz.com.
 - Related Files: openclaw.json (gateway)
 
 ---
+
+- 2026-02-28 08:09 | Heartbeat calendar check failed: 'accli' not found (Apple Calendar CLI not installed).
+- 2026-02-28 08:09 | Heartbeat email check failed: himalaya config missing at ~/Library/Application Support/himalaya/config.toml (and non-TTY prompt error).

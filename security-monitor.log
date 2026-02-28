@@ -204,3 +204,212 @@
 [2026-02-27 06:33:32 UTC] [INFO] Checking for suspicious network connections...
 [2026-02-27 06:33:33 UTC] [INFO] No suspicious network connections found
 [2026-02-27 06:33:33 UTC] [INFO] Updating security baseline...
+[2026-02-28 08:18:21 UTC] [INFO] Checking for exposed secrets in .env files...
+[2026-02-28 08:18:21 UTC] [INFO] No exposed secrets found
+[2026-02-28 08:18:21 UTC] [INFO] Checking for unverified skills...
+[2026-02-28 08:18:21 UTC] [INFO] Checking permission manifest for accli...
+[2026-02-28 08:18:21 UTC] [INFO] No permission manifest found for accli (optional)
+[2026-02-28 08:18:21 UTC] [INFO] Checking permission manifest for agent-browser-stagehand...
+[2026-02-28 08:18:21 UTC] [INFO] No permission manifest found for agent-browser-stagehand (optional)
+[2026-02-28 08:18:21 UTC] [INFO] Checking permission manifest for agent-security-audit...
+[2026-02-28 08:18:21 UTC] [INFO] No permission manifest found for agent-security-audit (optional)
+[2026-02-28 08:18:21 UTC] [INFO] Skipping benign pattern: webhook\.site (matched known pattern: webhook\.site)
+[2026-02-28 08:18:21 UTC] [INFO] Skipping benign pattern: curl.*\. (matched known pattern: webhook\.site)
+[2026-02-28 08:18:21 UTC] [INFO] Skipping benign pattern: eval( (matched known pattern: webhook\.site)
+[2026-02-28 08:18:21 UTC] [INFO] Checking permission manifest for agent-security-monitor...
+[2026-02-28 08:18:21 UTC] [INFO] Permission manifest found for agent-security-monitor: Scan agent environment for security vulnerabilities and suspicious activity
+[2026-02-28 08:18:21 UTC] [INFO] Unusual permissions on /Users/quentincasares/.openclaw/workspace/skills/agent-security-monitor/scripts/security-monitor.sh: 000
+[2026-02-28 08:18:21 UTC] [INFO] Checking permission manifest for ai-explain...
+[2026-02-28 08:18:21 UTC] [INFO] No permission manifest found for ai-explain (optional)
+[2026-02-28 08:18:21 UTC] [INFO] Checking permission manifest for ai-skill-scanner...
+[2026-02-28 08:18:21 UTC] [INFO] No permission manifest found for ai-skill-scanner (optional)
+[2026-02-28 08:18:21 UTC] [INFO] Unusual permissions on /Users/quentincasares/.openclaw/workspace/skills/ai-skill-scanner/scripts/advanced_checks.py: 000
+[2026-02-28 08:18:21 UTC] [INFO] Unusual permissions on /Users/quentincasares/.openclaw/workspace/skills/ai-skill-scanner/scripts/scan.py: 000
+[2026-02-28 08:18:21 UTC] [INFO] Checking permission manifest for apple-notes...
+[2026-02-28 08:18:21 UTC] [INFO] No permission manifest found for apple-notes (optional)
+[2026-02-28 08:18:21 UTC] [INFO] Checking permission manifest for asana...
+[2026-02-28 08:18:21 UTC] [INFO] No permission manifest found for asana (optional)
+[2026-02-28 08:18:21 UTC] [INFO] Checking permission manifest for auto-updater...
+[2026-02-28 08:18:21 UTC] [INFO] No permission manifest found for auto-updater (optional)
+[2026-02-28 08:18:21 UTC] [INFO] Skipping benign pattern: curl.*\. (matched known pattern: curl.*\.)
+[2026-02-28 08:18:21 UTC] [INFO] Checking permission manifest for bankr...
+[2026-02-28 08:18:21 UTC] [INFO] No permission manifest found for bankr (optional)
+[2026-02-28 08:18:21 UTC] [INFO] Unusual permissions on /Users/quentincasares/.openclaw/workspace/skills/bankr/scripts/setup.sh: 000
+[2026-02-28 08:18:21 UTC] [INFO] Skipping benign pattern: curl.*\. (matched known pattern: curl.*\.)
+[2026-02-28 08:18:21 UTC] [INFO] Checking permission manifest for blogburst...
+[2026-02-28 08:18:21 UTC] [INFO] No permission manifest found for blogburst (optional)
+[2026-02-28 08:18:21 UTC] [INFO] Checking permission manifest for calendar-notion-sync...
+[2026-02-28 08:18:21 UTC] [INFO] No permission manifest found for calendar-notion-sync (optional)
+[2026-02-28 08:18:21 UTC] [INFO] Unusual permissions on /Users/quentincasares/.openclaw/workspace/skills/calendar-notion-sync/scripts/sync.sh: 000
+[2026-02-28 08:18:21 UTC] [INFO] Checking permission manifest for calendar-sync...
+[2026-02-28 08:18:21 UTC] [INFO] No permission manifest found for calendar-sync (optional)
+[2026-02-28 08:18:21 UTC] [INFO] Unusual permissions on /Users/quentincasares/.openclaw/workspace/skills/calendar-sync/scripts/setup-cron.sh: 000
+[2026-02-28 08:18:21 UTC] [INFO] Unusual permissions on /Users/quentincasares/.openclaw/workspace/skills/calendar-sync/scripts/integration-test.sh: 000
+[2026-02-28 08:18:21 UTC] [INFO] Unusual permissions on /Users/quentincasares/.openclaw/workspace/skills/calendar-sync/scripts/check-permissions.sh: 000
+[2026-02-28 08:18:21 UTC] [INFO] Unusual permissions on /Users/quentincasares/.openclaw/workspace/skills/calendar-sync/scripts/sync.sh: 000
+[2026-02-28 08:18:21 UTC] [INFO] Unusual permissions on /Users/quentincasares/.openclaw/workspace/skills/calendar-sync/scripts/compare.js: 000
+[2026-02-28 08:18:21 UTC] [INFO] Unusual permissions on /Users/quentincasares/.openclaw/workspace/skills/calendar-sync/scripts/test.sh: 000
+[2026-02-28 08:18:21 UTC] [INFO] Checking permission manifest for codex-orchestrator...
+[2026-02-28 08:18:21 UTC] [INFO] No permission manifest found for codex-orchestrator (optional)
+[2026-02-28 08:18:21 UTC] [INFO] Checking permission manifest for codex-sub-agents...
+[2026-02-28 08:18:21 UTC] [INFO] No permission manifest found for codex-sub-agents (optional)
+[2026-02-28 08:18:21 UTC] [INFO] Checking permission manifest for data-analyst...
+[2026-02-28 08:18:21 UTC] [INFO] No permission manifest found for data-analyst (optional)
+[2026-02-28 08:18:21 UTC] [INFO] Unusual permissions on /Users/quentincasares/.openclaw/workspace/skills/data-analyst/scripts/data-init.sh: 000
+[2026-02-28 08:18:21 UTC] [INFO] Unusual permissions on /Users/quentincasares/.openclaw/workspace/skills/data-analyst/scripts/query.sh: 000
+[2026-02-28 08:18:21 UTC] [INFO] Checking permission manifest for data-anomaly-detector...
+[2026-02-28 08:18:21 UTC] [INFO] No permission manifest found for data-anomaly-detector (optional)
+[2026-02-28 08:18:21 UTC] [INFO] Checking permission manifest for elevenlabs-stt...
+[2026-02-28 08:18:21 UTC] [INFO] No permission manifest found for elevenlabs-stt (optional)
+[2026-02-28 08:18:21 UTC] [INFO] Unusual permissions on /Users/quentincasares/.openclaw/workspace/skills/elevenlabs-stt/scripts/transcribe.sh: 000
+[2026-02-28 08:18:21 UTC] [INFO] Checking permission manifest for elite-longterm-memory...
+[2026-02-28 08:18:21 UTC] [INFO] No permission manifest found for elite-longterm-memory (optional)
+[2026-02-28 08:18:21 UTC] [INFO] Unusual permissions on /Users/quentincasares/.openclaw/workspace/skills/elite-longterm-memory/bin/elite-memory.js: 000
+[2026-02-28 08:18:21 UTC] [INFO] Checking permission manifest for email-to-calendar...
+[2026-02-28 08:18:21 UTC] [INFO] No permission manifest found for email-to-calendar (optional)
+[2026-02-28 08:18:21 UTC] [INFO] Unusual permissions on /Users/quentincasares/.openclaw/workspace/skills/email-to-calendar/scripts/changelog.sh: 000
+[2026-02-28 08:18:21 UTC] [INFO] Unusual permissions on /Users/quentincasares/.openclaw/workspace/skills/email-to-calendar/scripts/activity_log.sh: 000
+[2026-02-28 08:18:21 UTC] [INFO] Unusual permissions on /Users/quentincasares/.openclaw/workspace/skills/email-to-calendar/scripts/undo.sh: 000
+[2026-02-28 08:18:21 UTC] [INFO] Unusual permissions on /Users/quentincasares/.openclaw/workspace/skills/email-to-calendar/scripts/calendar_search.sh: 000
+[2026-02-28 08:18:21 UTC] [INFO] Unusual permissions on /Users/quentincasares/.openclaw/workspace/skills/email-to-calendar/scripts/check_duplicate.sh: 000
+[2026-02-28 08:18:21 UTC] [INFO] Unusual permissions on /Users/quentincasares/.openclaw/workspace/skills/email-to-calendar/scripts/add_pending.sh: 000
+[2026-02-28 08:18:21 UTC] [INFO] Unusual permissions on /Users/quentincasares/.openclaw/workspace/skills/email-to-calendar/scripts/update_tracked_event.sh: 000
+[2026-02-28 08:18:21 UTC] [INFO] Unusual permissions on /Users/quentincasares/.openclaw/workspace/skills/email-to-calendar/scripts/tests/test_undo_ops.py: 000
+[2026-02-28 08:18:21 UTC] [INFO] Unusual permissions on /Users/quentincasares/.openclaw/workspace/skills/email-to-calendar/scripts/tests/test_common.py: 000
+[2026-02-28 08:18:21 UTC] [INFO] Unusual permissions on /Users/quentincasares/.openclaw/workspace/skills/email-to-calendar/scripts/tests/test_changelog_ops.py: 000
+[2026-02-28 08:18:21 UTC] [INFO] Unusual permissions on /Users/quentincasares/.openclaw/workspace/skills/email-to-calendar/scripts/tests/test_invite_ops.py: 000
+[2026-02-28 08:18:21 UTC] [INFO] Unusual permissions on /Users/quentincasares/.openclaw/workspace/skills/email-to-calendar/scripts/tests/test_event_tracking.py: 000
+[2026-02-28 08:18:21 UTC] [INFO] Unusual permissions on /Users/quentincasares/.openclaw/workspace/skills/email-to-calendar/scripts/tests/test_pending_ops.py: 000
+[2026-02-28 08:18:21 UTC] [INFO] Unusual permissions on /Users/quentincasares/.openclaw/workspace/skills/email-to-calendar/scripts/tests/__init__.py: 000
+[2026-02-28 08:18:21 UTC] [INFO] Unusual permissions on /Users/quentincasares/.openclaw/workspace/skills/email-to-calendar/scripts/tests/test_json_store.py: 000
+[2026-02-28 08:18:21 UTC] [INFO] Unusual permissions on /Users/quentincasares/.openclaw/workspace/skills/email-to-calendar/scripts/tests/test_date_parser.py: 000
+[2026-02-28 08:18:21 UTC] [INFO] Unusual permissions on /Users/quentincasares/.openclaw/workspace/skills/email-to-calendar/scripts/tests/test_disposition_ops.py: 000
+[2026-02-28 08:18:21 UTC] [INFO] Unusual permissions on /Users/quentincasares/.openclaw/workspace/skills/email-to-calendar/scripts/tests/test_activity_ops.py: 000
+[2026-02-28 08:18:21 UTC] [INFO] Unusual permissions on /Users/quentincasares/.openclaw/workspace/skills/email-to-calendar/scripts/utils/email_ops.py: 000
+[2026-02-28 08:18:21 UTC] [INFO] Unusual permissions on /Users/quentincasares/.openclaw/workspace/skills/email-to-calendar/scripts/utils/pending_ops.py: 000
+[2026-02-28 08:18:21 UTC] [INFO] Unusual permissions on /Users/quentincasares/.openclaw/workspace/skills/email-to-calendar/scripts/utils/activity_ops.py: 000
+[2026-02-28 08:18:21 UTC] [INFO] Unusual permissions on /Users/quentincasares/.openclaw/workspace/skills/email-to-calendar/scripts/utils/json_store.py: 000
+[2026-02-28 08:18:21 UTC] [INFO] Unusual permissions on /Users/quentincasares/.openclaw/workspace/skills/email-to-calendar/scripts/utils/undo_ops.py: 000
+[2026-02-28 08:18:21 UTC] [INFO] Unusual permissions on /Users/quentincasares/.openclaw/workspace/skills/email-to-calendar/scripts/utils/__init__.py: 000
+[2026-02-28 08:18:21 UTC] [INFO] Unusual permissions on /Users/quentincasares/.openclaw/workspace/skills/email-to-calendar/scripts/utils/changelog_ops.py: 000
+[2026-02-28 08:18:21 UTC] [INFO] Unusual permissions on /Users/quentincasares/.openclaw/workspace/skills/email-to-calendar/scripts/utils/disposition_ops.py: 000
+[2026-02-28 08:18:21 UTC] [INFO] Unusual permissions on /Users/quentincasares/.openclaw/workspace/skills/email-to-calendar/scripts/utils/event_tracking.py: 000
+[2026-02-28 08:18:21 UTC] [INFO] Unusual permissions on /Users/quentincasares/.openclaw/workspace/skills/email-to-calendar/scripts/utils/invite_ops.py: 000
+[2026-02-28 08:18:21 UTC] [INFO] Unusual permissions on /Users/quentincasares/.openclaw/workspace/skills/email-to-calendar/scripts/utils/common.py: 000
+[2026-02-28 08:18:21 UTC] [INFO] Unusual permissions on /Users/quentincasares/.openclaw/workspace/skills/email-to-calendar/scripts/utils/date_parser.py: 000
+[2026-02-28 08:18:21 UTC] [INFO] Unusual permissions on /Users/quentincasares/.openclaw/workspace/skills/email-to-calendar/scripts/utils/calendar_ops.py: 000
+[2026-02-28 08:18:21 UTC] [INFO] Unusual permissions on /Users/quentincasares/.openclaw/workspace/skills/email-to-calendar/scripts/email_read.sh: 000
+[2026-02-28 08:18:21 UTC] [INFO] Unusual permissions on /Users/quentincasares/.openclaw/workspace/skills/email-to-calendar/scripts/process_calendar_replies.sh: 000
+[2026-02-28 08:18:21 UTC] [INFO] Unusual permissions on /Users/quentincasares/.openclaw/workspace/skills/email-to-calendar/scripts/calendar_delete.sh: 000
+[2026-02-28 08:18:22 UTC] [INFO] Unusual permissions on /Users/quentincasares/.openclaw/workspace/skills/email-to-calendar/scripts/track_event.sh: 000
+[2026-02-28 08:18:22 UTC] [INFO] Unusual permissions on /Users/quentincasares/.openclaw/workspace/skills/email-to-calendar/scripts/run_tests.sh: 000
+[2026-02-28 08:18:22 UTC] [INFO] Unusual permissions on /Users/quentincasares/.openclaw/workspace/skills/email-to-calendar/scripts/delete_tracked_event.sh: 000
+[2026-02-28 08:18:22 UTC] [INFO] Unusual permissions on /Users/quentincasares/.openclaw/workspace/skills/email-to-calendar/scripts/disposition_email.sh: 000
+[2026-02-28 08:18:22 UTC] [INFO] Unusual permissions on /Users/quentincasares/.openclaw/workspace/skills/email-to-calendar/scripts/email_send.sh: 000
+[2026-02-28 08:18:22 UTC] [INFO] Unusual permissions on /Users/quentincasares/.openclaw/workspace/skills/email-to-calendar/scripts/update_invite_status.sh: 000
+[2026-02-28 08:18:22 UTC] [INFO] Unusual permissions on /Users/quentincasares/.openclaw/workspace/skills/email-to-calendar/scripts/list_pending.sh: 000
+[2026-02-28 08:18:22 UTC] [INFO] Unusual permissions on /Users/quentincasares/.openclaw/workspace/skills/email-to-calendar/scripts/create_event.sh: 000
+[2026-02-28 08:18:22 UTC] [INFO] Unusual permissions on /Users/quentincasares/.openclaw/workspace/skills/email-to-calendar/scripts/lookup_event.sh: 000
+[2026-02-28 08:18:22 UTC] [INFO] Unusual permissions on /Users/quentincasares/.openclaw/workspace/skills/email-to-calendar/scripts/email_search.sh: 000
+[2026-02-28 08:18:22 UTC] [INFO] Unusual permissions on /Users/quentincasares/.openclaw/workspace/skills/email-to-calendar/scripts/email_modify.sh: 000
+[2026-02-28 08:18:22 UTC] [INFO] Checking permission manifest for firecrawl-skills...
+[2026-02-28 08:18:22 UTC] [INFO] No permission manifest found for firecrawl-skills (optional)
+[2026-02-28 08:18:22 UTC] [INFO] Checking permission manifest for giga-coding-agent...
+[2026-02-28 08:18:22 UTC] [INFO] No permission manifest found for giga-coding-agent (optional)
+[2026-02-28 08:35:27 UTC] [INFO] Checking permission manifest for git-essentials...
+[2026-02-28 08:35:27 UTC] [INFO] No permission manifest found for git-essentials (optional)
+[2026-02-28 08:35:27 UTC] [INFO] Checking permission manifest for github...
+[2026-02-28 08:35:27 UTC] [INFO] No permission manifest found for github (optional)
+[2026-02-28 08:35:27 UTC] [INFO] Checking permission manifest for gog...
+[2026-02-28 08:35:27 UTC] [INFO] No permission manifest found for gog (optional)
+[2026-02-28 08:35:27 UTC] [INFO] Checking permission manifest for humanize...
+[2026-02-28 08:35:27 UTC] [INFO] No permission manifest found for humanize (optional)
+[2026-02-28 08:35:27 UTC] [INFO] Checking permission manifest for image-cog...
+[2026-02-28 08:35:27 UTC] [INFO] No permission manifest found for image-cog (optional)
+[2026-02-28 08:35:27 UTC] [INFO] Checking permission manifest for jarvis-voice...
+[2026-02-28 08:35:27 UTC] [INFO] No permission manifest found for jarvis-voice (optional)
+[2026-02-28 08:35:27 UTC] [INFO] Checking permission manifest for moltbook-engagement...
+[2026-02-28 08:35:27 UTC] [INFO] No permission manifest found for moltbook-engagement (optional)
+[2026-02-28 08:35:27 UTC] [INFO] Unusual permissions on /Users/quentincasares/.openclaw/workspace/skills/moltbook-engagement/scripts/comment-monitor.py: 000
+[2026-02-28 08:35:27 UTC] [INFO] Unusual permissions on /Users/quentincasares/.openclaw/workspace/skills/moltbook-engagement/scripts/moltbook-post.py: 000
+[2026-02-28 08:35:27 UTC] [INFO] Unusual permissions on /Users/quentincasares/.openclaw/workspace/skills/moltbook-engagement/scripts/post-metrics.py: 000
+[2026-02-28 08:35:27 UTC] [INFO] Unusual permissions on /Users/quentincasares/.openclaw/workspace/skills/moltbook-engagement/scripts/feed-scanner.py: 000
+[2026-02-28 08:35:27 UTC] [INFO] Checking permission manifest for moltbook-interact...
+[2026-02-28 08:35:27 UTC] [INFO] No permission manifest found for moltbook-interact (optional)
+[2026-02-28 08:35:27 UTC] [INFO] Unusual permissions on /Users/quentincasares/.openclaw/workspace/skills/moltbook-interact/scripts/moltbook.sh: 000
+[2026-02-28 08:35:27 UTC] [INFO] Checking permission manifest for ontology...
+[2026-02-28 08:35:27 UTC] [INFO] No permission manifest found for ontology (optional)
+[2026-02-28 08:35:27 UTC] [INFO] Unusual permissions on /Users/quentincasares/.openclaw/workspace/skills/ontology/scripts/ontology.py: 000
+[2026-02-28 08:35:27 UTC] [INFO] Checking permission manifest for openclaw-kirocli-coding-agent...
+[2026-02-28 08:35:27 UTC] [INFO] No permission manifest found for openclaw-kirocli-coding-agent (optional)
+[2026-02-28 08:35:27 UTC] [INFO] Checking permission manifest for opencode-controller...
+[2026-02-28 08:35:27 UTC] [INFO] No permission manifest found for opencode-controller (optional)
+[2026-02-28 08:35:27 UTC] [INFO] Checking permission manifest for pdf...
+[2026-02-28 08:35:27 UTC] [INFO] No permission manifest found for pdf (optional)
+[2026-02-28 08:35:27 UTC] [INFO] Checking permission manifest for postiz...
+[2026-02-28 08:35:27 UTC] [INFO] No permission manifest found for postiz (optional)
+[2026-02-28 08:35:27 UTC] [INFO] Unusual permissions on /Users/quentincasares/.openclaw/workspace/skills/postiz/examples/basic-usage.sh: 000
+[2026-02-28 08:35:27 UTC] [INFO] Unusual permissions on /Users/quentincasares/.openclaw/workspace/skills/postiz/examples/command-line-examples.sh: 000
+[2026-02-28 08:35:27 UTC] [INFO] Checking permission manifest for proactive-messages...
+[2026-02-28 08:35:27 UTC] [INFO] No permission manifest found for proactive-messages (optional)
+[2026-02-28 08:35:27 UTC] [INFO] Checking permission manifest for prompt-engineering-expert...
+[2026-02-28 08:35:27 UTC] [INFO] No permission manifest found for prompt-engineering-expert (optional)
+[2026-02-28 08:35:27 UTC] [INFO] Checking permission manifest for second-brain...
+[2026-02-28 08:35:27 UTC] [INFO] No permission manifest found for second-brain (optional)
+[2026-02-28 08:35:27 UTC] [INFO] Unusual permissions on /Users/quentincasares/.openclaw/workspace/skills/second-brain/scripts/ensue-api.sh: 000
+[2026-02-28 08:35:27 UTC] [INFO] Checking permission manifest for self-improving-agent...
+[2026-02-28 08:35:27 UTC] [INFO] No permission manifest found for self-improving-agent (optional)
+[2026-02-28 08:35:27 UTC] [INFO] Unusual permissions on /Users/quentincasares/.openclaw/workspace/skills/self-improving-agent/hooks/openclaw/handler.js: 000
+[2026-02-28 08:35:27 UTC] [INFO] Unusual permissions on /Users/quentincasares/.openclaw/workspace/skills/self-improving-agent/scripts/activator.sh: 000
+[2026-02-28 08:35:27 UTC] [INFO] Unusual permissions on /Users/quentincasares/.openclaw/workspace/skills/self-improving-agent/scripts/extract-skill.sh: 000
+[2026-02-28 08:35:27 UTC] [INFO] Unusual permissions on /Users/quentincasares/.openclaw/workspace/skills/self-improving-agent/scripts/error-detector.sh: 000
+[2026-02-28 08:35:27 UTC] [INFO] Checking permission manifest for senior-architect...
+[2026-02-28 08:35:27 UTC] [INFO] No permission manifest found for senior-architect (optional)
+[2026-02-28 08:35:27 UTC] [INFO] Unusual permissions on /Users/quentincasares/.openclaw/workspace/skills/senior-architect/scripts/architecture_diagram_generator.py: 000
+[2026-02-28 08:35:27 UTC] [INFO] Unusual permissions on /Users/quentincasares/.openclaw/workspace/skills/senior-architect/scripts/dependency_analyzer.py: 000
+[2026-02-28 08:35:27 UTC] [INFO] Unusual permissions on /Users/quentincasares/.openclaw/workspace/skills/senior-architect/scripts/project_architect.py: 000
+[2026-02-28 08:35:27 UTC] [INFO] Checking permission manifest for skillboss...
+[2026-02-28 08:35:27 UTC] [INFO] No permission manifest found for skillboss (optional)
+[2026-02-28 08:35:27 UTC] [INFO] Unusual permissions on /Users/quentincasares/.openclaw/workspace/skills/skillboss/install/install.sh: 000
+[2026-02-28 08:35:27 UTC] [INFO] Unusual permissions on /Users/quentincasares/.openclaw/workspace/skills/skillboss/install/update.sh: 000
+[2026-02-28 08:35:27 UTC] [INFO] Unusual permissions on /Users/quentincasares/.openclaw/workspace/skills/skillboss/scripts/api-hub.js: 000
+[2026-02-28 08:35:27 UTC] [INFO] Unusual permissions on /Users/quentincasares/.openclaw/workspace/skills/skillboss/scripts/stripe-connect.js: 000
+[2026-02-28 08:35:27 UTC] [INFO] Unusual permissions on /Users/quentincasares/.openclaw/workspace/skills/skillboss/scripts/product-manager.js: 000
+[2026-02-28 08:35:27 UTC] [INFO] Unusual permissions on /Users/quentincasares/.openclaw/workspace/skills/skillboss/scripts/serve-build.js: 000
+[2026-02-28 08:35:27 UTC] [INFO] Unusual permissions on /Users/quentincasares/.openclaw/workspace/skills/skillboss/scripts/lib/fetch-retry.js: 000
+[2026-02-28 08:35:27 UTC] [INFO] Unusual permissions on /Users/quentincasares/.openclaw/workspace/skills/skillboss/templates/worker-ecommerce/tailwind.config.js: 000
+[2026-02-28 08:35:27 UTC] [INFO] Unusual permissions on /Users/quentincasares/.openclaw/workspace/skills/skillboss/templates/worker-ecommerce/postcss.config.js: 000
+[2026-02-28 08:35:27 UTC] [INFO] Checking permission manifest for slack...
+[2026-02-28 08:35:27 UTC] [INFO] No permission manifest found for slack (optional)
+[2026-02-28 08:35:27 UTC] [INFO] Checking permission manifest for sql-toolkit...
+[2026-02-28 08:35:27 UTC] [INFO] No permission manifest found for sql-toolkit (optional)
+[2026-02-28 08:35:27 UTC] [INFO] Unusual permissions on /Users/quentincasares/.openclaw/workspace/skills/sql-toolkit/sql-toolkit.sh: 000
+[2026-02-28 08:35:27 UTC] [INFO] Checking permission manifest for tmux...
+[2026-02-28 08:35:27 UTC] [INFO] No permission manifest found for tmux (optional)
+[2026-02-28 08:35:27 UTC] [INFO] Unusual permissions on /Users/quentincasares/.openclaw/workspace/skills/tmux/scripts/wait-for-text.sh: 000
+[2026-02-28 08:35:27 UTC] [INFO] Unusual permissions on /Users/quentincasares/.openclaw/workspace/skills/tmux/scripts/find-sessions.sh: 000
+[2026-02-28 08:35:27 UTC] [INFO] Skipping benign pattern: webhook\.site (matched known pattern: webhook\.site)
+[2026-02-28 08:35:27 UTC] [INFO] Checking permission manifest for trust-dashboard...
+[2026-02-28 08:35:27 UTC] [INFO] No permission manifest found for trust-dashboard (optional)
+[2026-02-28 08:35:27 UTC] [INFO] Unusual permissions on /Users/quentincasares/.openclaw/workspace/skills/trust-dashboard/scripts/trust-dashboard.sh: 000
+[2026-02-28 08:35:27 UTC] [INFO] Checking permission manifest for tweet-writer...
+[2026-02-28 08:35:27 UTC] [INFO] No permission manifest found for tweet-writer (optional)
+[2026-02-28 08:35:27 UTC] [INFO] Checking permission manifest for vestige...
+[2026-02-28 08:35:27 UTC] [INFO] No permission manifest found for vestige (optional)
+[2026-02-28 08:35:28 UTC] [INFO] Checking permission manifest for vibe-coding...
+[2026-02-28 08:35:28 UTC] [INFO] No permission manifest found for vibe-coding (optional)
+[2026-02-28 08:35:28 UTC] [INFO] Checking permission manifest for x-twitter...
+[2026-02-28 08:35:28 UTC] [INFO] No permission manifest found for x-twitter (optional)
+[2026-02-28 08:35:28 UTC] [INFO] Unusual permissions on /Users/quentincasares/.openclaw/workspace/skills/x-twitter/bin/twclaw.js: 000
+[2026-02-28 08:35:28 UTC] [INFO] All skills have SKILL.md documentation
+[2026-02-28 08:35:28 UTC] [INFO] Checking for insecure key storage...
+[2026-02-28 08:35:28 UTC] [INFO] Key storage looks secure
+[2026-02-28 08:35:28 UTC] [INFO] Checking recent command history...
+[2026-02-28 08:35:28 UTC] [INFO] No suspicious commands found in recent history
+[2026-02-28 08:35:28 UTC] [INFO] Checking for sensitive data in logs...
+[2026-02-28 08:35:28 UTC] [INFO] Logs look clean (no sensitive data found)
+[2026-02-28 08:35:28 UTC] [INFO] Checking for unsigned executables...
+[2026-02-28 08:35:28 UTC] [INFO] No unsigned executables found in skills
+[2026-02-28 08:35:28 UTC] [INFO] Checking for suspicious network connections...
+[2026-02-28 08:35:29 UTC] [INFO] No suspicious network connections found
+[2026-02-28 08:35:29 UTC] [INFO] Updating security baseline...

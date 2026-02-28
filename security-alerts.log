@@ -1,2 +1,4 @@
 [2026-02-27 06:33:31 UTC] [ALERT:HIGH] [malicious_pattern] Suspicious pattern in openclaw-kirocli-coding-agent/SKILL.md: exec.*os
 [2026-02-27 06:33:32 UTC] [ALERT:HIGH] [malicious_pattern] Suspicious pattern in sql-toolkit/SKILL.md: exec.*os
+[2026-02-28 08:35:27 UTC] [ALERT:HIGH] [malicious_pattern] Suspicious pattern in openclaw-kirocli-coding-agent/SKILL.md: exec.*os
+[2026-02-28 08:35:27 UTC] [ALERT:HIGH] [malicious_pattern] Suspicious pattern in sql-toolkit/SKILL.md: exec.*os

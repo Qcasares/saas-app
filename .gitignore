@@ -1,3 +1,13 @@
 .env
 saas-app/.env*.local
 saas-app/.env.local
+
+# AI model caches
+.fastembed_cache/
+.cache/
+*.bin
+*.safetensors
+*.onnx
+*.pt
+*.pth
+*.ckpt

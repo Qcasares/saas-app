@@ -33,6 +33,10 @@ Surface urgent/unread items.
 | Scribe | Content (Evening) | `898af5b4-c619-41d8-b4c4-4c48fac87e2d` | 5 PM | 5 min |
 | Editor | Newsletter | `f068cd53-946b-41c9-9b24-2f617c77c246` | Sun 6 PM | 15 min |
 | Architect | Engineering | `2c25d4cd-e8b5-4634-87fd-e7b328bcc64c` | 10 AM | 20 min |
+| Trader | Market Scan (Morning) | `5329c00d-ad8b-4a8f-a66e-7c465e8ac5a7` | 9 AM | 10 min |
+| Trader | Market Scan (Midday) | `dad8e6f9-ab04-4903-a494-c0ffaaa66bf8` | 1 PM | 10 min |
+| Trader | Market Scan (Evening) | `508eedd2-82b9-4267-8775-a6affdac003d` | 5 PM | 10 min |
+| Trader | End of Day Review | `dfb19c64-25de-4708-8b4d-25fe135bf2ab` | 9 PM | 10 min |
 
 ---
 
@@ -54,6 +58,12 @@ openclaw cron run f068cd53-946b-41c9-9b24-2f617c77c246 --force  # Weekly
 
 # Architect (Engineering)
 openclaw cron run 2c25d4cd-e8b5-4634-87fd-e7b328bcc64c --force  # Daily
+
+# Trader (Crypto Day Trader)
+openclaw cron run 5329c00d-ad8b-4a8f-a66e-7c465e8ac5a7 --force  # Morning
+openclaw cron run dad8e6f9-ab04-4903-a494-c0ffaaa66bf8 --force  # Midday
+openclaw cron run 508eedd2-82b9-4267-8775-a6affdac003d --force  # Evening
+openclaw cron run dfb19c64-25de-4708-8b4d-25fe135bf2ab --force  # EOD Review
 ```
 
 ### Restart Gateway (if needed)
@@ -72,6 +82,9 @@ openclaw gateway restart
 | `intel/CONTENT-DRAFTS.md` | Scribe | 6 hours post-run | Has pending drafts? |
 | `intel/NEWSLETTER-DRAFT.md` | Editor | Mon 9 AM deadline | Ready for review? |
 | `intel/TECH-NOTES.md` | Architect | 24 hours | Any entries today? |
+| `trading/MARKET-ANALYSIS.md` | Trader | 6 hours | Updated with today's date? |
+| `trading/WATCHLIST.md` | Trader | 12 hours | Active setups listed? |
+| `trading/TRADE-JOURNAL.md` | Trader | 24 hours | Today's session logged? |
 
 ### Quality Gates
 ```bash
@@ -83,6 +96,10 @@ grep -q "pending review" intel/CONTENT-DRAFTS.md 2>/dev/null && echo "✅ Drafts
 
 # Check intel file sizes (warn if >1MB)
 find intel -name "*.md" -size +1M -exec ls -lh {} \; 2>/dev/null | awk '{print "⚠️ Large file: " $9 " (" $5 ")"}'
+
+# Check trading files
+grep -q "$(date +%Y-%m-%d)" trading/MARKET-ANALYSIS.md 2>/dev/null && echo "✅ Trader analysis current" || echo "⚠️ Trader analysis stale"
+grep -q "$(date +%Y-%m-%d)" trading/TRADE-JOURNAL.md 2>/dev/null && echo "✅ Trade journal current" || echo "ℹ️ No trades logged today"
 ```
 
 ---

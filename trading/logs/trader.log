@@ -1,0 +1,50 @@
+[2026-03-01 13:32:27] =
+[2026-03-01 13:32:27] Trader Execution Script Started
+[2026-03-01 13:32:27] =
+[2026-03-01 13:32:27] Checking prerequisites...
+[2026-03-01 13:32:27] Mode: SIMULATION (paper trading)
+[2026-03-01 13:32:27] Validating trade: 
+{
+  "symbol": "BTC-USD",
+  "side": "buy",
+  "size_usd": 100,
+  "price": 65000,
+  "stop_price": 63000
+}
+[2026-03-01 13:32:27] Risk validation result:
+{
+  "approved": true,
+  "reason": "SIMULATION MODE - Paper trade only",
+  "simulation": true,
+  "warnings": []
+}
+[2026-03-01 13:32:27] Trade approved
+[2026-03-01 13:32:27] Executing SIMULATION trade
+[2026-03-01 13:32:27] =
+[2026-03-01 13:32:27] Trader Execution Complete
+[2026-03-01 13:32:27] =
+[2026-03-01 13:32:27] =
+[2026-03-01 13:32:27] Trader Execution Script Started
+[2026-03-01 13:32:27] =
+[2026-03-01 13:32:27] Checking prerequisites...
+[2026-03-01 13:32:27] Mode: SIMULATION (paper trading)
+[2026-03-01 13:32:27] Validating trade: 
+{
+  "symbol": "ETH-USD",
+  "side": "sell",
+  "size_usd": 75,
+  "price": 3550,
+  "stop_price": 3700
+}
+[2026-03-01 13:32:27] Risk validation result:
+{
+  "approved": true,
+  "reason": "SIMULATION MODE - Paper trade only",
+  "simulation": true,
+  "warnings": []
+}
+[2026-03-01 13:32:27] Trade approved
+[2026-03-01 13:32:27] Executing SIMULATION trade
+[2026-03-01 13:32:27] =
+[2026-03-01 13:32:27] Trader Execution Complete
+[2026-03-01 13:32:27] =

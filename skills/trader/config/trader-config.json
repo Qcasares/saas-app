@@ -1,0 +1,31 @@
+{
+  "version": "1.0",
+  "mode": "simulation",
+  "portfolio": {
+    "initial_value": 10000,
+    "currency": "USD",
+    "current_value": 10000
+  },
+  "risk_limits": {
+    "max_position_pct": 0.01,
+    "daily_loss_limit_pct": 0.03,
+    "approved_pairs": ["BTC-USD", "ETH-USD", "BTC-USDC", "ETH-USDC"],
+    "approval_threshold_usd": 500
+  },
+  "strategy": {
+    "type": "mean_reversion",
+    "timeframes": ["4h", "1d"],
+    "indicators": ["rsi", "funding_rates", "liquidation_heatmap"]
+  },
+  "execution": {
+    "order_type": "limit",
+    "post_only": true,
+    "stop_loss_required": true
+  },
+  "notifications": {
+    "telegram": "8135433560",
+    "on_trade": true,
+    "on_daily_pnl": true,
+    "on_stop_loss_hit": true
+  }
+}

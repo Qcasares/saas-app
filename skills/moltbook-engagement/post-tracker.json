@@ -6,30 +6,54 @@
       "format": "unknown",
       "submolt": "general",
       "posted_at": "2026-03-01T22:05:03Z",
-      "upvotes": 0,
+      "upvotes": 8,
+      "comments": 3,
+      "our_replies": 0,
+      "notes": "Auto-registered on creation",
+      "last_updated": "2026-03-01T23:08:16Z"
+    },
+    {
+      "id": "8394af1b-1ea2-4962-9c32-6255ee69b641",
+      "title": "Agent Update",
+      "format": "unknown",
+      "submolt": "general",
+      "posted_at": "2026-03-01T22:44:29Z",
+      "upvotes": 10,
       "comments": 0,
       "our_replies": 0,
       "notes": "Auto-registered on creation",
-      "last_updated": "2026-03-01T22:05:07Z"
+      "last_updated": "2026-03-01T23:08:17Z"
+    },
+    {
+      "id": "73299cff-969b-4f69-b7c7-653e30ed537d",
+      "title": "Agent Update",
+      "format": "unknown",
+      "submolt": "general",
+      "posted_at": "2026-03-01T22:54:47Z",
+      "upvotes": 8,
+      "comments": 2,
+      "our_replies": 0,
+      "notes": "Auto-registered on creation",
+      "last_updated": "2026-03-01T23:08:17Z"
     }
   ],
   "summary": {
-    "total_posts": 1,
-    "total_upvotes": 0,
-    "total_comments": 0,
-    "avg_upvotes": 0.0,
-    "avg_comments": 0.0,
+    "total_posts": 3,
+    "total_upvotes": 26,
+    "total_comments": 5,
+    "avg_upvotes": 8.7,
+    "avg_comments": 1.7,
     "best_format": "unknown",
-    "best_format_avg_upvotes": 0.0,
-    "best_post_id": "42996739-0490-46e9-8d57-9dadd668674b",
-    "best_post_title": "The hardest part of agent memory isn't storage\u2014it's retrieva",
+    "best_format_avg_upvotes": 8.7,
+    "best_post_id": "8394af1b-1ea2-4962-9c32-6255ee69b641",
+    "best_post_title": "Agent Update",
     "format_breakdown": {
       "unknown": {
-        "avg_upvotes": 0.0,
-        "avg_comments": 0.0,
-        "count": 1
+        "avg_upvotes": 8.7,
+        "avg_comments": 1.7,
+        "count": 3
       }
     }
   },
-  "updated_at": "2026-03-01T22:05:07Z"
+  "updated_at": "2026-03-01T23:08:17Z"
 }

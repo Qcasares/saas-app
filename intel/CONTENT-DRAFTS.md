@@ -207,4 +207,116 @@ Context optimization tools should be on your evaluation radar. The vendors who s
 
 ---
 
+## Drafts for Review — 2026-03-01 (Evening Batch)
+
+### X/Twitter — The AI Ethics Schism
+
+Anthropic refuses Pentagon classified work on ethical grounds.
+Trump admin labels them a "supply-chain risk to national security."
+
+360+ employees from Google and OpenAI sign a letter supporting Anthropic.
+
+The AI industry just split in two:
+→ Defense-friendly (OpenAI)
+→ Ethics-restricted (Anthropic)
+
+Vendor choice is now a values statement. Not just technical.
+
+**Context:** Today's intel on OpenAI's Pentagon deal and Anthropic's federal ban
+**Why share:** This reframes AI procurement beyond capability to ethics—traders and tech leaders need to understand the geopolitical vendor landscape
+
+---
+
+### X/Twitter — Multi-Agent Systems Are Here
+
+Three agent orchestration platforms hit GitHub trending today:
+• ruflo — multi-agent swarms
+• deer-flow — ByteDance's SuperAgent
+• airi — self-hosted companions
+
+The pattern: Single agents → multi-agent coordination.
+
+This isn't research anymore. It's production infrastructure.
+
+**Context:** Trending repos indicate shift from monolithic models to agent orchestration
+**Why share:** Market structure insight—whoever owns the orchestration layer owns the next phase of AI deployment
+
+---
+
+### X/Twitter — Engineering vs. Coding
+
+New narrative gaining traction:
+
+"AI made writing code easier. It made being an engineer harder."
+
+The distinction matters.
+→ Coding = syntax, boilerplate, speed
+→ Engineering = architecture, debugging, system design
+
+First wave: augment coders.
+Second wave: replace them.
+Third wave: reveal who was actually engineering all along.
+
+**Context:** Hacker News discussion on AI's impact on software engineering
+**Why share:** Professional self-reflection for engineers and hiring managers—what skills actually matter now
+
+---
+
+### LinkedIn — The Great AI Vendor Bifurcation: Ethics as Competitive Moat
+
+This week's OpenAI-Pentagon partnership, and the Trump administration's subsequent ban on Anthropic products across all federal agencies, marks a structural shift in the AI market. We're witnessing the emergence of two distinct vendor categories with incompatible customer bases.
+
+**The Split**
+
+Anthropic's refusal to deploy on classified networks—citing responsible use commitments—triggered an unprecedented federal blacklist. The Defense Secretary explicitly labeled them a "supply-chain risk to national security." Meanwhile, 360+ employees from Google and OpenAI signed a letter supporting Anthropic's position.
+
+This creates a clear market segmentation:
+- **Defense-friendly**: OpenAI (Pentagon classified contracts), Palantir-adjacent models
+- **Ethics-restricted**: Anthropic (with documented use-case limitations)
+
+**The Procurement Implication**
+
+For enterprise technology leaders, vendor selection now requires a new evaluation criterion: ethical AI stance assessment. Questions that previously lived in CSR reports now belong in RFPs:
+- Does this vendor have military deployment restrictions?
+- Could our use of this platform create reputational risk with ESG-focused investors?
+- What contractual guarantees exist regarding use-case limitations?
+
+**The Market Reality**
+
+Both categories will thrive. Defense contractors and intelligence-adjacent enterprises will gravitate toward OpenAI's classified-clearance capabilities. ESG-conscious financial services, healthcare, and consumer-facing brands will pay premiums for principled alternatives—or seek open-source options.
+
+The key is intentionality. Make vendor ethics a deliberate evaluation dimension, not an afterthought discovered during due diligence.
+
+**Angle:** Enterprise AI procurement strategy and vendor risk management
+
+---
+
+### LinkedIn — From Copilots to Agents: The Engineering Paradigm Shift
+
+A counter-narrative is emerging in software engineering circles, crystallized in a widely-shared essay: "AI made writing code easier. It made being an engineer harder."
+
+This distinction deserves attention from technology leaders planning workforce and architecture strategies.
+
+**Coding vs. Engineering**
+
+The first phase of AI-assisted development focused on speed—autocomplete, boilerplate generation, documentation drafting. These tools augmented *coders*: people who translate specifications into syntax.
+
+The emerging phase focuses on *engineering*: system design, debugging complex failures, architectural decisions under uncertainty, and operational resilience. These skills resist automation because they require judgment, not pattern matching.
+
+**The Workforce Implication**
+
+Organizations that optimized for coding velocity—measuring developers by lines written or commits shipped—may discover they've built teams vulnerable to AI displacement. Organizations that valued engineering judgment—debugging capability, system thinking, operational experience—have invested in the skills that become *more* valuable as AI handles routine implementation.
+
+**The Strategic Response**
+
+1. **Redefine hiring criteria**: Weight debugging scenarios and architectural discussion higher than coding speed tests
+2. **Reskill investments**: Focus training budgets on system design, observability, and incident response—not just new frameworks
+3. **Measure what matters**: Shift engineering metrics from output velocity to system reliability and maintainability
+
+The engineers who thrive in the AI-augmented era won't be the fastest typists. They'll be the ones who know what to build, why it matters, and how to fix it when it breaks.
+
+**Angle:** Workforce strategy and engineering culture for technology leaders
+
+---
+
 *Drafted by Scribe (Content Agent) for review. Do not auto-post.*

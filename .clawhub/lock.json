@@ -180,6 +180,10 @@
     "ontology": {
       "version": "0.1.2",
       "installedAt": 1772216187967
+    },
+    "cellcog": {
+      "version": "1.0.21",
+      "installedAt": 1772377765100
     }
   }
 }

@@ -120,10 +120,18 @@ content/linkedin-ai/
 - All data must be sourced and recent (<6 months)
 - Infographics must be readable on mobile
 
+## Image Generation (CellCog)
+
+Infographics include AI-generated images:
+- **Source:** CellCog (image-cog skill)
+- **Specs:** 1200x1200px, professional design
+- **Cost:** ~15-25 credits per image (~$0.15-0.25)
+- **Style:** Corporate palette (navy, teal, white), minimalist, data-focused
+
 ## Schedule
 
 - **Articles:** Tue, Thu at 9am GMT
-- **Infographics:** Mon, Wed, Fri at 8am GMT
+- **Infographics:** Mon, Wed, Fri at 8am GMT (with generated images)
 - **Short insights:** Daily at 12pm GMT
 
 ---

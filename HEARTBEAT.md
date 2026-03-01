@@ -110,13 +110,21 @@ grep -q "$(date +%Y-%m-%d)" trading/TRADE-JOURNAL.md 2>/dev/null && echo "✅ Tr
 ```
 Sherlock (8 AM) → Scribe (9 AM) [DEPENDENT]
 Sherlock (2 PM) → Scribe (5 PM) [DEPENDENT]
-Sherlock (6 PM) → [Next day cycle]
+Sherlock (8 AM) → Trader (9 AM) [DEPENDENT - CONSERVATIVE]
+Sherlock (2 PM) → Trader (1 PM) [DEPENDENT - CONSERVATIVE]
+Sherlock (6 PM) → Trader (5 PM) [DEPENDENT - CONSERVATIVE]
+Sherlock (6 PM) → Trader (9 PM EOD) [DEPENDENT - CONSERVATIVE]
 ```
 
 ### Dependency Rules
 | Condition | Action |
 |-----------|--------|
-| Sherlock missed 8 AM run | Skip Scribe 9 AM, alert " intel stale" |
+| Sherlock missed 8 AM run | Skip Scribe 9 AM, alert "intel stale" |
+| Sherlock missed 8 AM run | Skip Trader 9 AM market scan, alert "BLOCKED: research stale" |
+| Sherlock missed 2 PM run | Skip Trader 1 PM scan, alert "BLOCKED: research stale" |
+| Sherlock missed 6 PM run | Skip Trader 5 PM & 9 PM scans, alert "BLOCKED: research stale" |
+| `intel/DAILY-INTEL.md` age >2h at trade time | **HARD BLOCK** — Trader cannot execute |
+| `intel/DAILY-INTEL.md` age >4h at scan time | **HARD BLOCK** — Trader scan skipped |
 | `intel/DAILY-INTEL.md` age >24h | Content may be stale, flag for review |
 | Sherlock running >15 min | Possible hang, check and restart if needed |
 | Multiple agents failing | Gateway issue likely, restart gateway |
@@ -128,6 +136,58 @@ Before Scribe runs, verify:
 3. File timestamp is from today
 
 If checks fail → Log to `memory/heartbeat-state.json`, skip run, alert Q.
+
+---
+
+### Pre-Flight Checks for Trader (CONSERVATIVE MODE)
+**Policy:** No trades without fresh research. Hard blocks, no exceptions.
+
+Before ANY Trader run, verify:
+1. **Sherlock completed within last 2 hours** (strict threshold for trading)
+2. `intel/DAILY-INTEL.md` exists and has content
+3. File contains today's date (`YYYY-MM-DD`)
+4. Market analysis section is present and non-empty
+
+**Pre-flight validation script:**
+```bash
+#!/bin/bash
+# scripts/trader-preflight.sh
+INTEL_FILE="intel/DAILY-INTEL.md"
+MAX_AGE_MINUTES=120  # 2 hours strict
+
+if [ ! -f "$INTEL_FILE" ]; then
+  echo "🚫 BLOCKED: intel/DAILY-INTEL.md missing"
+  exit 1
+fi
+
+FILE_AGE_MIN=$(( ($(date +%s) - $(stat -c %Y "$INTEL_FILE" 2>/dev/null || stat -f %m "$INTEL_FILE")) / 60 ))
+
+if [ "$FILE_AGE_MIN" -gt "$MAX_AGE_MINUTES" ]; then
+  echo "🚫 BLOCKED: Research stale (${FILE_AGE_MIN}min old, max ${MAX_AGE_MINUTES}min)"
+  echo "   Last Sherlock run: $(stat -c %y "$INTEL_FILE" 2>/dev/null || stat -f %Sm "$INTEL_FILE")"
+  exit 1
+fi
+
+if ! grep -q "$(date +%Y-%m-%d)" "$INTEL_FILE"; then
+  echo "🚫 BLOCKED: intel file missing today's date"
+  exit 1
+fi
+
+echo "✅ Research fresh (${FILE_AGE_MIN}min old), proceeding"
+exit 0
+```
+
+**If checks fail:**
+- **Log:** `memory/heartbeat-state.json` with `traderBlocked: true`, `blockReason: "research_stale"`
+- **Skip:** Trader job aborted before execution
+- **Alert:** Orange escalation — Telegram alert with context
+- **No auto-recovery:** Manual intervention required (force-run Sherlock first)
+
+**Override (emergency only):**
+```bash
+# Use only when you explicitly want to trade despite stale research
+openclaw cron run <job-id> --force --skip-deps
+```
 
 ---
 
@@ -145,6 +205,7 @@ If checks fail → Log to `memory/heartbeat-state.json`, skip run, alert Q.
 - Job stale 48-72 hours
 - 2 consecutive failures
 - Dependency chain broken (Scribe without Sherlock)
+- **Trader blocked due to stale research** (conservative enforcement)
 **Action:**
 - Send Telegram alert with context
 - Include recovery command for manual run
@@ -283,7 +344,11 @@ Location: `memory/heartbeat-state.json`
     },
     "dependencies": {
       "scribeBlocked": false,
-      "blockReason": null
+      "scribeBlockReason": null,
+      "traderBlocked": false,
+      "traderBlockReason": null,
+      "lastSherlockRun": "2026-02-28T18:00:00Z",
+      "researchFreshnessMinutes": 45
     },
     "resources": {
       "intelDirMB": 45,
@@ -348,5 +413,5 @@ Recovery: Run `openclaw cron run cfdb2c59... --force`
 
 ---
 
-*Last updated: 2026-02-28 by KingKong 🦍*
-*Protocol version: 2.0 | Agents: 7 | Escalation: 3-tier*
+*Last updated: 2026-03-01 by KingKong 🦍*
+*Protocol version: 2.1 | Agents: 7 | Escalation: 3-tier | Trader: conservative*

@@ -160,7 +160,8 @@ Skills are shared. Your setup is yours. Keeping them apart means you can update 
 ### Social Media
 
 - **postiz** — Schedule posts to 28+ platforms (X, LinkedIn, Reddit, etc.)
-  - Requires: `POSTIZ_API_KEY` from postiz.com
+  - ✅ **POSTIZ_API_KEY**: configured
+  - Integration ID: `cmm7s3d7200abno0yf4upaxc8` (X: Dilbert5404442/@qbot)
   - Usage: `postiz posts:create -c "Content" -s "2024-12-31T12:00:00Z"`
   - Supports images, videos, platform-specific settings
   - Docs: `~/.openclaw/workspace/skills/postiz/SKILL.md`

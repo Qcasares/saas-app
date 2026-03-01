@@ -1,4 +1,0 @@
-[2026-02-18 15:39:51] Workflow orchestrator initialized
-[2026-02-18 15:39:51] Workflow wf_1771429191_51d2d801: transitioned to PLANNING
-[2026-02-18 15:39:51] ERROR: Failed to generate plan for wf_1771429191_51d2d801
-[2026-02-18 15:39:51] Workflow wf_1771429191_51d2d801: transitioned to FAILED

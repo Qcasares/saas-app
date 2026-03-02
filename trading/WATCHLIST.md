@@ -1,134 +1,103 @@
-# Trading Watchlist — March 1, 2026
-**Last Updated:** Sunday, March 1, 2026 — 5:01 PM (Europe/London)
+# Trading Watchlist — March 2, 2026 (Morning)
+**Last Updated:** Monday, March 2, 2026 — 9:08 AM (Europe/London)
 
 ---
 
 ## Active Setups
 
-### 🔶 BTC/USD — ACCUMULATION ZONE
+### 🔶 BTC/USD — ACCUMULATION ZONE (HOLDING)
 **Status:** WATCH / ACCUMULATE  
-**Current:** $66,180  
-**Setup:** Historic oversold accumulation
+**Current:** $66,196  
+**Setup:** Historic oversold accumulation — Strategy floor test
 
 **Thesis:**
 - RSI at 25.6 (all-time low, only 3rd sub-30 in history)
-- Fear & Greed at 14 (Extreme Fear, recovering from 5)
-- Strategy cost basis at $66,385 acting as floor
-- Negative funding rates suggest short squeeze potential
-- Prior sub-30 RSI readings (2015, 2018) preceded 18x-100x rallies
+- Fear & Greed at 14 (Extreme Fear)
+- Strategy cost basis at $66,385 acting as critical floor
+- Weekend spike to $68,200 failed — consolidation continues
+- Negative funding rates suggest short squeeze potential remains
+
+**Key Levels:**
+| Level | Price | Significance |
+|-------|-------|--------------|
+| 🔴 Critical | $66,385 | Strategy floor — DO NOT BREAK |
+| 🟡 Support | $63,000 | Accumulation zone low |
+| 🟡 Resistance | $68,200 | Weekend high |
+| 🟢 Bullish | $70,000 | Reclaim = trend shift |
+| 🟢 Target | $100K+ | Full trend reversal |
 
 **Entry Zones:**
 - Primary: $63,000 - $66,500 (current zone)
-- Aggressive: $60,000 - $63,000 (if panic selling occurs)
+- Aggressive: $60,000 - $63,000 (if panic selling)
 
 **Invalidation:** Sustained close below $60,000
 
-**Targets:**
-- T1: $70,000 (psychological, 1:2 R/R)
-- T2: $75,000 (resistance cluster)
-- T3: $100,000+ (trend reversal)
-
-**Position Sizing:** 1-2% risk max
-**Leverage:** Spot or 2x maximum
+**Position Sizing:** 1-2% risk max  
+**Leverage:** Spot or 2x maximum  
 **Timeframe:** Multi-month hold
 
 **Alerts:**
-- 🔔 Price below $66,000 (Strategy floor approach)
+- 🔔 Price below $66,000 (Strategy floor breach risk)
 - 🔔 Price below $63,000 (panic selling)
-- 🔔 RSI crosses above 30 (momentum shift)
-- 🔔 ETF inflows turn positive (institutional reversal)
+- 🔔 Break above $68,200 (momentum shift)
 
 ---
 
 ### 🔶 ETH/USD — WAIT
 **Status:** STAND ASIDE  
-**Current:** $1,974  
-**Setup:** No clear edge — underperforming
+**Current:** $1,973  
+**Setup:** No clear edge — underperforming BTC
 
 **Thesis:**
 - ETH -60% from ATH vs BTC -47% — relative weakness
-- 83.6% of liquidations were longs — extreme pain
-- Institutions rotating from ETH to gold/BTC
-- Needs to reclaim $2,680 for bullish structure
+- Failed to participate in weekend BTC spike
+- Institutions rotating to gold/BTC
+- Needs $2,680 reclaim for bullish structure
 
-**Entry:** NO ENTRY — wait for $2,680 reclaim
+**Entry:** NO ENTRY
 
-**Invalidation:** Close below $1,800
-
-**Note:** Better risk-reward in BTC currently. ETH may outperform later in cycle but not yet.
+**Note:** Better risk-reward in BTC currently. ETH may outperform later in cycle.
 
 ---
 
-### 🔶 SOL/USD — HIGH RISK / HIGH REWARD
-**Status:** WATCH / SPECULATIVE  
-**Current:** $84.83  
-**Setup:** Extreme positioning divergence
+### 🔶 SOL/USD — HIGH RISK / WAIT FOR RESOLUTION
+**Status:** WATCH / STAND ASIDE  
+**Current:** $85.00 (est.)  
+**Setup:** Extreme positioning divergence unresolved
 
 **Thesis:**
-- Strongest large-cap recovery (+7.56% intraday)
-- 70.1% long / 29.9% short with negative funding (-0.0046%)
-- Tension must resolve — liquidation cascade likely
-- Could squeeze to $100+ OR dump to $70
-
-**Entry:** NO ENTRY — wait for resolution
+- Strongest large-cap recovery last week
+- 70% long / 30% short with negative funding
+- Tension unresolved — liquidation cascade still likely
 
 **Trade Plan:**
-- IF breaks $90 with volume → Long toward $100
-- IF breaks below $80 → Short toward $70
-- This is a breakout play, not a range trade
+- IF breaks $90 with volume → Consider long toward $100
+- IF breaks below $80 → Consider short toward $70
+- Wait for directional resolution before entering
 
-**Position Sizing:** 0.5% risk max (speculative)
+**Position Sizing:** 0.5% risk max (speculative)  
 **Leverage:** None — spot only
-
-**Note:** Dangerous setup. Wait for directional resolution before entering.
 
 ---
 
 ## Monitoring List
 
 ### XRP/USD
-- Funding rate: -0.0131% (most negative)
-- 67.4% long despite extreme negative funding
+- Funding rate most negative among majors (-0.013%)
 - Potential short squeeze candidate if sentiment shifts
 - Watch for regulatory catalysts
 
-### BNB/USD
-- Holding $600-$630 range well
-- Exchange token with utility
-- Less correlated to macro BTC moves
-- Monitor for relative strength plays
-
-### Hyperliquid (HYPE)
-- $31.23 (+9.87% 24h)
-- Oil-linked futures surged 5% on Iran news
-- Derivatives infrastructure play
-- Watch for continued momentum
-
 ### Gold-Backed Tokens (PAXG, XAUT)
-- PAXG: $5,344 (+0.65%)
-- $310M volume on Binance (risk-off demand)
 - Rotation from crypto to gold visible
+- PAXG holding $5,300+ on risk-off demand
 - Consider as hedge allocation
 
 ---
 
-## Key Levels Summary
-
-| Asset | Critical Support | Key Resistance | Bullish Trigger |
-|-------|------------------|----------------|-----------------|
-| BTC | $66,385 / $63,000 | $68,200 / $70,000 | Reclaim $70K |
-| ETH | $1,800 | $2,055 | Reclaim $2,680 |
-| SOL | $77 | $88.90 | Break $90 |
-| XRP | $1.27 | $1.43 | Funding flip |
-
----
-
-## Economic Calendar Alerts
+## Economic Calendar
 
 | Date | Event | Impact |
 |------|-------|--------|
-| Mar 2 | ISM Manufacturing PMI | Medium |
-| Mar 5 | ADP Employment | Medium |
 | **Mar 7** | **Non-Farm Payrolls** | **HIGH** |
 | Mar 17-18 | FOMC Meeting | **HIGH** |
 | Mid-Mar | Feb CPI | **HIGH** |
@@ -139,7 +108,6 @@
 
 - ✅ Max 1-2% risk per trade
 - ✅ Stop-losses defined BEFORE entry
-- ✅ No leverage in choppy conditions
 - ✅ DCA into weakness, not strength
 - ✅ Let extreme fear persist — don't FOMO
 - ✅ Process over outcomes
@@ -148,13 +116,13 @@
 
 ## This Week's Focus
 
-1. **Friday NFP** — Highest volatility event
-2. **BTC $66,385 level** — Strategy floor test
+1. **Friday NFP** — Highest volatility event for BTC
+2. **BTC $66,385 level** — Critical Strategy floor holding
 3. **ETF flow reversal** — First positive week = trend signal
 4. **Iran developments** — Geopolitical tail risk
-5. **FOMC March 17-18** — Rate decision critical
 
 ---
 
-*Watchlist by: KingKong*  
-*Strategy: Accumulate BTC in fear, stand aside in ETH, wait for SOL resolution*
+**Strategy Summary:** Accumulate BTC in fear, stand aside in ETH, wait for SOL resolution. Patience is the trade.
+
+*Watchlist by: KingKong*

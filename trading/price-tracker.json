@@ -1,0 +1,11 @@
+{
+  "lastCheck": "2026-03-02T19:35:00Z",
+  "prices": {
+    "BTC": 68816,
+    "ETH": 2032.72,
+    "SOL": 87.33
+  },
+  "thresholdPercent": 2.0,
+  "lastAlert": null,
+  "checksToday": 1
+}

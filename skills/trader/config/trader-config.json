@@ -1,6 +1,11 @@
 {
-  "version": "1.0",
-  "mode": "simulation",
+  "version": "1.1",
+  "mode": "live",
+  "models": {
+    "analysis": "claude-sonnet-4",
+    "execution": "kimi-coding/k2p5",
+    "default": "claude-sonnet-4"
+  },
   "portfolio": {
     "initial_value": 10000,
     "currency": "USD",
@@ -9,7 +14,7 @@
   "risk_limits": {
     "max_position_pct": 0.01,
     "daily_loss_limit_pct": 0.03,
-    "approved_pairs": ["BTC-USD", "ETH-USD", "BTC-USDC", "ETH-USDC"],
+    "approved_pairs": ["BTC-USD", "ETH-USD", "SOL-USD", "BTC-USDC", "ETH-USDC"],
     "approval_threshold_usd": 500
   },
   "strategy": {
@@ -27,5 +32,10 @@
     "on_trade": true,
     "on_daily_pnl": true,
     "on_stop_loss_hit": true
+  },
+  "api": {
+    "provider": "coinbase",
+    "key_id": "577c27e6-22e2-4901-af7e-9caa79720505",
+    "status": "active"
   }
 }

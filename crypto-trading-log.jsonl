@@ -9685,3 +9685,147 @@
 {"timestamp": "2026-03-02T00:06:51.394005", "level": "INFO", "message": "Estimated monthly yield: $95.00", "portfolio_value": 1000.0}
 {"timestamp": "2026-03-02T00:06:51.394048", "level": "INFO", "message": "Scanning for crypto alpha", "portfolio_value": 1000.0}
 {"timestamp": "2026-03-02T00:06:51.711719", "level": "SUMMARY", "message": "Portfolio: $1000.00 | PnL: $0.00 | Positions: 0 | Risk: OK", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T00:12:00.042115", "level": "INFO", "message": "Starting points farming cycle", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T00:12:00.042196", "level": "INFO", "message": "Found 3 farming opportunities", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T00:12:00.042240", "level": "ACTION", "message": "\u2705 Check Dreamcash points balance", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T00:12:00.042301", "level": "ACTION", "message": "\u2705 Claim any available rewards", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T00:12:00.042348", "level": "ACTION", "message": "\u2705 Check referral status", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T00:12:00.042394", "level": "ACTION", "message": "\u2705 Review trading volume", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T00:12:00.042433", "level": "ACTION", "message": "\u2705 Check points accumulation", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T00:12:00.042478", "level": "ACTION", "message": "\ud83d\udcc5 Weekly: Optimize trading strategy", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T00:12:00.042546", "level": "ACTION", "message": "\ud83d\udcc5 Weekly: Review and adjust positions", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T00:12:00.042612", "level": "INFO", "message": "Estimated monthly yield: $95.00", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T00:12:00.042646", "level": "INFO", "message": "Scanning for crypto alpha", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T00:12:00.393769", "level": "SUMMARY", "message": "Portfolio: $1000.00 | PnL: $0.00 | Positions: 0 | Risk: OK", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T00:17:08.767630", "level": "INFO", "message": "Starting points farming cycle", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T00:17:08.767844", "level": "INFO", "message": "Found 3 farming opportunities", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T00:17:08.767887", "level": "ACTION", "message": "\u2705 Check Dreamcash points balance", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T00:17:08.767929", "level": "ACTION", "message": "\u2705 Claim any available rewards", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T00:17:08.767963", "level": "ACTION", "message": "\u2705 Check referral status", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T00:17:08.767991", "level": "ACTION", "message": "\u2705 Review trading volume", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T00:17:08.768021", "level": "ACTION", "message": "\u2705 Check points accumulation", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T00:17:08.768055", "level": "ACTION", "message": "\ud83d\udcc5 Weekly: Optimize trading strategy", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T00:17:08.768084", "level": "ACTION", "message": "\ud83d\udcc5 Weekly: Review and adjust positions", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T00:17:08.768123", "level": "INFO", "message": "Estimated monthly yield: $95.00", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T00:17:08.768151", "level": "INFO", "message": "Scanning for crypto alpha", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T00:17:09.153616", "level": "SUMMARY", "message": "Portfolio: $1000.00 | PnL: $0.00 | Positions: 0 | Risk: OK", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T00:22:17.682259", "level": "INFO", "message": "Starting points farming cycle", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T00:22:17.682512", "level": "INFO", "message": "Found 3 farming opportunities", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T00:22:17.682548", "level": "ACTION", "message": "\u2705 Check Dreamcash points balance", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T00:22:17.682581", "level": "ACTION", "message": "\u2705 Claim any available rewards", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T00:22:17.682622", "level": "ACTION", "message": "\u2705 Check referral status", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T00:22:17.682672", "level": "ACTION", "message": "\u2705 Review trading volume", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T00:22:17.682729", "level": "ACTION", "message": "\u2705 Check points accumulation", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T00:22:17.682768", "level": "ACTION", "message": "\ud83d\udcc5 Weekly: Optimize trading strategy", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T00:22:17.682815", "level": "ACTION", "message": "\ud83d\udcc5 Weekly: Review and adjust positions", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T00:22:17.682860", "level": "INFO", "message": "Estimated monthly yield: $95.00", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T00:22:17.682887", "level": "INFO", "message": "Scanning for crypto alpha", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T00:22:18.000417", "level": "SUMMARY", "message": "Portfolio: $1000.00 | PnL: $0.00 | Positions: 0 | Risk: OK", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T00:27:26.538260", "level": "INFO", "message": "Starting points farming cycle", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T00:27:26.538485", "level": "INFO", "message": "Found 3 farming opportunities", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T00:27:26.538521", "level": "ACTION", "message": "\u2705 Check Dreamcash points balance", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T00:27:26.538560", "level": "ACTION", "message": "\u2705 Claim any available rewards", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T00:27:26.538605", "level": "ACTION", "message": "\u2705 Check referral status", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T00:27:26.538651", "level": "ACTION", "message": "\u2705 Review trading volume", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T00:27:26.538696", "level": "ACTION", "message": "\u2705 Check points accumulation", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T00:27:26.538741", "level": "ACTION", "message": "\ud83d\udcc5 Weekly: Optimize trading strategy", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T00:27:26.538812", "level": "ACTION", "message": "\ud83d\udcc5 Weekly: Review and adjust positions", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T00:27:26.538876", "level": "INFO", "message": "Estimated monthly yield: $95.00", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T00:27:26.538916", "level": "INFO", "message": "Scanning for crypto alpha", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T00:27:26.882880", "level": "SUMMARY", "message": "Portfolio: $1000.00 | PnL: $0.00 | Positions: 0 | Risk: OK", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T00:32:35.481705", "level": "INFO", "message": "Starting points farming cycle", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T00:32:35.481812", "level": "INFO", "message": "Found 3 farming opportunities", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T00:32:35.481856", "level": "ACTION", "message": "\u2705 Check Dreamcash points balance", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T00:32:35.481892", "level": "ACTION", "message": "\u2705 Claim any available rewards", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T00:32:35.481924", "level": "ACTION", "message": "\u2705 Check referral status", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T00:32:35.481958", "level": "ACTION", "message": "\u2705 Review trading volume", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T00:32:35.481986", "level": "ACTION", "message": "\u2705 Check points accumulation", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T00:32:35.482014", "level": "ACTION", "message": "\ud83d\udcc5 Weekly: Optimize trading strategy", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T00:32:35.482042", "level": "ACTION", "message": "\ud83d\udcc5 Weekly: Review and adjust positions", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T00:32:35.482079", "level": "INFO", "message": "Estimated monthly yield: $95.00", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T00:32:35.482106", "level": "INFO", "message": "Scanning for crypto alpha", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T00:32:35.840072", "level": "SUMMARY", "message": "Portfolio: $1000.00 | PnL: $0.00 | Positions: 0 | Risk: OK", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T00:37:44.325640", "level": "INFO", "message": "Starting points farming cycle", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T00:37:44.325850", "level": "INFO", "message": "Found 3 farming opportunities", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T00:37:44.325890", "level": "ACTION", "message": "\u2705 Check Dreamcash points balance", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T00:37:44.325921", "level": "ACTION", "message": "\u2705 Claim any available rewards", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T00:37:44.325967", "level": "ACTION", "message": "\u2705 Check referral status", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T00:37:44.326013", "level": "ACTION", "message": "\u2705 Review trading volume", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T00:37:44.326060", "level": "ACTION", "message": "\u2705 Check points accumulation", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T00:37:44.326119", "level": "ACTION", "message": "\ud83d\udcc5 Weekly: Optimize trading strategy", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T00:37:44.326161", "level": "ACTION", "message": "\ud83d\udcc5 Weekly: Review and adjust positions", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T00:37:44.326200", "level": "INFO", "message": "Estimated monthly yield: $95.00", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T00:37:44.326244", "level": "INFO", "message": "Scanning for crypto alpha", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T00:37:44.681136", "level": "SUMMARY", "message": "Portfolio: $1000.00 | PnL: $0.00 | Positions: 0 | Risk: OK", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T00:42:53.066435", "level": "INFO", "message": "Starting points farming cycle", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T00:42:53.066904", "level": "INFO", "message": "Found 3 farming opportunities", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T00:42:53.066953", "level": "ACTION", "message": "\u2705 Check Dreamcash points balance", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T00:42:53.066993", "level": "ACTION", "message": "\u2705 Claim any available rewards", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T00:42:53.067030", "level": "ACTION", "message": "\u2705 Check referral status", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T00:42:53.067072", "level": "ACTION", "message": "\u2705 Review trading volume", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T00:42:53.067126", "level": "ACTION", "message": "\u2705 Check points accumulation", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T00:42:53.067180", "level": "ACTION", "message": "\ud83d\udcc5 Weekly: Optimize trading strategy", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T00:42:53.067232", "level": "ACTION", "message": "\ud83d\udcc5 Weekly: Review and adjust positions", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T00:42:53.067296", "level": "INFO", "message": "Estimated monthly yield: $95.00", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T00:42:53.067333", "level": "INFO", "message": "Scanning for crypto alpha", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T00:42:53.393311", "level": "SUMMARY", "message": "Portfolio: $1000.00 | PnL: $0.00 | Positions: 0 | Risk: OK", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T00:48:01.843594", "level": "INFO", "message": "Starting points farming cycle", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T00:48:01.843814", "level": "INFO", "message": "Found 3 farming opportunities", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T00:48:01.843863", "level": "ACTION", "message": "\u2705 Check Dreamcash points balance", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T00:48:01.843899", "level": "ACTION", "message": "\u2705 Claim any available rewards", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T00:48:01.843946", "level": "ACTION", "message": "\u2705 Check referral status", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T00:48:01.843987", "level": "ACTION", "message": "\u2705 Review trading volume", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T00:48:01.844029", "level": "ACTION", "message": "\u2705 Check points accumulation", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T00:48:01.844073", "level": "ACTION", "message": "\ud83d\udcc5 Weekly: Optimize trading strategy", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T00:48:01.844106", "level": "ACTION", "message": "\ud83d\udcc5 Weekly: Review and adjust positions", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T00:48:01.844156", "level": "INFO", "message": "Estimated monthly yield: $95.00", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T00:48:01.844192", "level": "INFO", "message": "Scanning for crypto alpha", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T00:48:02.181983", "level": "SUMMARY", "message": "Portfolio: $1000.00 | PnL: $0.00 | Positions: 0 | Risk: OK", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T00:53:10.678555", "level": "INFO", "message": "Starting points farming cycle", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T00:53:10.678762", "level": "INFO", "message": "Found 3 farming opportunities", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T00:53:10.678798", "level": "ACTION", "message": "\u2705 Check Dreamcash points balance", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T00:53:10.678847", "level": "ACTION", "message": "\u2705 Claim any available rewards", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T00:53:10.678884", "level": "ACTION", "message": "\u2705 Check referral status", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T00:53:10.678932", "level": "ACTION", "message": "\u2705 Review trading volume", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T00:53:10.678998", "level": "ACTION", "message": "\u2705 Check points accumulation", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T00:53:10.679047", "level": "ACTION", "message": "\ud83d\udcc5 Weekly: Optimize trading strategy", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T00:53:10.679083", "level": "ACTION", "message": "\ud83d\udcc5 Weekly: Review and adjust positions", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T00:53:10.679134", "level": "INFO", "message": "Estimated monthly yield: $95.00", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T00:53:10.679176", "level": "INFO", "message": "Scanning for crypto alpha", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T00:53:10.999121", "level": "SUMMARY", "message": "Portfolio: $1000.00 | PnL: $0.00 | Positions: 0 | Risk: OK", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T00:58:19.479123", "level": "INFO", "message": "Starting points farming cycle", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T00:58:19.479331", "level": "INFO", "message": "Found 3 farming opportunities", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T00:58:19.479368", "level": "ACTION", "message": "\u2705 Check Dreamcash points balance", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T00:58:19.479426", "level": "ACTION", "message": "\u2705 Claim any available rewards", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T00:58:19.479477", "level": "ACTION", "message": "\u2705 Check referral status", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T00:58:19.479515", "level": "ACTION", "message": "\u2705 Review trading volume", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T00:58:19.479554", "level": "ACTION", "message": "\u2705 Check points accumulation", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T00:58:19.479599", "level": "ACTION", "message": "\ud83d\udcc5 Weekly: Optimize trading strategy", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T00:58:19.479651", "level": "ACTION", "message": "\ud83d\udcc5 Weekly: Review and adjust positions", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T00:58:19.479692", "level": "INFO", "message": "Estimated monthly yield: $95.00", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T00:58:19.479719", "level": "INFO", "message": "Scanning for crypto alpha", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T00:58:19.817500", "level": "SUMMARY", "message": "Portfolio: $1000.00 | PnL: $0.00 | Positions: 0 | Risk: OK", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T01:00:01.534460", "level": "INFO", "message": "Starting points farming cycle", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T01:00:01.534780", "level": "INFO", "message": "Found 3 farming opportunities", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T01:00:01.534840", "level": "ACTION", "message": "\u2705 Check Dreamcash points balance", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T01:00:01.534891", "level": "ACTION", "message": "\u2705 Claim any available rewards", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T01:00:01.534943", "level": "ACTION", "message": "\u2705 Check referral status", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T01:00:01.534988", "level": "ACTION", "message": "\u2705 Review trading volume", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T01:00:01.535030", "level": "ACTION", "message": "\u2705 Check points accumulation", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T01:00:01.535076", "level": "ACTION", "message": "\ud83d\udcc5 Weekly: Optimize trading strategy", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T01:00:01.535122", "level": "ACTION", "message": "\ud83d\udcc5 Weekly: Review and adjust positions", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T01:00:01.535188", "level": "INFO", "message": "Estimated monthly yield: $95.00", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T01:00:01.535231", "level": "INFO", "message": "Scanning for crypto alpha", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T01:00:01.906945", "level": "SUMMARY", "message": "Portfolio: $1000.00 | PnL: $0.00 | Positions: 0 | Risk: OK", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T01:03:28.046633", "level": "INFO", "message": "Starting points farming cycle", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T01:03:28.046720", "level": "INFO", "message": "Found 3 farming opportunities", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T01:03:28.046753", "level": "ACTION", "message": "\u2705 Check Dreamcash points balance", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T01:03:28.046818", "level": "ACTION", "message": "\u2705 Claim any available rewards", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T01:03:28.046878", "level": "ACTION", "message": "\u2705 Check referral status", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T01:03:28.046912", "level": "ACTION", "message": "\u2705 Review trading volume", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T01:03:28.046955", "level": "ACTION", "message": "\u2705 Check points accumulation", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T01:03:28.047010", "level": "ACTION", "message": "\ud83d\udcc5 Weekly: Optimize trading strategy", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T01:03:28.047063", "level": "ACTION", "message": "\ud83d\udcc5 Weekly: Review and adjust positions", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T01:03:28.047120", "level": "INFO", "message": "Estimated monthly yield: $95.00", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T01:03:28.047169", "level": "INFO", "message": "Scanning for crypto alpha", "portfolio_value": 1000.0}
+{"timestamp": "2026-03-02T01:03:28.384985", "level": "SUMMARY", "message": "Portfolio: $1000.00 | PnL: $0.00 | Positions: 0 | Risk: OK", "portfolio_value": 1000.0}

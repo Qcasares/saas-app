@@ -1,74 +1,83 @@
-# Trading Watchlist — March 2, 2026 (Morning)
-**Last Updated:** Monday, March 2, 2026 — 9:08 AM (Europe/London)
+# Trading Watchlist — March 2, 2026 (Evening)
+**Last Updated:** Monday, March 2, 2026 — 6:11 PM (Europe/London)
 
 ---
 
-## Active Setups
+## 🚨 ACTIVE ALERTS
 
-### 🔶 BTC/USD — ACCUMULATION ZONE (HOLDING)
-**Status:** WATCH / ACCUMULATE  
-**Current:** $66,196  
-**Setup:** Historic oversold accumulation — Strategy floor test
+### BTC/USD — STRATEGY FLOOR BREACHED (CRITICAL)
+**Status:** 🚨 DEFENSIVE / STAND ASIDE / WAIT FOR RECLAIM  
+**Current:** ~$66,080 (BELOW $66,385 floor)  
+**Setup:** Technical breakdown — former support now resistance
 
-**Thesis:**
-- RSI at 25.6 (all-time low, only 3rd sub-30 in history)
-- Fear & Greed at 14 (Extreme Fear)
-- Strategy cost basis at $66,385 acting as critical floor
-- Weekend spike to $68,200 failed — consolidation continues
-- Negative funding rates suggest short squeeze potential remains
+**Thesis Update:**
+- ⚠️ **CRITICAL:** BTC has broken below MicroStrategy's $66,385 cost basis
+- MicroStrategy's 717,722 BTC position now underwater (~$220M unrealized loss)
+- Fear & Greed stable at 10 — maximum fear persists
+- RSI oversold but can stay oversold in bear trends
+- Risk of forced selling cascade if $63,000 tested
+
+**⚠️ CRITICAL LEVEL:** $66,385 (Strategy Floor — NOW RESISTANCE)
+- Current price: ~$66,080 (BELOW floor by ~$300)
+- This is the line in the sand — MUST reclaim for bullish case
+- Sustained trading below = risk of forced liquidations
 
 **Key Levels:**
 | Level | Price | Significance |
 |-------|-------|--------------|
-| 🔴 Critical | $66,385 | Strategy floor — DO NOT BREAK |
-| 🟡 Support | $63,000 | Accumulation zone low |
-| 🟡 Resistance | $68,200 | Weekend high |
-| 🟢 Bullish | $70,000 | Reclaim = trend shift |
-| 🟢 Target | $100K+ | Full trend reversal |
+| 🔴 RESISTANCE | $66,385 | Strategy floor — MUST RECLAIM |
+| 🔴 Support | $63,000 | Next major accumulation zone |
+| 🔴 Support | $60,000 | Psychological (must hold) |
+| 🟡 Resistance | $68,200 | Prior high |
+| 🟢 Bullish | $70,000 | Trend shift |
 
 **Entry Zones:**
-- Primary: $63,000 - $66,500 (current zone)
-- Aggressive: $60,000 - $63,000 (if panic selling)
+- **HOLD on new entries** until $66,385 reclaim
+- If $60K-$63K tested AND holds = potential DCA opportunity
+- Wait for reclaim confirmation, don't try to catch the falling knife
 
-**Invalidation:** Sustained close below $60,000
+**Invalidation:** Sustained close below $60,000 (bear market resumes)
 
-**Position Sizing:** 1-2% risk max  
-**Leverage:** Spot or 2x maximum  
-**Timeframe:** Multi-month hold
+**Position Sizing:** 1-2% risk max (if entering)  
+**Leverage:** Spot only — no leverage in this environment  
+**Timeframe:** Multi-month hold (when re-entering)
 
 **Alerts:**
-- 🔔 Price below $66,000 (Strategy floor breach risk)
-- 🔔 Price below $63,000 (panic selling)
+- 🚨 **URGENT:** Price reclaims $66,385 (bullish resumption)
+- 🚨 Price below $63,000 (forced selling zone)
 - 🔔 Break above $68,200 (momentum shift)
 
 ---
 
-### 🔶 ETH/USD — WAIT
-**Status:** STAND ASIDE  
-**Current:** $1,973  
+## STANDBY SETUPS
+
+### ETH/USD — STAND ASIDE
+**Status:** NO TRADE  
+**Current:** ~$1,936 (-3% on day)  
 **Setup:** No clear edge — underperforming BTC
 
 **Thesis:**
-- ETH -60% from ATH vs BTC -47% — relative weakness
-- Failed to participate in weekend BTC spike
-- Institutions rotating to gold/BTC
+- ETH -60% from ATH vs BTC -47% — relative weakness continues
+- Down 3% on the day — underperforming on the breakdown
+- Institutions rotating away from ETH continues
 - Needs $2,680 reclaim for bullish structure
 
 **Entry:** NO ENTRY
 
-**Note:** Better risk-reward in BTC currently. ETH may outperform later in cycle.
+**Note:** Better risk-reward in BTC even with the breakdown. ETH may outperform later in cycle, but not yet.
 
 ---
 
-### 🔶 SOL/USD — HIGH RISK / WAIT FOR RESOLUTION
+### SOL/USD — HIGH RISK / WAIT FOR RESOLUTION
 **Status:** WATCH / STAND ASIDE  
-**Current:** $85.00 (est.)  
-**Setup:** Extreme positioning divergence unresolved
+**Current:** ~$84  
+**Setup:** Range-bound, positioning divergence unresolved
 
 **Thesis:**
-- Strongest large-cap recovery last week
-- 70% long / 30% short with negative funding
-- Tension unresolved — liquidation cascade still likely
+- Still trading in $80-$90 range
+- 70% long / 30% short with negative funding = tension
+- No directional resolution
+- Vulnerable to BTC-led selling if breakdown accelerates
 
 **Trade Plan:**
 - IF breaks $90 with volume → Consider long toward $100
@@ -80,49 +89,62 @@
 
 ---
 
-## Monitoring List
+## MONITORING LIST
 
 ### XRP/USD
-- Funding rate most negative among majors (-0.013%)
-- Potential short squeeze candidate if sentiment shifts
+- Funding rate most negative among majors
+- Vulnerable to risk-off selling
 - Watch for regulatory catalysts
+- Currently tracking broader market weakness
 
 ### Gold-Backed Tokens (PAXG, XAUT)
-- Rotation from crypto to gold visible
+- Rotation from crypto to gold continues
 - PAXG holding $5,300+ on risk-off demand
-- Consider as hedge allocation
+- Consider as hedge allocation if risk-off accelerates
+
+### Altcoin Sector
+- Most alts underperforming BTC in risk-off environment
+- High-beta assets getting hit harder on breakdown
+- Wait for BTC to stabilize before considering alt exposure
 
 ---
 
-## Economic Calendar
+## ECONOMIC CALENDAR
 
 | Date | Event | Impact |
 |------|-------|--------|
-| **Mar 7** | **Non-Farm Payrolls** | **HIGH** |
-| Mar 17-18 | FOMC Meeting | **HIGH** |
-| Mid-Mar | Feb CPI | **HIGH** |
+| **Mar 7** | **Non-Farm Payrolls** | **HIGH** — Potential catalyst |
+| Mar 17-18 | FOMC Meeting | **HIGH** — Rate decision |
+| Mid-Mar | Feb CPI | **HIGH** — Inflation data |
 
 ---
 
-## Risk Management Reminders
+## RISK MANAGEMENT REMINDERS
 
 - ✅ Max 1-2% risk per trade
 - ✅ Stop-losses defined BEFORE entry
-- ✅ DCA into weakness, not strength
-- ✅ Let extreme fear persist — don't FOMO
+- ✅ **DO NOT add to positions** until $66,385 reclaim
+- ✅ Let extreme fear persist — don't FOMO on dead cat bounces
 - ✅ Process over outcomes
+- ✅ **WATCH $66,385 CLOSELY** — This is the key level now
 
 ---
 
-## This Week's Focus
+## EVENING SUMMARY
 
-1. **Friday NFP** — Highest volatility event for BTC
-2. **BTC $66,385 level** — Critical Strategy floor holding
-3. **ETF flow reversal** — First positive week = trend signal
-4. **Iran developments** — Geopolitical tail risk
+**The Line in the Sand Has Been Crossed:** BTC has broken below the Strategy floor at $66,385. This is a significant technical breakdown that invalidates the near-term bullish accumulation thesis.
 
----
+**New Thesis:**
+- If $66,385 reclaims quickly → Relief rally possible
+- If $63,000 tested → Forced selling may accelerate
+- If $60,000 breaks → Bear market resumes
 
-**Strategy Summary:** Accumulate BTC in fear, stand aside in ETH, wait for SOL resolution. Patience is the trade.
+**Plan:**
+- 🚨 **NO NEW POSITIONS** until $66,385 reclaim
+- 🚨 **WATCH $63,000** — Next critical test
+- ✅ Hold dry powder for better entries
+- ✅ Wait for Friday NFP catalyst
+
+**Strategy Summary:** Defensive mode activated. The Strategy floor breach is a warning sign. Survive first, profit second. The market will be here tomorrow — make sure you are too.
 
 *Watchlist by: KingKong*

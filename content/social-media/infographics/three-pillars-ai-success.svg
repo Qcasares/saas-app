@@ -1,0 +1,59 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='1200' height='675' viewBox='0 0 1200 675'>
+  <defs>
+    <linearGradient id='bg2' x1='0%' y1='0%' x2='0%' y2='100%'>
+      <stop offset='0%' style='stop-color:#ffffff'/>
+      <stop offset='100%' style='stop-color:#f7fafc'/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width='1200' height='675' fill='url(#bg2)'/>
+  
+  <!-- Title -->
+  <text x='600' y='50' text-anchor='middle' font-family='Arial, sans-serif' font-size='40' font-weight='bold' fill='#1a365d'>THE THREE PILLARS OF AI SUCCESS</text>
+  
+  <!-- Pillar 1: Executive Sponsorship -->
+  <rect x='80' y='100' width='320' height='480' rx='8' fill='#1a365d'/>
+  <text x='240' y='150' text-anchor='middle' font-family='Arial, sans-serif' font-size='28' font-weight='bold' fill='white'>PILLAR 1</text>
+  <text x='240' y='200' text-anchor='middle' font-family='Arial, sans-serif' font-size='22' font-weight='bold' fill='#d69e2e'>Executive</text>
+  <text x='240' y='230' text-anchor='middle' font-family='Arial, sans-serif' font-size='22' font-weight='bold' fill='#d69e2e'>Sponsorship</text>
+  
+  <text x='240' y='290' text-anchor='middle' font-family='Arial, sans-serif' font-size='48' font-weight='bold' fill='white'>3x</text>
+  <text x='240' y='330' text-anchor='middle' font-family='Arial, sans-serif' font-size='18' fill='#a0aec0'>higher success rate</text>
+  
+  <text x='240' y='380' text-anchor='middle' font-family='Arial, sans-serif' font-size='16' fill='white'>✓ From Day One</text>
+  <text x='240' y='410' text-anchor='middle' font-family='Arial, sans-serif' font-size='16' fill='white'>✓ Active Involvement</text>
+  <text x='240' y='440' text-anchor='middle' font-family='Arial, sans-serif' font-size='16' fill='white'>✓ Strategic Priority</text>
+  
+  <!-- Pillar 2: Infrastructure -->
+  <rect x='440' y='100' width='320' height='480' rx='8' fill='#d69e2e'/>
+  <text x='600' y='150' text-anchor='middle' font-family='Arial, sans-serif' font-size='28' font-weight='bold' fill='#1a365d'>PILLAR 2</text>
+  <text x='600' y='200' text-anchor='middle' font-family='Arial, sans-serif' font-size='22' font-weight='bold' fill='#1a365d'>Dedicated</text>
+  <text x='600' y='230' text-anchor='middle' font-family='Arial, sans-serif' font-size='22' font-weight='bold' fill='#1a365d'>Infrastructure</text>
+  
+  <text x='600' y='310' text-anchor='middle' font-family='Arial, sans-serif' font-size='16' fill='#1a365d'>• Data Pipelines</text>
+  <text x='600' y='340' text-anchor='middle' font-family='Arial, sans-serif' font-size='16' fill='#1a365d'>• Model Registry</text>
+  <text x='600' y='370' text-anchor='middle' font-family='Arial, sans-serif' font-size='16' fill='#1a365d'>• Monitoring</text>
+  <text x='600' y='400' text-anchor='middle' font-family='Arial, sans-serif' font-size='16' fill='#1a365d'>• Compute Resources</text>
+  <text x='600' y='440' text-anchor='middle' font-family='Arial, sans-serif' font-size='18' font-weight='bold' fill='#1a365d'>Not borrowed.</text>
+  <text x='600' y='465' text-anchor='middle' font-family='Arial, sans-serif' font-size='18' font-weight='bold' fill='#1a365d'>Dedicated.</text>
+  
+  <!-- Pillar 3: Prioritization -->
+  <rect x='800' y='100' width='320' height='480' rx='8' fill='#1a365d'/>
+  <text x='960' y='150' text-anchor='middle' font-family='Arial, sans-serif' font-size='28' font-weight='bold' fill='white'>PILLAR 3</text>
+  <text x='960' y='200' text-anchor='middle' font-family='Arial, sans-serif' font-size='22' font-weight='bold' fill='#d69e2e'>Ruthless</text>
+  <text x='960' y='230' text-anchor='middle' font-family='Arial, sans-serif' font-size='22' font-weight='bold' fill='#d69e2e'>Prioritization</text>
+  
+  <text x='960' y='300' text-anchor='middle' font-family='Arial, sans-serif' font-size='56' font-weight='bold' fill='white'>90%</text>
+  <text x='960' y='345' text-anchor='middle' font-family='Arial, sans-serif' font-size='18' fill='#a0aec0'>say NO to</text>
+  <text x='960' y='370' text-anchor='middle' font-family='Arial, sans-serif' font-size='18' fill='#a0aec0'>use cases</text>
+  
+  <text x='960' y='420' text-anchor='middle' font-family='Arial, sans-serif' font-size='16' fill='white'>Focus on 2-3</text>
+  <text x='960' y='445' text-anchor='middle' font-family='Arial, sans-serif' font-size='16' fill='white'>high-impact wins</text>
+  
+  <!-- Base connector -->
+  <rect x='100' y='600' width='1000' height='8' rx='4' fill='#d69e2e'/>
+  
+  <!-- Footer -->
+  <text x='600' y='650' text-anchor='middle' font-family='Arial, sans-serif' font-size='18' fill='#a0aec0'>Integration of all three pillars creates sustainable competitive advantage</text>
+</svg>

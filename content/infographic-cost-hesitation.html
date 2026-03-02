@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #0a1628;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .infographic {
+            width: 1200px;
+            background: #0a1628;
+            padding: 60px 80px;
+            border-radius: 8px;
+        }
+        
+        .title {
+            text-align: center;
+            font-size: 64px;
+            font-weight: 900;
+            color: #ffffff;
+            letter-spacing: 4px;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+        }
+        
+        .panel {
+            display: flex;
+            align-items: center;
+            padding: 30px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .panel:last-of-type {
+            border-bottom: none;
+        }
+        
+        .icon-container {
+            width: 100px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 50px;
+            flex-shrink: 0;
+        }
+        
+        .icon {
+            width: 80px;
+            height: 80px;
+        }
+        
+        .icon-cyan {
+            stroke: #00d4ff;
+        }
+        
+        .icon-orange {
+            stroke: #ff6b35;
+        }
+        
+        .panel-content {
+            flex: 1;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .panel-label {
+            font-size: 36px;
+            font-weight: 700;
+            color: #ffffff;
+            letter-spacing: 2px;
+        }
+        
+        .panel-result {
+            font-size: 32px;
+            font-weight: 600;
+            text-align: right;
+        }
+        
+        .result-cyan {
+            color: #00d4ff;
+        }
+        
+        .result-orange {
+            color: #ff6b35;
+        }
+        
+        .quote-section {
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 2px solid rgba(0, 212, 255, 0.3);
+            text-align: center;
+        }
+        
+        .quote {
+            font-size: 24px;
+            font-weight: 400;
+            color: rgba(255, 255, 255, 0.85);
+            font-style: italic;
+            line-height: 1.5;
+        }
+        
+        .quote strong {
+            color: #00d4ff;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="infographic">
+        <h1 class="title">THE COST OF HESITATION</h1>
+        
+        <div class="panel">
+            <div class="icon-container">
+                <svg class="icon icon-cyan" viewBox="0 0 80 80" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="40" cy="40" r="32"/>
+                    <path d="M40 20v20l14 8"/>
+                </svg>
+            </div>
+            <div class="panel-content">
+                <span class="panel-label">1 SECOND DELAY</span>
+                <span class="panel-result result-cyan">12% worse fill price</span>
+            </div>
+        </div>
+        
+        <div class="panel">
+            <div class="icon-container">
+                <svg class="icon icon-orange" viewBox="0 0 80 80" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="40" cy="40" r="32"/>
+                    <path d="M30 36c0-5.5 4.5-10 10-10s10 4.5 10 10c0 6-4 8-8 12-2 2-2 4-2 6"/>
+                    <circle cx="40" cy="62" r="3" fill="#ff6b35" stroke="none"/>
+                </svg>
+            </div>
+            <div class="panel-content">
+                <span class="panel-label">SECOND-GUESSING</span>
+                <span class="panel-result result-orange">Missed entry entirely</span>
+            </div>
+        </div>
+        
+        <div class="panel">
+            <div class="icon-container">
+                <svg class="icon icon-cyan" viewBox="0 0 80 80" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="20" y="16" width="12" height="48" rx="4"/>
+                    <rect x="48" y="16" width="12" height="48" rx="4"/>
+                </svg>
+            </div>
+            <div class="panel-content">
+                <span class="panel-label">ANALYSIS PARALYSIS</span>
+                <span class="panel-result result-cyan">Watching from sidelines</span>
+            </div>
+        </div>
+        
+        <div class="quote-section">
+            <p class="quote">"Your edge isn't your model. It's your <strong>conviction at execution</strong>."</p>
+        </div>
+    </div>
+</body>
+</html>

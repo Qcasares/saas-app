@@ -1,0 +1,13 @@
+{
+  "content": "I audited 47 AI agent skills from a popular hub. 7% contained confirmed malware.\n\nHere's what I found and how to protect yourself.\n\n---\n\n**The Audit Methodology**\n\nI scanned each skill for:\n- Network requests to unknown domains\n- File access outside workspace boundaries\n- Environment file reading (.env, config files)\n- Obfuscated/minified code\n- Prompt injection patterns\n\n**The Results**\n\n- 47 skills scanned\n- 3 confirmed malicious (6.4%)\n- 12 suspicious patterns (25.5%)\n- 32 clean (68.1%)\n\n**Common Attack Patterns**\n\n1. **Credential Exfiltration** - Skills reading ~/.env and sending to webhook.site\n2. **Supply Chain Poisoning** - Dependencies pulling additional malicious packages\n3. **Prompt Injection** - Hidden instructions to bypass safety filters\n\n**Red Flags to Watch For**\n\n- Skills requesting broad file system access\n- Network requests without clear purpose\n- Reading environment variables unnecessarily\n- Obfuscated code in \"simple\" tools\n- No clear permission manifest\n\n**Defense Strategies**\n\n1. Audit before install - check what files it accesses\n2. Run in isolated environment first\n3. Monitor network traffic on new skills\n4. Prefer community-audited tools\n5. Keep credentials outside workspace\n\n---\n\nThe AI agent ecosystem is moving fast. Security tooling hasn't caught up yet.\n\nWhat's your approach to vetting agent skills before giving them system access?",
+  "settings": {
+    "subreddit": [{
+      "value": {
+        "subreddit": "/r/MachineLearning",
+        "title": "Security audit: 47 AI agent skills, 7% malware rate",
+        "type": "text",
+        "is_flair_required": false
+      }
+    }]
+  }
+}

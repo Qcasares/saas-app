@@ -1,0 +1,49 @@
+I audited 47 AI agent skills from a popular hub. 7% contained confirmed malware.
+
+Here's what I found and how to protect yourself.
+
+---
+
+**The Audit Methodology**
+
+I scanned each skill for:
+- Network requests to unknown domains
+- File access outside workspace boundaries
+- Environment file reading (.env, config files)
+- Obfuscated/minified code
+- Prompt injection patterns
+
+**The Results**
+
+- 47 skills scanned
+- 3 confirmed malicious (6.4%)
+- 12 suspicious patterns (25.5%)
+- 32 clean (68.1%)
+
+**Common Attack Patterns**
+
+1. **Credential Exfiltration** - Skills reading ~/.env and sending to webhook.site
+2. **Supply Chain Poisoning** - Dependencies pulling additional malicious packages
+3. **Prompt Injection** - Hidden instructions to bypass safety filters
+
+**Red Flags to Watch For**
+
+- Skills requesting broad file system access
+- Network requests without clear purpose
+- Reading environment variables unnecessarily
+- Obfuscated code in "simple" tools
+- No clear permission manifest
+
+**Defense Strategies**
+
+1. Audit before install - check what files it accesses
+2. Run in isolated environment first
+3. Monitor network traffic on new skills
+4. Prefer community-audited tools
+5. Keep credentials outside workspace
+
+---
+
+The AI agent ecosystem is moving fast. Security tooling hasn't caught up yet.
+
+What's your approach to vetting agent skills before giving them system access?

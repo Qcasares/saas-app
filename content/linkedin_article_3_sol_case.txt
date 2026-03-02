@@ -1,0 +1,59 @@
+Last week, my agent flagged a SOL setup that exemplifies everything I've been writing about.
+
+THE SETUP
+
+Monday afternoon, 2:47 PM GMT. My monitoring system pinged:
+
+→ Funding rate: -0.08% across major perp exchanges (excessive short bias)
+→ Open Interest: +12% in 2 hours (new money entering short)
+→ Volume: 2.5x average (institutional footprint)
+→ Spot premium on Coinbase: 0.3% (buying pressure in regulated venues)
+
+Classic short squeeze conditions. All criteria met.
+
+THE HESITATION
+
+I saw the alert. I pulled up the chart. I verified the data.
+
+Then I hesitated.
+
+"Let me see confirmation first."
+
+I wanted to see the move start before committing. This seems reasonable—it's risk management, right?
+
+THE COST
+
+Four hours later: +14%.
+
+I watched it happen from the sidelines. The setup was textbook. My conviction wasn't.
+
+THE ANALYSIS
+
+What went wrong?
+
+1. I conflated "confirmation" with "certainty"
+2. I let recent losses affect my willingness to take valid setups
+3. I didn't size appropriately for my conviction level
+4. I forgot that edge means winning over a series, not every trade
+
+THE LESSON
+
+This is why I'm building calibration systems, not just detection systems.
+
+The agent did its job perfectly. It detected confluence. It flagged the edge case. It met all criteria in my framework.
+
+The failure was in the human element: conviction at the moment of execution.
+
+MOVING FORWARD
+
+New rule: If it meets all criteria, I take it. No second-guessing.
+
+The hesitation cost—12% worse fills on average, missed entries entirely—is higher than the occasional false positive.
+
+Trust the system. Execute the plan. Review the results.
+
+That's the job.
+
+Have you had similar experiences? How do you handle the psychology of execution after a string of losses?
+
+#Trading #Crypto #SOL #RiskManagement #TradingPsychology #AI

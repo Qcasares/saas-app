@@ -1,0 +1,4 @@
+[2026-03-02 06:03:15 UTC] [ALERT:HIGH] [malicious_pattern] Suspicious pattern in openclaw-kirocli-coding-agent/SKILL.md: exec.*os
+[2026-03-02 06:03:16 UTC] [ALERT:MEDIUM] [unverified_skill] Skill without SKILL.md: scribe
+[2026-03-02 06:03:16 UTC] [ALERT:MEDIUM] [unverified_skill] Skill without SKILL.md: sherlock
+[2026-03-02 06:03:16 UTC] [ALERT:HIGH] [malicious_pattern] Suspicious pattern in sql-toolkit/SKILL.md: exec.*os

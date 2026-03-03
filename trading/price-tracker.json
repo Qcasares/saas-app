@@ -1,9 +1,9 @@
 {
-  "lastCheck": "2026-03-03T13:51:00Z",
+  "lastCheck": "2026-03-03T14:51:00Z",
   "prices": {
-    "BTC": 66843.80,
-    "ETH": 1947.33,
-    "SOL": 83.45
+    "BTC": 66378,
+    "ETH": 1940.25,
+    "SOL": 83.01
   },
   "thresholdPercent": 2.0,
   "criticalLevels": {
@@ -26,7 +26,7 @@
     }
   },
   "lastAlert": "2026-03-03T09:44:00Z",
-  "checksToday": 12,
+  "checksToday": 13,
   "alertConfig": {
     "btcFloorProximity": 0.15,
     "btcReclaimZone": 66450,

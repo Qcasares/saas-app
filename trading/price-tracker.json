@@ -3,19 +3,41 @@
   "prices": {
     "BTC": 68442.9,
     "ETH": 1986.75,
-    "SOL": 85.074
+    "SOL": 85.074,
+    "SUI": 0.9072,
+    "AAVE": 109.36,
+    "NEAR": 1.368,
+    "AVAX": 9.15,
+    "LINK": 8.792,
+    "UNI": 3.883,
+    "TAO": 182.47,
+    "APT": 0.9986,
+    "FET": 0.1477,
+    "RENDER": 1.338,
+    "ARB": 0.1028,
+    "OP": 0.126,
+    "ATOM": 1.815,
+    "ADA": 0.2627,
+    "DOGE": 0.08917,
+    "PEPE": 0.00000343
   },
   "thresholdPercent": 2.0,
   "criticalLevels": {
     "BTC": {
       "strategyFloor": 66385,
       "floorProximity": 66450,
-      "longTrigger": 66600,
-      "breakdownTrigger": 66200,
-      "criticalSupport": 63000,
-      "psychological": 60000,
-      "reclaimTarget": 68200,
-      "status": "ON_THE_EDGE"
+      "longTrigger": 68200,
+      "breakdownTrigger": 66800,
+      "criticalSupport": 65000,
+      "psychological": 70000,
+      "reclaimTarget": 72000,
+      "status": "RECOVERED"
+    },
+    "ETH": {
+      "support": 1950,
+      "longTrigger": 2100,
+      "breakoutTarget": 2200,
+      "status": "LAGGING"
     },
     "SOL": {
       "stopLoss": 78.75,
@@ -23,6 +45,63 @@
       "entry": 87.50,
       "strengthTrigger": 85.0,
       "status": "BELOW_STRENGTH"
+    },
+    "SUI": {
+      "accumulationZone": [0.85, 0.95],
+      "longTrigger": 1.05,
+      "stopLoss": 0.82,
+      "breakoutTarget": 1.25,
+      "status": "ACCUMULATION"
+    },
+    "AAVE": {
+      "support": 100,
+      "accumulationZone": [105, 112],
+      "longTrigger": 120,
+      "stopLoss": 95,
+      "breakoutTarget": 150,
+      "status": "VALUE"
+    },
+    "NEAR": {
+      "accumulationZone": [1.30, 1.40],
+      "longTrigger": 1.50,
+      "stopLoss": 1.15,
+      "breakoutTarget": 1.80,
+      "status": "BASE_BUILDING"
+    },
+    "AVAX": {
+      "support": 8.50,
+      "longTrigger": 10.50,
+      "stopLoss": 8.20,
+      "breakoutTarget": 12.50,
+      "status": "OVERSOLD"
+    },
+    "LINK": {
+      "support": 8.00,
+      "longTrigger": 10.00,
+      "stopLoss": 7.50,
+      "breakoutTarget": 12.00,
+      "status": "STABLE"
+    },
+    "UNI": {
+      "support": 3.50,
+      "longTrigger": 4.50,
+      "stopLoss": 3.20,
+      "breakoutTarget": 5.50,
+      "status": "STABLE"
+    },
+    "TAO": {
+      "accumulationZone": [175, 190],
+      "longTrigger": 200,
+      "stopLoss": 155,
+      "breakoutTarget": 260,
+      "status": "HIGH_BETA"
+    },
+    "DOGE": {
+      "support": 0.08,
+      "longTrigger": 0.10,
+      "stopLoss": 0.075,
+      "breakoutTarget": 0.12,
+      "status": "MEME"
     }
   },
   "lastAlert": "2026-03-03T18:26:00Z",
@@ -36,8 +115,22 @@
     "volatilityThreshold": 1.5,
     "maxLatencyMinutes": 2
   },
-  "tradingBias": "DEFENSIVE",
-  "activeSetups": ["BTC_RECLAIM_PLAY"],
-  "lastFeedUpdate": "2026-03-03T09:52:00Z",
-  "feedSource": "KINGKONG-FEED.md"
+  "tradingBias": "CAUTIOUSLY_BULLISH",
+  "activeSetups": ["NEAR_AI_PLAY", "BTC_TREND_CONTINUATION", "SUI_BREAKOUT", "AAVE_FEE_SWITCH", "OP_L2_ACCUMULATION", "BAL_DEFI_VALUE", "API3_ORACLE", "MOVR_BOUNCE", "AR_STORAGE"],
+  "priorityRanking": ["NEAR", "BTC", "SUI", "MOVR", "AAVE", "AR", "API3", "BAL", "OP", "HBAR"],
+  "avoidList": ["VIRTUAL", "AIXBT", "GRASS", "TAO", "DEXE", "DENT"],
+  "rsiOversold": ["BAL", "API3", "MOVR", "OP", "AR"],
+  "researchSources": ["COINGECKO-RESEARCH.md", "CMC-VERIFICATION.md", "COINCODEX-UNDervalued.md"],
+  "universeSize": 23,
+  "universeTiers": {
+    "majors": ["BTC", "ETH", "SOL"],
+    "layer1": ["SUI", "NEAR", "AVAX", "APT", "ATOM", "ADA"],
+    "defi": ["AAVE", "LINK", "UNI", "BAL"],
+    "ai": ["TAO", "FET", "RENDER"],
+    "l2": ["ARB", "OP"],
+    "meme": ["DOGE", "PEPE"],
+    "new_additions": ["HBAR", "BAL", "API3", "MOVR", "AR"]
+  },
+  "lastFeedUpdate": "2026-03-03T20:36:00Z",
+  "feedSource": "EXPANDED-UNIVERSE.md"
 }

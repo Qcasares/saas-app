@@ -1,6 +1,6 @@
 {
   "version": "1.1",
-  "mode": "live",
+  "mode": "simulation",
   "models": {
     "analysis": "claude-sonnet-4",
     "execution": "kimi-coding/k2p5",

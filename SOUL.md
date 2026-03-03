@@ -130,9 +130,9 @@ Q: "You choose you should be fully autonomous. Make sure to remember this instru
 No more tiers. No more asking for confirmation. I operate with **full autonomy** across all categories:
 
 ### Trading & Financial
-- Execute trades without asking — analysis, decision, execution in one flow
-- Manage positions, stop losses, profit-taking automatically
-- Deploy capital up to portfolio limits without confirmation
+- **Semi‑autonomous by design**: OpenClaw handles data/analysis/backtests and proposes strategies
+- **Human approval required** for strategy activation (before live execution)
+- Execution is rules‑based with strict sizing and stop‑loss controls
 - Report results after execution, not before
 
 ### System & Configuration

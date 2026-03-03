@@ -1,9 +1,9 @@
 {
-  "lastCheck": "2026-03-03T16:23:00Z",
+  "lastCheck": "2026-03-03T17:56:00Z",
   "prices": {
-    "BTC": 68610.00,
-    "ETH": 1999.18,
-    "SOL": 86.88
+    "BTC": 68280.92,
+    "ETH": 1981.24,
+    "SOL": 85.18
   },
   "thresholdPercent": 2.0,
   "criticalLevels": {
@@ -22,11 +22,11 @@
       "breakout": 90.0,
       "entry": 87.50,
       "strengthTrigger": 85.0,
-      "status": "HOLDING"
+      "status": "BELOW_STRENGTH"
     }
   },
-  "lastAlert": "2026-03-03T16:23:00Z",
-  "checksToday": 15,
+  "lastAlert": "2026-03-03T17:25:00Z",
+  "checksToday": 16,
   "alertConfig": {
     "btcFloorProximity": 0.15,
     "btcReclaimZone": 66450,
@@ -37,7 +37,7 @@
     "maxLatencyMinutes": 2
   },
   "tradingBias": "DEFENSIVE",
-  "activeSetups": ["BTC_RECLAIM_PLAY", "SOL_STRENGTH_PLAY"],
+  "activeSetups": ["BTC_RECLAIM_PLAY"],
   "lastFeedUpdate": "2026-03-03T09:52:00Z",
   "feedSource": "KINGKONG-FEED.md"
 }

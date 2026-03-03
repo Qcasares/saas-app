@@ -9,7 +9,8 @@ import sys
 from datetime import datetime
 
 # Add workspace to path for coinbase client
-sys.path.insert(0, '/Users/quentincasares/.openclaw/workspace/.venv/lib/python3.13/site-packages')
+site_pkg = f"/Users/quentincasares/.openclaw/workspace/.venv/lib/python{sys.version_info.major}.{sys.version_info.minor}/site-packages"
+sys.path.insert(0, site_pkg)
 
 try:
     from coinbase.rest import RESTClient

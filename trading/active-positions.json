@@ -1,1 +1,54 @@
-[]
+[
+  {
+    "signal_id": "sig-20260303-001",
+    "asset": "FAI-USDC",
+    "direction": "LONG",
+    "entry_price": 0.00292,
+    "targets": [
+      {
+        "price": 0.003154,
+        "size_pct": 0.5,
+        "label": "TP1"
+      },
+      {
+        "price": 0.003358,
+        "size_pct": 0.5,
+        "label": "TP2"
+      }
+    ],
+    "stop_loss": 0.002716,
+    "position_value": 10,
+    "status": "open",
+    "opened_at": "2026-03-03T10:14:00Z",
+    "tp1_hit": false,
+    "tp2_hit": false,
+    "trailing_active": false,
+    "trailing_stop": null
+  },
+  {
+    "signal_id": "sig-20260303-004",
+    "asset": "NEAR-USDC",
+    "direction": "LONG",
+    "entry_price": 1.357,
+    "targets": [
+      {
+        "price": 1.46556,
+        "size_pct": 0.5,
+        "label": "TP1"
+      },
+      {
+        "price": 1.56055,
+        "size_pct": 0.5,
+        "label": "TP2"
+      }
+    ],
+    "stop_loss": 1.26201,
+    "position_value": 10,
+    "status": "open",
+    "opened_at": "2026-03-03T10:14:00Z",
+    "tp1_hit": false,
+    "tp2_hit": false,
+    "trailing_active": false,
+    "trailing_stop": null
+  }
+]

@@ -1,65 +1,65 @@
 {
-  "timestamp": "2026-03-03T21:55:03.053985",
+  "timestamp": "2026-03-03T23:20:27.265459",
   "prices": {
     "BTC-USD": {
-      "price": 68054.3,
+      "price": 68540.0,
       "bid": 0.0,
       "ask": 0.0,
-      "volume_24h": 13057.58191906,
-      "percent_change_24h": -2.05601725201949,
-      "timestamp": "2026-03-03T21:55:03.354099"
+      "volume_24h": 12984.83323949,
+      "percent_change_24h": -1.01643727916802,
+      "timestamp": "2026-03-03T23:20:27.581466"
     },
     "ETH-USD": {
-      "price": 1968.61,
+      "price": 1991.02,
       "bid": 0.0,
       "ask": 0.0,
-      "volume_24h": 229255.32646702,
-      "percent_change_24h": -3.78297271274334,
-      "timestamp": "2026-03-03T21:55:03.534399"
+      "volume_24h": 228833.99206149,
+      "percent_change_24h": -2.61008227433256,
+      "timestamp": "2026-03-03T23:20:27.773107"
     },
     "SOL-USD": {
-      "price": 85.07,
+      "price": 87.208,
       "bid": 0.0,
       "ask": 0.0,
-      "volume_24h": 2329968.96664293,
-      "percent_change_24h": -2.78825277111187,
-      "timestamp": "2026-03-03T21:55:03.722645"
+      "volume_24h": 2408272.8778621,
+      "percent_change_24h": -0.28813171735651,
+      "timestamp": "2026-03-03T23:20:27.949342"
     },
     "SOL-GBP": {
-      "price": 63.69,
+      "price": 65.23,
       "bid": 0.0,
       "ask": 0.0,
-      "volume_24h": 18440.521,
-      "percent_change_24h": -2.46554364471669,
-      "timestamp": "2026-03-03T21:55:03.920981"
+      "volume_24h": 17815.775,
+      "percent_change_24h": 0.04601226993865,
+      "timestamp": "2026-03-03T23:20:28.124520"
     },
     "BTC-GBP": {
-      "price": 50959.56,
+      "price": 51312.02,
       "bid": 0.0,
       "ask": 0.0,
-      "volume_24h": 118.62387817,
-      "percent_change_24h": -1.57225008822069,
-      "timestamp": "2026-03-03T21:55:04.099312"
+      "volume_24h": 117.4158352,
+      "percent_change_24h": -0.56201277352848,
+      "timestamp": "2026-03-03T23:20:28.299692"
     }
   },
   "trends": {
     "SOL-USD": {
       "trend": "NEUTRAL \u2194\ufe0f",
-      "change_6h_pct": 0.14,
-      "current_price": 83.92,
-      "avg_price_6h": 84.07
+      "change_6h_pct": 0.19,
+      "current_price": 84.41,
+      "avg_price_6h": 84.48
     },
     "BTC-USD": {
       "trend": "NEUTRAL \u2194\ufe0f",
-      "change_6h_pct": 0.27,
-      "current_price": 66846.0,
-      "avg_price_6h": 67071.84
+      "change_6h_pct": 0.32,
+      "current_price": 67381.94,
+      "avg_price_6h": 67511.98
     },
     "ETH-USD": {
       "trend": "NEUTRAL \u2194\ufe0f",
-      "change_6h_pct": 0.15,
-      "current_price": 1957.56,
-      "avg_price_6h": 1958.22
+      "change_6h_pct": 0.17,
+      "current_price": 1967.16,
+      "avg_price_6h": 1965.99
     }
   },
   "alerts": [
@@ -67,10 +67,10 @@
       "type": "POSITION_UPDATE",
       "asset": "SOL",
       "balance": 0.076,
-      "current_price": 85.06,
+      "current_price": 87.208,
       "entry_price": 87.5,
-      "gain_pct": -2.79,
-      "gain_usd": -0.19
+      "gain_pct": -0.33,
+      "gain_usd": -0.02
     }
   ],
   "recommendations": []

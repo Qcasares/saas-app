@@ -1,3 +1,0 @@
-AI_GAP_URL=https://uploads.postiz.com/rGT5OaNcRB.png
-PILLARS_URL=https://uploads.postiz.com/cxAeVQMLLN.png
-GOV_URL=https://uploads.postiz.com/MwKwivnw2r.png

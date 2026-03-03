@@ -1,0 +1,27 @@
+{
+  "timestamp": "2026-03-03T19:16:00Z",
+  "actor": "KingKong",
+  "event": "BTC_RECLAIM_68200",
+  "details": {
+    "btc_price": 68611.06,
+    "reclaim_level": 68200,
+    "distance_above": 411.06,
+    "previous_status": "critical_proximity",
+    "new_status": "bullish_structure_restored"
+  },
+  "missed_alert": true,
+  "reason": "System monitored but did not proactively alert on reclaim",
+  "sol_position": {
+    "price": 85.06,
+    "pnl_pct": -2.79,
+    "stop": 78.75,
+    "buffer": 6.31,
+    "status": "holding"
+  },
+  "actions_available": [
+    "Consider new long entries on BTC",
+    "Hold SOL position",
+    "Move SOL stop to breakeven if price > $87",
+    "Add to SOL if breaks $90"
+  ]
+}

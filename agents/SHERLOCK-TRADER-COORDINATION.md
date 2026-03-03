@@ -63,10 +63,10 @@ Trader: Set protective stops for overnight
 |----------|-----------|-----------|
 | Signal generation | Sherlock | Automatic |
 | Signal validation | Bridge | Automatic |
-| Trade execution | Trader | Requires KingKong approval if >$500 or confidence <80% |
-| Stop adjustment | Trader | Automatic after TP1 hit |
-| Emergency close | Trader | Immediate on stop loss |
-| Strategy change | KingKong | Any time |
+| Trade execution | Trader | **REQUIRES HUMAN APPROVAL** — Simulation mode default |
+| Stop adjustment | Trader | Automatic after TP1 hit (on approved positions) |
+| Emergency close | Trader | Immediate on stop loss (protective) |
+| Strategy activation | KingKong | **Human approval required** before live execution |
 
 ## Signal Confidence Levels
 

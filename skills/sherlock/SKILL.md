@@ -34,28 +34,49 @@ Execute in sequence:
    - Repos by language, stars gained
    - Framework shifts, new tools
 
-3. **Crypto Market Data** — `scripts/crypto_sweep.py`
-   - Top movers, volume anomalies
-   - Funding rates, liquidation data
+3. **CoinGecko Market Data** — `scripts/coingecko_sweep.py`
+   - Global crypto metrics, BTC dominance
+   - Top 100 coins, gainers/losers
+   - Trending searches (community interest)
+   - Key assets tracking
 
-4. **On-Chain Analytics** — `scripts/onchain_sweep.py`
+4. **Messari Fundamentals** — `scripts/messari_sweep.py`
+   - On-chain metrics (NVT, active addresses)
+   - Research reports, fundamentals
+   - Institutional-grade analytics
+
+5. **Enhanced News** — `scripts/crypto_news_enhanced.py`
+   - CoinDesk, CoinTelegraph headlines
+   - Regulatory developments
+   - Macro/crypto crossover
+
+6. **On-Chain Analytics** — `scripts/onchain_sweep.py`
    - Exchange flows, accumulation patterns
    - Whale movements, unusual activity
 
-5. **News Aggregation** — `scripts/news_sweep.py`
-   - Tech/crypto/AI headlines
-   - Funding announcements, partnerships
+7. **Coinbase Pro Data** — `scripts/crypto_sweep.py`
+   - Exchange-specific volume and pricing
+   - Funding rates, liquidation data
 
-6. **Synthesis** — `scripts/synthesize.py`
+8. **Synthesis** — `scripts/synthesize.py`
    - Compile into structured report
    - Flag high-signal items
 
+### Data Stack (Per Your Specification)
+
+| Source | Type | Coverage | Use Case |
+|--------|------|----------|----------|
+| **CoinGecko** | Pricing/Market Data | 10K+ coins, global metrics | Market snapshot, dominance, trends |
+| **Messari** | Fundamentals/Research | Institutional-grade | On-chain metrics, research reports |
+| **Glassnode/Dune** | On-Chain Analytics | BTC, ETH, major L1s | Exchange flows, holder behavior |
+| **CoinDesk/The Block** | News/Regulatory | Industry-leading | Macro developments, compliance |
+
 ### Source Hierarchy
 
-1. **Primary** — Official announcements, direct data
-2. **Secondary** — Reuters, Bloomberg, CoinDesk
-3. **Technical** — On-chain, derivatives metrics
-4. **Community** — Filtered Twitter/X, forums
+1. **Primary** — CoinGecko (price), Messari (fundamentals), official announcements
+2. **Secondary** — CoinDesk, The Block, Reuters, Bloomberg
+3. **Technical** — On-chain data, derivatives metrics, exchange flows
+4. **Community** — Filtered Twitter/X, forums, developer activity
 5. **Sentiment** — Contrarian indicator only
 
 ## Output Format

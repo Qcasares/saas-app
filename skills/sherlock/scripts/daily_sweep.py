@@ -17,6 +17,9 @@ def run_sweep(script_name, output_dir="/tmp"):
     name_map = {
         "hn_sweep.py": "hn",
         "github_trending.py": "github",
+        "coingecko_sweep.py": "coingecko",
+        "messari_sweep.py": "messari",
+        "crypto_news_enhanced.py": "news_plus",
         "crypto_sweep.py": "crypto",
         "news_sweep.py": "news"
     }
@@ -49,6 +52,9 @@ def main():
     sweeps = [
         "hn_sweep.py",
         "github_trending.py",
+        "coingecko_sweep.py",
+        "messari_sweep.py",
+        "crypto_news_enhanced.py",
         "crypto_sweep.py",
         "news_sweep.py"
     ]

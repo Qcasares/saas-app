@@ -1,11 +1,29 @@
 {
-  "lastCheck": "2026-03-03T03:43:00Z",
+  "lastCheck": "2026-03-03T09:51:00Z",
   "prices": {
-    "BTC": 68400.00,
-    "ETH": 2011.52,
-    "SOL": 86.53
+    "BTC": 66465.38,
+    "ETH": 1947.45,
+    "SOL": 84.32
   },
-  "thresholdPercent": 2.0,
-  "lastAlert": null,
-  "checksToday": 6
+  "thresholdPercent": 1.0,
+  "criticalLevels": {
+    "BTC": {
+      "strategyFloor": 66385,
+      "criticalSupport": 63000,
+      "psychological": 60000,
+      "reclaimTarget": 68200
+    },
+    "SOL": {
+      "stopLoss": 78.75,
+      "breakout": 90.0,
+      "entry": 87.50
+    }
+  },
+  "lastAlert": "2026-03-03T09:44:00Z",
+  "checksToday": 9,
+  "alertConfig": {
+    "btcFloorProximity": 0.2,
+    "solStopProximity": 0.5,
+    "volatilityThreshold": 1.5
+  }
 }

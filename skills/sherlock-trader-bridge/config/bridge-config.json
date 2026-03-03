@@ -1,0 +1,34 @@
+{
+  "version": "1.0",
+  "signal_threshold": 0.70,
+  "auto_execute": false,
+  "require_approval_above_usd": 500,
+  "profit_taking": {
+    "enabled": true,
+    "tp1_pct": 0.08,
+    "tp2_pct": 0.15,
+    "tp3_pct": 0.25,
+    "trailing_after_tp1": true,
+    "trailing_pct": 0.03
+  },
+  "risk_overrides": {
+    "max_parabolic_position_pct": 0.05,
+    "max_momentum_position_pct": 0.10,
+    "require_stop_loss": true,
+    "max_hold_hours": 48
+  },
+  "notifications": {
+    "on_signal": true,
+    "on_entry": true,
+    "on_exit": true,
+    "on_target_hit": true,
+    "on_stop_loss": true,
+    "channels": ["telegram"]
+  },
+  "integration": {
+    "sherlock_intel_path": "intel/SHERLOCK-*.md",
+    "signals_path": "signals/",
+    "trading_log_path": "trading/",
+    "monitor_interval_seconds": 300
+  }
+}

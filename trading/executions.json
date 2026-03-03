@@ -1,0 +1,170 @@
+[
+  {
+    "signal_id": "sig-20260303-001",
+    "asset": "FAI-USD",
+    "direction": "LONG",
+    "timestamp": "2026-03-03T09:59:50.461721",
+    "mode": "live",
+    "orders": [],
+    "status": "failed",
+    "error": "No module named 'coinbase_trader'"
+  },
+  {
+    "signal_id": "sig-20260303-004",
+    "asset": "NEAR-USD",
+    "direction": "LONG",
+    "timestamp": "2026-03-03T09:59:50.461777",
+    "mode": "live",
+    "orders": [],
+    "status": "failed",
+    "error": "No module named 'coinbase_trader'"
+  },
+  {
+    "signal_id": "sig-20260303-001",
+    "asset": "FAI-USD",
+    "direction": "LONG",
+    "timestamp": "2026-03-03T10:00:46.754968",
+    "mode": "live",
+    "orders": [],
+    "status": "failed",
+    "error": "coinbase-advanced-py not installed. Run: pip install coinbase-advanced-py"
+  },
+  {
+    "signal_id": "sig-20260303-004",
+    "asset": "NEAR-USD",
+    "direction": "LONG",
+    "timestamp": "2026-03-03T10:00:46.757585",
+    "mode": "live",
+    "orders": [],
+    "status": "failed",
+    "error": "coinbase-advanced-py not installed. Run: pip install coinbase-advanced-py"
+  },
+  {
+    "signal_id": "sig-20260303-001",
+    "asset": "FAI-USD",
+    "direction": "LONG",
+    "timestamp": "2026-03-03T10:01:50.148466",
+    "mode": "live",
+    "orders": [],
+    "status": "failed",
+    "error": "coinbase-advanced-py not installed. Run: pip install coinbase-advanced-py"
+  },
+  {
+    "signal_id": "sig-20260303-004",
+    "asset": "NEAR-USD",
+    "direction": "LONG",
+    "timestamp": "2026-03-03T10:01:50.149948",
+    "mode": "live",
+    "orders": [],
+    "status": "failed",
+    "error": "coinbase-advanced-py not installed. Run: pip install coinbase-advanced-py"
+  },
+  {
+    "signal_id": "sig-20260303-001",
+    "asset": "FAI-USD",
+    "direction": "LONG",
+    "timestamp": "2026-03-03T10:04:55.236430",
+    "mode": "live",
+    "orders": [],
+    "status": "failed",
+    "error": "COINBASE_API_KEY and COINBASE_API_SECRET must be set in environment"
+  },
+  {
+    "signal_id": "sig-20260303-004",
+    "asset": "NEAR-USD",
+    "direction": "LONG",
+    "timestamp": "2026-03-03T10:04:55.295988",
+    "mode": "live",
+    "orders": [],
+    "status": "failed",
+    "error": "COINBASE_API_KEY and COINBASE_API_SECRET must be set in environment"
+  },
+  {
+    "signal_id": "sig-20260303-001",
+    "asset": "FAI-USD",
+    "direction": "LONG",
+    "timestamp": "2026-03-03T10:05:20.511027",
+    "mode": "live",
+    "orders": [
+      {
+        "simulation": true,
+        "type": "limit_order",
+        "product_id": "FAI-USD",
+        "side": "BUY",
+        "base_size": 3448.2758620689656,
+        "limit_price": 0.0029
+      },
+      {
+        "type": "stop_loss_pending",
+        "price": 0.002697,
+        "note": "Stop loss to be placed separately"
+      }
+    ],
+    "status": "executed",
+    "position_value": 10
+  },
+  {
+    "signal_id": "sig-20260303-004",
+    "asset": "NEAR-USD",
+    "direction": "LONG",
+    "timestamp": "2026-03-03T10:05:21.699606",
+    "mode": "live",
+    "orders": [
+      {
+        "simulation": true,
+        "type": "limit_order",
+        "product_id": "NEAR-USD",
+        "side": "BUY",
+        "base_size": 7.369196757553427,
+        "limit_price": 1.357
+      },
+      {
+        "type": "stop_loss_pending",
+        "price": 1.26201,
+        "note": "Stop loss to be placed separately"
+      }
+    ],
+    "status": "executed",
+    "position_value": 10
+  },
+  {
+    "signal_id": "sig-20260303-001",
+    "asset": "FAI-USD",
+    "direction": "LONG",
+    "timestamp": "2026-03-03T10:05:45.898436",
+    "mode": "live",
+    "orders": [],
+    "status": "failed",
+    "error": "limit_order_gtc() missing 1 required positional argument: 'client_order_id'"
+  },
+  {
+    "signal_id": "sig-20260303-004",
+    "asset": "NEAR-USD",
+    "direction": "LONG",
+    "timestamp": "2026-03-03T10:05:47.270784",
+    "mode": "live",
+    "orders": [],
+    "status": "failed",
+    "error": "limit_order_gtc() missing 1 required positional argument: 'client_order_id'"
+  },
+  {
+    "signal_id": "sig-20260303-001",
+    "asset": "FAI-USD",
+    "direction": "LONG",
+    "timestamp": "2026-03-03T10:06:03.507587",
+    "mode": "live",
+    "orders": [],
+    "status": "failed",
+    "error": "400 Client Error: Bad Request {\"error\":\"INVALID_ARGUMENT\",\"error_details\":\"account is not available\",\"message\":\"account is not available\"}"
+  },
+  {
+    "signal_id": "sig-20260303-004",
+    "asset": "NEAR-USD",
+    "direction": "LONG",
+    "timestamp": "2026-03-03T10:06:05.072103",
+    "mode": "live",
+    "orders": [],
+    "status": "failed",
+    "error": "400 Client Error: Bad Request {\"error\":\"INVALID_ARGUMENT\",\"error_details\":\"account is not available\",\"message\":\"account is not available\"}"
+  }
+]

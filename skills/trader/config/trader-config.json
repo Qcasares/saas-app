@@ -14,7 +14,7 @@
   "risk_limits": {
     "max_position_pct": 0.01,
     "daily_loss_limit_pct": 0.03,
-    "approved_pairs": ["BTC-USD", "ETH-USD", "SOL-USD", "BTC-USDC", "ETH-USDC"],
+    "approved_pairs": ["BTC-USD", "ETH-USD", "SOL-USD", "BTC-USDC", "ETH-USDC", "XRP-USD", "VVV-USD", "DOGE-USD", "SUI-USD", "ZEC-USD", "LINK-USD", "NEAR-USD", "ADA-USD", "HBAR-USD", "LTC-USD", "TAO-USD", "HYPE-USD", "AVAX-USD", "PENGU-USD", "XLM-USD", "BCH-USD", "ROBO-USD", "ONDO-USD", "FAI-USD", "AAVE-USD", "UNI-USD", "ZRO-USD", "PEPE-USD", "DOT-USD", "BONK-USD", "FARTCOIN-USD", "PUMP-USD", "AERO-USD", "MON-USD", "BNB-USD", "ENA-USD", "PERP-USD", "POL-USD", "KITE-USD", "ICP-USD"],
     "approval_threshold_usd": 500
   },
   "strategy": {

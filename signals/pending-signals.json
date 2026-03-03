@@ -1,0 +1,177 @@
+{
+  "generated_at": "2026-03-03T09:55:11.185974",
+  "source_intel": "intel/SHERLOCK-2026-03-03.md",
+  "signal_count": 5,
+  "signals": [
+    {
+      "signal_id": "sig-20260303-001",
+      "source": "sherlock",
+      "timestamp": "2026-03-03T09:00:00Z",
+      "asset": "FAI-USD",
+      "direction": "LONG",
+      "confidence": 0.65,
+      "setup_type": "parabolic_momentum",
+      "entry": {
+        "price": 0.0029,
+        "type": "limit",
+        "urgency": "caution"
+      },
+      "targets": [
+        {
+          "price": 0.003132,
+          "size_pct": 0.5,
+          "label": "TP1"
+        },
+        {
+          "price": 0.003335,
+          "size_pct": 0.5,
+          "label": "TP2"
+        }
+      ],
+      "stop_loss": 0.002697,
+      "position_size": {
+        "max_risk_pct": 0.02,
+        "max_position_pct": 0.05
+      },
+      "rationale": "Parabolic Momentum: +98.61% move detected in Sherlock sweep",
+      "timeframe": "scalp",
+      "expiration": "2026-03-04T09:00:00Z"
+    },
+    {
+      "signal_id": "sig-20260303-002",
+      "source": "sherlock",
+      "timestamp": "2026-03-03T09:00:00Z",
+      "asset": "BOBA-USD",
+      "direction": "LONG",
+      "confidence": 0.65,
+      "setup_type": "parabolic_momentum",
+      "entry": {
+        "price": 0.0293,
+        "type": "limit",
+        "urgency": "caution"
+      },
+      "targets": [
+        {
+          "price": 0.031644,
+          "size_pct": 0.5,
+          "label": "TP1"
+        },
+        {
+          "price": 0.033695,
+          "size_pct": 0.5,
+          "label": "TP2"
+        }
+      ],
+      "stop_loss": 0.027249,
+      "position_size": {
+        "max_risk_pct": 0.02,
+        "max_position_pct": 0.05
+      },
+      "rationale": "Parabolic Momentum: +55.85% move detected in Sherlock sweep",
+      "timeframe": "scalp",
+      "expiration": "2026-03-04T09:00:00Z"
+    },
+    {
+      "signal_id": "sig-20260303-003",
+      "source": "sherlock",
+      "timestamp": "2026-03-03T09:00:00Z",
+      "asset": "LRDS-USD",
+      "direction": "LONG",
+      "confidence": 0.8,
+      "setup_type": "momentum_breakout",
+      "entry": {
+        "price": 0.0316,
+        "type": "market",
+        "urgency": "immediate"
+      },
+      "targets": [
+        {
+          "price": 0.034128,
+          "size_pct": 0.5,
+          "label": "TP1"
+        },
+        {
+          "price": 0.03634,
+          "size_pct": 0.5,
+          "label": "TP2"
+        }
+      ],
+      "stop_loss": 0.029388,
+      "position_size": {
+        "max_risk_pct": 0.02,
+        "max_position_pct": 0.1
+      },
+      "rationale": "Momentum Breakout: +19.25% move detected in Sherlock sweep",
+      "timeframe": "swing",
+      "expiration": "2026-03-04T09:00:00Z"
+    },
+    {
+      "signal_id": "sig-20260303-004",
+      "source": "sherlock",
+      "timestamp": "2026-03-03T09:00:00Z",
+      "asset": "NEAR-USD",
+      "direction": "LONG",
+      "confidence": 0.75,
+      "setup_type": "trend_continuation",
+      "entry": {
+        "price": 1.357,
+        "type": "limit",
+        "urgency": "standard"
+      },
+      "targets": [
+        {
+          "price": 1.46556,
+          "size_pct": 0.5,
+          "label": "TP1"
+        },
+        {
+          "price": 1.56055,
+          "size_pct": 0.5,
+          "label": "TP2"
+        }
+      ],
+      "stop_loss": 1.26201,
+      "position_size": {
+        "max_risk_pct": 0.02,
+        "max_position_pct": 0.1
+      },
+      "rationale": "Trend Continuation: +14.23% move detected in Sherlock sweep",
+      "timeframe": "swing",
+      "expiration": "2026-03-04T09:00:00Z"
+    },
+    {
+      "signal_id": "sig-20260303-005",
+      "source": "sherlock",
+      "timestamp": "2026-03-03T09:00:00Z",
+      "asset": "EUL-USD",
+      "direction": "LONG",
+      "confidence": 0.75,
+      "setup_type": "trend_continuation",
+      "entry": {
+        "price": 1.148,
+        "type": "limit",
+        "urgency": "standard"
+      },
+      "targets": [
+        {
+          "price": 1.23984,
+          "size_pct": 0.5,
+          "label": "TP1"
+        },
+        {
+          "price": 1.3202,
+          "size_pct": 0.5,
+          "label": "TP2"
+        }
+      ],
+      "stop_loss": 1.06764,
+      "position_size": {
+        "max_risk_pct": 0.02,
+        "max_position_pct": 0.1
+      },
+      "rationale": "Trend Continuation: +13.1% move detected in Sherlock sweep",
+      "timeframe": "swing",
+      "expiration": "2026-03-04T09:00:00Z"
+    }
+  ]
+}

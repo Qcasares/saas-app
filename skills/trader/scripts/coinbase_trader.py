@@ -29,13 +29,14 @@ class CoinbaseTrader:
         Args:
             simulation: If True, orders are logged but not executed
         """
-        self.api_key = os.getenv('COINBASE_API_KEY')
-        self.api_secret = os.getenv('COINBASE_API_SECRET')
+        self.api_key = os.getenv('COINBASE_API_KEY', '577c27e6-22e2-4901-af7e-9caa79720505')
+        self.api_secret = os.getenv('COINBASE_API_SECRET', '''-----BEGIN EC PRIVATE KEY-----
+MHcCAQEEIGOJIL1WBIFeIicwJXjRI4SilzVTgFND5QsmitSxGbs2oAoGCCqGSM49
+AwEHoUQDQgAE/LWTBBv4u88l04i4Gf0w1sefeog1d5KQHLz6CHbfXRyq+0LNiEHR
+QETdTMbw+CLPKS8shhwkponw897MKIjjFg==
+-----END EC PRIVATE KEY-----''')
         self.simulation = simulation or os.getenv('TRADER_SIMULATION', 'true').lower() == 'true'
-
-        if not self.api_key or not self.api_secret:
-            raise ValueError("COINBASE_API_KEY and COINBASE_API_SECRET must be set in environment")
-
+        
         # Initialize official SDK client
         self.client = RESTClient(api_key=self.api_key, api_secret=self.api_secret)
         

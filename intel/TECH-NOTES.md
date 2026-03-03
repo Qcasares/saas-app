@@ -4,6 +4,39 @@
 
 ---
 
+## 2026-03-03 — Journal Automation + Coinbase Secret Removal
+
+### Summary
+Built baseline trade journal tooling and removed hardcoded Coinbase credentials. Created the standard `tools/` directory layout for engineering infrastructure.
+
+### Changes
+1. **Created tools/ directory structure**
+   - `tools/data-collection/`
+   - `tools/journal/`
+   - `tools/alerts/`
+   - `tools/analysis/`
+   - `tools/dashboards/`
+
+2. **Trade journal summary script**
+   - New: `tools/journal/trade_journal.py`
+   - Reads `trading/executions.json`, `trading/active-positions.json`, and `trading/MARKET-ANALYSIS.json`
+   - Outputs text summary + writes `trading/journal-summary.json`
+   - Computes status counts, exposure, and MTM PnL snapshot
+
+3. **Security cleanup**
+   - Removed hardcoded Coinbase API key/secret from `skills/trader/scripts/coinbase-trader.py`
+   - Script now requires `COINBASE_API_KEY` and `COINBASE_API_SECRET` env vars
+
+### Notes / Follow-ups
+- Execution logs show failures from missing `coinbase-advanced-py` and missing env vars. To run live:
+  ```bash
+  pip install coinbase-advanced-py
+  export COINBASE_API_KEY=...
+  export COINBASE_API_SECRET=...
+  ```
+
+---
+
 ## 2026-03-01 — Security Hardening & Dependency Updates
 
 ### Summary

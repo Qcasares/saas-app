@@ -37,6 +37,26 @@ Skills are shared. Your setup is yours. Keeping them apart means you can update 
 
 ---
 
+### Prefect Workflow Tools
+
+Custom CLI tools for Prefect workflow orchestration:
+
+- **prefect-executor** — Execute Prefect flows with workspace-aware configuration
+  - Auto-detects virtual environments
+  - Logs execution history
+  - Usage: `prefect-executor flow.py --deployment prod --param key value`
+  - Location: `~/.openclaw/workspace/tools/prefect-executor.py`
+  - Symlink: `~/.local/bin/prefect-executor`
+
+- **pipeline-deploy** — Deploy Prefect pipelines with environment-aware configuration
+  - Auto-detects @flow entrypoints
+  - Manages dev/staging/prod environments
+  - Usage: `pipeline-deploy flow.py --name my-flow --env prod --schedule "0 9 * * *" --apply`
+  - Location: `~/.openclaw/workspace/tools/pipeline-deploy.py`
+  - Symlink: `~/.local/bin/pipeline-deploy`
+
+---
+
 ### Google Workspace (Primary)
 
 - **gog** — PRIMARY interface for Google services (Gmail, Calendar, Drive, Contacts, Sheets, Docs)

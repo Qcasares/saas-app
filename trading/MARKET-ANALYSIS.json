@@ -1,45 +1,45 @@
 {
-  "timestamp": "2026-03-03T23:20:27.265459",
+  "timestamp": "2026-03-03T23:56:44.618669",
   "prices": {
     "BTC-USD": {
-      "price": 68540.0,
+      "price": 68281.0,
       "bid": 0.0,
       "ask": 0.0,
-      "volume_24h": 12984.83323949,
-      "percent_change_24h": -1.01643727916802,
-      "timestamp": "2026-03-03T23:20:27.581466"
+      "volume_24h": 12824.14031252,
+      "percent_change_24h": -0.74964318798292,
+      "timestamp": "2026-03-03T23:56:44.983573"
     },
     "ETH-USD": {
-      "price": 1991.02,
+      "price": 1982.05,
       "bid": 0.0,
       "ask": 0.0,
-      "volume_24h": 228833.99206149,
-      "percent_change_24h": -2.61008227433256,
-      "timestamp": "2026-03-03T23:20:27.773107"
+      "volume_24h": 227292.02304524,
+      "percent_change_24h": -2.21129130136615,
+      "timestamp": "2026-03-03T23:56:45.161309"
     },
     "SOL-USD": {
-      "price": 87.208,
+      "price": 86.97,
       "bid": 0.0,
       "ask": 0.0,
-      "volume_24h": 2408272.8778621,
-      "percent_change_24h": -0.28813171735651,
-      "timestamp": "2026-03-03T23:20:27.949342"
+      "volume_24h": 2434185.86284359,
+      "percent_change_24h": 0.40406372662203,
+      "timestamp": "2026-03-03T23:56:45.337048"
     },
     "SOL-GBP": {
-      "price": 65.23,
+      "price": 65.12,
       "bid": 0.0,
       "ask": 0.0,
-      "volume_24h": 17815.775,
-      "percent_change_24h": 0.04601226993865,
-      "timestamp": "2026-03-03T23:20:28.124520"
+      "volume_24h": 17487.097,
+      "percent_change_24h": 0.82056045827527,
+      "timestamp": "2026-03-03T23:56:45.523487"
     },
     "BTC-GBP": {
-      "price": 51312.02,
+      "price": 51123.6,
       "bid": 0.0,
       "ask": 0.0,
-      "volume_24h": 117.4158352,
-      "percent_change_24h": -0.56201277352848,
-      "timestamp": "2026-03-03T23:20:28.299692"
+      "volume_24h": 115.28059642,
+      "percent_change_24h": -0.30011219347905,
+      "timestamp": "2026-03-03T23:56:45.702407"
     }
   },
   "trends": {
@@ -67,10 +67,10 @@
       "type": "POSITION_UPDATE",
       "asset": "SOL",
       "balance": 0.076,
-      "current_price": 87.208,
+      "current_price": 86.968,
       "entry_price": 87.5,
-      "gain_pct": -0.33,
-      "gain_usd": -0.02
+      "gain_pct": -0.61,
+      "gain_usd": -0.04
     }
   ],
   "recommendations": []

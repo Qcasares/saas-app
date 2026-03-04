@@ -166,5 +166,15 @@
     "orders": [],
     "status": "failed",
     "error": "400 Client Error: Bad Request {\"error\":\"INVALID_ARGUMENT\",\"error_details\":\"account is not available\",\"message\":\"account is not available\"}"
+  },
+  {
+    "signal_id": "sig-manual-20260304-0800VVV",
+    "asset": "VVV-USD",
+    "direction": "LONG",
+    "timestamp": "2026-03-04T08:09:43.583715",
+    "mode": "live",
+    "orders": [],
+    "status": "failed",
+    "error": "400 Client Error: Bad Request {\"error\":\"INVALID_ARGUMENT\",\"error_details\":\"account is not available\",\"message\":\"account is not available\"}"
   }
 ]

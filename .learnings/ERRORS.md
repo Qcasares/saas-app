@@ -171,3 +171,33 @@ Use a here-doc python script or avoid f-string with shell interpolation. Prefer 
 - Tags: shell, zsh, quoting
 
 ---
+
+## [ERR-20260304-002] missing-timeout-command
+
+**Logged**: 2026-03-04T07:47:00Z
+**Priority**: medium
+**Status**: pending
+**Area**: infra
+
+### Summary
+`timeout` command not found in zsh on macOS when testing monitor script.
+
+### Error
+```
+zsh:1: command not found: timeout
+```
+
+### Context
+- Command: `timeout 30 python3 skills/sherlock-trader-bridge/scripts/monitor_positions.py --once --mode simulation`
+- Shell: zsh
+- Host: macOS
+
+### Suggested Fix
+Use `gtimeout` (coreutils) or replace with a Python-based timeout wrapper.
+
+### Metadata
+- Reproducible: yes
+- Related Files: skills/sherlock-trader-bridge/scripts/monitor_positions.py
+- Tags: macos, shell, timeout
+
+---

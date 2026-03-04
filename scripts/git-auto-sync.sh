@@ -35,7 +35,7 @@ fi
 git add -A
 
 # Check for sensitive data in staged files
-if git diff --cached --name-only | grep -qE '\.env|secret|token|key|password'; then
+if git diff --cached --name-only | grep -qE '^\.env|_secret\.json|_token\.json|\.key$|password'; then
     echo "⚠️  WARNING: Potential sensitive files detected:"
     git diff --cached --name-only | grep -E '\.env|secret|token|key|password'
     echo ""

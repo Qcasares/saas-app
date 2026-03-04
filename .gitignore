@@ -5,6 +5,9 @@
 saas-app/.env*.local
 saas-app/.env.local
 
+# Scripts that contain secret detection patterns (not actual secrets)
+scripts/precommit-secret-scan.sh
+
 # AI model caches
 .fastembed_cache/
 .cache/

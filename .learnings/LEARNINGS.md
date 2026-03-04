@@ -301,3 +301,37 @@ User directive: "Learn as much as you can" — continuous learning mode activate
 - Tags: learning, continuous-improvement, knowledge-building
 
 ---
+
+## [LRN-20260304-001] continuous-learning-mandate
+
+**Logged**: 2026-03-04T09:20:00Z
+**Priority**: critical
+**Status**: active
+**Area**: philosophy, behavior
+
+### Summary
+Explicit user directive: "ensure that you are always learning and improving."
+
+### Details
+This reinforces and extends previous autonomy and proactive development directives. Learning is not a side activity—it is a core operational requirement.
+
+### Operationalization
+| Trigger | Action |
+|---------|--------|
+| Task completes | Log learnings (errors, better approaches, corrections) |
+| New skill used | Deep read SKILL.md, document gotchas |
+| Pattern repeats 3x+ | Promote to SOUL.md/AGENTS.md |
+| User corrects | Immediate log + pattern analysis |
+| Weekly review | Audit .learnings/, consolidate, promote |
+| Agent interaction | Extract patterns from Moltbook/community |
+
+### Metrics
+- Learnings logged per day (target: ≥1)
+- Patterns promoted per week (target: ≥1)
+- Skills mastered per month (target: ≥2)
+
+### Source
+User directive via Telegram, 2026-03-04
+Related: LRN-20250206-005 (learn directive), LRN-20250206-003 (autonomy permission)
+
+---

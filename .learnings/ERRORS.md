@@ -143,3 +143,31 @@ Restart OpenClaw gateway and verify DNS/network access to app.postiz.com.
 
 - 2026-02-28 08:09 | Heartbeat calendar check failed: 'accli' not found (Apple Calendar CLI not installed).
 - 2026-02-28 08:09 | Heartbeat email check failed: himalaya config missing at ~/Library/Application Support/himalaya/config.toml (and non-TTY prompt error).
+## [ERR-20260304-001] coinbase_price_fetch_shell
+
+**Logged**: 2026-03-04T07:10:00Z
+**Priority**: medium
+**Status**: pending
+**Area**: infra
+
+### Summary
+Shell command failed when fetching Coinbase prices due to zsh substitution/escaping issues.
+
+### Error
+```
+zsh:1: bad substitution
+```
+
+### Context
+- Attempted: curl https://api.exchange.coinbase.com/products/BTC-USD/ticker | python3 -c "print(f'BTC: ${float(d["price"]):,.2f}')"
+- Shell: zsh
+
+### Suggested Fix
+Use a here-doc python script or avoid f-string with shell interpolation. Prefer writing to a temp script.
+
+### Metadata
+- Reproducible: yes
+- Related Files: none
+- Tags: shell, zsh, quoting
+
+---

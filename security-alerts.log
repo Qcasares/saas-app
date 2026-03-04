@@ -6,3 +6,7 @@
 [2026-03-03 07:57:47 UTC] [ALERT:MEDIUM] [unverified_skill] Skill without SKILL.md: scribe
 [2026-03-03 07:57:48 UTC] [ALERT:MEDIUM] [unverified_skill] Skill without SKILL.md: sherlock
 [2026-03-03 07:57:48 UTC] [ALERT:HIGH] [malicious_pattern] Suspicious pattern in sql-toolkit/SKILL.md: exec.*os
+[2026-03-04 06:45:12 UTC] [ALERT:HIGH] [malicious_pattern] Suspicious pattern in openclaw-kirocli-coding-agent/SKILL.md: exec.*os
+[2026-03-04 06:45:12 UTC] [ALERT:MEDIUM] [unverified_skill] Skill without SKILL.md: scribe
+[2026-03-04 06:45:12 UTC] [ALERT:HIGH] [malicious_pattern] Suspicious pattern in sherlock-trader-bridge/SKILL.md: exec.*os
+[2026-03-04 06:45:12 UTC] [ALERT:HIGH] [malicious_pattern] Suspicious pattern in sql-toolkit/SKILL.md: exec.*os

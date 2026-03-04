@@ -1,18 +1,26 @@
 {
   "max_daily_loss_usd": 10,
-  "max_position_size_usd": 30,
+  "max_position_size_usd": 10,
   "per_trade_risk_pct": 2.0,
-  "max_open_positions": 2,
+  "max_open_positions": 5,
   "instruments": ["BTC", "ETH", "SOL"],
   "timeframes": ["4H", "1D"],
   "stop_loss_default_pct": 5.0,
   "take_profit_targets": [1.5, 2.5, 4.0],
-  "position_sizing": "fixed_risk",
-  "max_correlated_positions": 1,
+  "position_sizing": "portfolio_pct",
+  "position_size_pct": 0.20,
+  "max_correlated_positions": 2,
   "trading_hours": "24/7",
-  "account_balance_usd": 37.45,
-  "trading_mode": "SIMULATION_UNTIL_FUNDED",
+  "account_balance_usd": 50.52,
+  "trading_mode": "LIVE",
   "simulation_target_usd": 500,
   "funding_threshold_usd": 100,
-  "last_updated": "2026-03-04T08:45:00Z"
+  "last_updated": "2026-03-04T11:45:00Z",
+  "improvements_applied": [
+    "Increased position size to 20% portfolio (~$10 per trade)",
+    "Enabled auto-stop execution",
+    "Added 30-min continuous scanner",
+    "Added funding rate scanner",
+    "Increased correlation limit to 2"
+  ]
 }

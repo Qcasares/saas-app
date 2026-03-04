@@ -44,14 +44,19 @@ def main():
         # Place limit order 0.5% above market to ensure fill
         limit_price = price * 1.005
         
-        print(f"Converting: £{gbp_to_use:.2f} → ~{usdc_amount:.2f} USDC")
+        # Respect base_increment precision (0.01 for USDC)
+        usdc_amount_rounded = round(usdc_amount, 2)
+        # Respect quote_increment precision (0.0001 for GBP)
+        limit_price_rounded = round(limit_price, 4)
+        
+        print(f"Converting: £{gbp_to_use:.2f} → ~{usdc_amount_rounded:.2f} USDC")
         print(f"Rate: 1 USDC = £{price:.4f}")
         
         order = trader.client.limit_order_gtc(
             product_id='USDC-GBP',
             side='BUY',
-            base_size=str(round(usdc_amount, 6)),
-            limit_price=str(round(limit_price, 4)),
+            base_size=str(usdc_amount_rounded),
+            limit_price=str(limit_price_rounded),
             client_order_id=str(uuid.uuid4())
         )
         

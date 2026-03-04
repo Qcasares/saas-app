@@ -1,32 +1,5 @@
 [
   {
-    "signal_id": "sig-20260303-001",
-    "asset": "FAI-USDC",
-    "direction": "LONG",
-    "entry_price": 0.00353,
-    "position_size": 1399.0,
-    "position_value": 4.93,
-    "targets": [
-      {
-        "price": 0.00381,
-        "size_pct": 0.5,
-        "label": "TP1"
-      },
-      {
-        "price": 0.00406,
-        "size_pct": 0.3,
-        "label": "TP2"
-      }
-    ],
-    "stop_loss": 0.00328,
-    "status": "open",
-    "opened_at": "2026-03-03T14:30:00Z",
-    "tp1_hit": false,
-    "tp2_hit": false,
-    "trailing_active": false,
-    "trailing_stop": null
-  },
-  {
     "signal_id": "sig-20260303-004",
     "asset": "NEAR-USDC",
     "direction": "LONG",
@@ -48,6 +21,33 @@
     "stop_loss": 1.289,
     "status": "open",
     "opened_at": "2026-03-03T14:30:00Z",
+    "tp1_hit": false,
+    "tp2_hit": false,
+    "trailing_active": false,
+    "trailing_stop": null
+  },
+  {
+    "signal_id": "sig-manual-20260304-111428",
+    "asset": "VVV-USDC",
+    "direction": "LONG",
+    "entry_price": 6.14,
+    "position_size": 0.5700325732899023,
+    "position_value": 3.5,
+    "targets": [
+      {
+        "price": 6.6,
+        "size_pct": 0.5,
+        "label": "TP1"
+      },
+      {
+        "price": 6.9,
+        "size_pct": 0.5,
+        "label": "TP2"
+      }
+    ],
+    "stop_loss": 5.83,
+    "status": "open",
+    "opened_at": "2026-03-04T11:14:28.379204",
     "tp1_hit": false,
     "tp2_hit": false,
     "trailing_active": false,

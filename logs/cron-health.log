@@ -674,3 +674,607 @@
 2026-03-04 10:58:16 | Jobs with errors: 6
 2026-03-04 10:58:16 | Auto-fixed: 6
 2026-03-04 10:58:16 | === Check Complete ===
+2026-03-04 11:07:04 | === Cron Health Check Started ===
+2026-03-04 11:07:05 | Checking: Cron Health Monitor (Self-Healing) (52bb69be-f6d0-4ef8-b871-a38ff78f074d)
+2026-03-04 11:07:05 |   Status: error | Consecutive errors: 2
+2026-03-04 11:07:05 |   🔄 Auto-retrying job (attempt with backoff)...
+2026-03-04 11:07:06 |   ✅ Retry initiated
+2026-03-04 11:07:06 | Checking: Trading System Health Check (b2d350f3-0200-475a-b75c-cafc6c5ff9cd)
+2026-03-04 11:07:06 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:07:06 | Checking: GBP Auto-Converter (cffe3a97-1931-4efd-b76c-950e03d1eff2)
+2026-03-04 11:07:06 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:07:07 | Checking: Emergency Monitor (5-min) (2f1f9cec-adbb-4a0f-b61a-23fcfa43eb65)
+2026-03-04 11:07:07 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:07:08 | Checking: Squad Monitor - 15min Money Focus (b82a99b5-d0b2-4725-97c1-a127e639dede)
+2026-03-04 11:07:08 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:07:08 | Checking: Hourly Git Auto-Sync (78b8964c-52f0-4ad7-8edb-6534eab07d1e)
+2026-03-04 11:07:08 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:07:09 | Checking: Trader Market Scan (Midday) (dad8e6f9-ab04-4903-a494-c0ffaaa66bf8)
+2026-03-04 11:07:09 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:07:10 | Checking: Sherlock Afternoon Update (082f0fdf-e9ab-4073-befb-94b3b119383c)
+2026-03-04 11:07:10 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:07:10 | Checking: Sherlock Research (Afternoon) (cfdb2c59-0f29-470d-98ad-b8cb48b46133)
+2026-03-04 11:07:10 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:07:11 | Checking: Trader Market Scan (Evening) (508eedd2-82b9-4267-8775-a6affdac003d)
+2026-03-04 11:07:11 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:07:11 | Checking: Sherlock Research (Evening) (f78250ca-57a9-489a-b45f-29ee8fde43d0)
+2026-03-04 11:07:11 |   Status: error | Consecutive errors: 1
+2026-03-04 11:07:12 |   🔄 Auto-retrying job (attempt with backoff)...
+2026-03-04 11:07:12 |   ✅ Retry initiated
+2026-03-04 11:07:12 | Checking: Daily Self-Improvement Review (59cee57b-ca5c-49c3-b92d-e633572a6a70)
+2026-03-04 11:07:12 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:07:13 | Checking: Daily Auto-Update (c5c577b7-d12a-4a7c-9ae9-7955a01b07f5)
+2026-03-04 11:07:13 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:07:13 | Checking: Daily Security Monitor Scan (0e7434dd-4493-4412-bf8e-a7590cadfdbc)
+2026-03-04 11:07:13 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:07:14 | Checking: Daily Brew Update & Upgrade (e9df09a5-2ac3-445d-a79b-2302a2d804ae)
+2026-03-04 11:07:14 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:07:15 | Checking: Daily Briefing (7am) (b25924f1-5d8c-48c6-91fa-f703ac7a3801)
+2026-03-04 11:07:15 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:07:15 | Checking: Sherlock Research (Morning) (3fd6d3f4-9c31-4348-8e35-5496b906e3af)
+2026-03-04 11:07:15 |   Status: error | Consecutive errors: 1
+2026-03-04 11:07:16 |   🔄 Auto-retrying job (attempt with backoff)...
+2026-03-04 11:07:16 |   ✅ Retry initiated
+2026-03-04 11:07:16 | Checking: Sherlock Morning Sweep (6e091019-a76f-4006-b655-524b8df99a90)
+2026-03-04 11:07:16 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:07:17 | Checking: Daily Skill & Security Briefing (308810d1-f6e0-4776-ab19-11e0c0ec1518)
+2026-03-04 11:07:17 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:07:17 | Checking: Trader Market Scan (Morning) (5329c00d-ad8b-4a8f-a66e-7c465e8ac5a7)
+2026-03-04 11:07:17 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:07:18 | Checking: Weekly Trust Dashboard Report (1cbdd91c-f611-4b95-9ed0-eb72172db7b3)
+2026-03-04 11:07:18 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:07:19 | === Summary ===
+2026-03-04 11:07:19 | Jobs with errors: 3
+2026-03-04 11:07:19 | Auto-fixed: 3
+2026-03-04 11:07:19 | === Check Complete ===
+2026-03-04 11:12:05 | === Cron Health Check Started ===
+2026-03-04 11:12:06 | Checking: Cron Health Monitor (Self-Healing) (52bb69be-f6d0-4ef8-b871-a38ff78f074d)
+2026-03-04 11:12:06 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:12:07 | Checking: GBP Auto-Converter (cffe3a97-1931-4efd-b76c-950e03d1eff2)
+2026-03-04 11:12:07 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:12:07 | Checking: Squad Monitor - 15min Money Focus (b82a99b5-d0b2-4725-97c1-a127e639dede)
+2026-03-04 11:12:07 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:12:08 | Checking: Emergency Monitor (5-min) (2f1f9cec-adbb-4a0f-b61a-23fcfa43eb65)
+2026-03-04 11:12:08 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:12:09 | Checking: Trading System Health Check (b2d350f3-0200-475a-b75c-cafc6c5ff9cd)
+2026-03-04 11:12:09 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:12:09 | Checking: Hourly Git Auto-Sync (78b8964c-52f0-4ad7-8edb-6534eab07d1e)
+2026-03-04 11:12:09 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:12:10 | Checking: Trader Market Scan (Midday) (dad8e6f9-ab04-4903-a494-c0ffaaa66bf8)
+2026-03-04 11:12:10 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:12:11 | Checking: Sherlock Afternoon Update (082f0fdf-e9ab-4073-befb-94b3b119383c)
+2026-03-04 11:12:11 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:12:11 | Checking: Sherlock Research (Afternoon) (cfdb2c59-0f29-470d-98ad-b8cb48b46133)
+2026-03-04 11:12:11 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:12:12 | Checking: Trader Market Scan (Evening) (508eedd2-82b9-4267-8775-a6affdac003d)
+2026-03-04 11:12:12 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:12:12 | Checking: Sherlock Research (Evening) (f78250ca-57a9-489a-b45f-29ee8fde43d0)
+2026-03-04 11:12:12 |   Status: error | Consecutive errors: 1
+2026-03-04 11:12:13 |   🔄 Auto-retrying job (attempt with backoff)...
+2026-03-04 11:12:13 |   ✅ Retry initiated
+2026-03-04 11:12:13 | Checking: Daily Self-Improvement Review (59cee57b-ca5c-49c3-b92d-e633572a6a70)
+2026-03-04 11:12:13 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:12:14 | Checking: Daily Auto-Update (c5c577b7-d12a-4a7c-9ae9-7955a01b07f5)
+2026-03-04 11:12:14 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:12:15 | Checking: Daily Security Monitor Scan (0e7434dd-4493-4412-bf8e-a7590cadfdbc)
+2026-03-04 11:12:15 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:12:15 | Checking: Daily Brew Update & Upgrade (e9df09a5-2ac3-445d-a79b-2302a2d804ae)
+2026-03-04 11:12:15 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:12:16 | Checking: Daily Briefing (7am) (b25924f1-5d8c-48c6-91fa-f703ac7a3801)
+2026-03-04 11:12:16 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:12:16 | Checking: Sherlock Research (Morning) (3fd6d3f4-9c31-4348-8e35-5496b906e3af)
+2026-03-04 11:12:16 |   Status: error | Consecutive errors: 1
+2026-03-04 11:12:17 |   🔄 Auto-retrying job (attempt with backoff)...
+2026-03-04 11:12:17 |   ✅ Retry initiated
+2026-03-04 11:12:17 | Checking: Sherlock Morning Sweep (6e091019-a76f-4006-b655-524b8df99a90)
+2026-03-04 11:12:17 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:12:18 | Checking: Daily Skill & Security Briefing (308810d1-f6e0-4776-ab19-11e0c0ec1518)
+2026-03-04 11:12:18 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:12:18 | Checking: Trader Market Scan (Morning) (5329c00d-ad8b-4a8f-a66e-7c465e8ac5a7)
+2026-03-04 11:12:18 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:12:19 | Checking: Weekly Trust Dashboard Report (1cbdd91c-f611-4b95-9ed0-eb72172db7b3)
+2026-03-04 11:12:19 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:12:20 | === Summary ===
+2026-03-04 11:12:20 | Jobs with errors: 2
+2026-03-04 11:12:20 | Auto-fixed: 2
+2026-03-04 11:12:20 | === Check Complete ===
+2026-03-04 11:17:07 | === Cron Health Check Started ===
+2026-03-04 11:17:07 | Checking: Cron Health Monitor (Self-Healing) (52bb69be-f6d0-4ef8-b871-a38ff78f074d)
+2026-03-04 11:17:07 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:17:08 | Checking: Trading System Health Check (b2d350f3-0200-475a-b75c-cafc6c5ff9cd)
+2026-03-04 11:17:08 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:17:09 | Checking: GBP Auto-Converter (cffe3a97-1931-4efd-b76c-950e03d1eff2)
+2026-03-04 11:17:09 |   Status: error | Consecutive errors: 1
+2026-03-04 11:17:09 |   🔄 Auto-retrying job (attempt with backoff)...
+2026-03-04 11:17:09 |   ✅ Retry initiated
+2026-03-04 11:17:09 | Checking: Emergency Monitor (5-min) (2f1f9cec-adbb-4a0f-b61a-23fcfa43eb65)
+2026-03-04 11:17:09 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:17:10 | Checking: Squad Monitor - 15min Money Focus (b82a99b5-d0b2-4725-97c1-a127e639dede)
+2026-03-04 11:17:10 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:17:11 | Checking: Hourly Git Auto-Sync (78b8964c-52f0-4ad7-8edb-6534eab07d1e)
+2026-03-04 11:17:11 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:17:11 | Checking: Trader Market Scan (Midday) (dad8e6f9-ab04-4903-a494-c0ffaaa66bf8)
+2026-03-04 11:17:11 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:17:12 | Checking: Sherlock Afternoon Update (082f0fdf-e9ab-4073-befb-94b3b119383c)
+2026-03-04 11:17:12 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:17:13 | Checking: Sherlock Research (Afternoon) (cfdb2c59-0f29-470d-98ad-b8cb48b46133)
+2026-03-04 11:17:13 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:17:13 | Checking: Trader Market Scan (Evening) (508eedd2-82b9-4267-8775-a6affdac003d)
+2026-03-04 11:17:13 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:17:14 | Checking: Sherlock Research (Evening) (f78250ca-57a9-489a-b45f-29ee8fde43d0)
+2026-03-04 11:17:14 |   Status: error | Consecutive errors: 1
+2026-03-04 11:17:15 |   🔄 Auto-retrying job (attempt with backoff)...
+2026-03-04 11:17:15 |   ✅ Retry initiated
+2026-03-04 11:17:15 | Checking: Daily Self-Improvement Review (59cee57b-ca5c-49c3-b92d-e633572a6a70)
+2026-03-04 11:17:15 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:17:15 | Checking: Daily Auto-Update (c5c577b7-d12a-4a7c-9ae9-7955a01b07f5)
+2026-03-04 11:17:15 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:17:16 | Checking: Daily Security Monitor Scan (0e7434dd-4493-4412-bf8e-a7590cadfdbc)
+2026-03-04 11:17:16 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:17:17 | Checking: Daily Brew Update & Upgrade (e9df09a5-2ac3-445d-a79b-2302a2d804ae)
+2026-03-04 11:17:17 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:17:17 | Checking: Daily Briefing (7am) (b25924f1-5d8c-48c6-91fa-f703ac7a3801)
+2026-03-04 11:17:17 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:17:18 | Checking: Sherlock Research (Morning) (3fd6d3f4-9c31-4348-8e35-5496b906e3af)
+2026-03-04 11:17:18 |   Status: error | Consecutive errors: 1
+2026-03-04 11:17:19 |   🔄 Auto-retrying job (attempt with backoff)...
+2026-03-04 11:17:19 |   ✅ Retry initiated
+2026-03-04 11:17:19 | Checking: Sherlock Morning Sweep (6e091019-a76f-4006-b655-524b8df99a90)
+2026-03-04 11:17:19 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:17:19 | Checking: Daily Skill & Security Briefing (308810d1-f6e0-4776-ab19-11e0c0ec1518)
+2026-03-04 11:17:19 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:17:20 | Checking: Trader Market Scan (Morning) (5329c00d-ad8b-4a8f-a66e-7c465e8ac5a7)
+2026-03-04 11:17:20 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:17:21 | Checking: Weekly Trust Dashboard Report (1cbdd91c-f611-4b95-9ed0-eb72172db7b3)
+2026-03-04 11:17:21 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:17:21 | === Summary ===
+2026-03-04 11:17:21 | Jobs with errors: 3
+2026-03-04 11:17:21 | Auto-fixed: 3
+2026-03-04 11:17:21 | === Check Complete ===
+2026-03-04 11:22:07 | === Cron Health Check Started ===
+2026-03-04 11:22:08 | Checking: Cron Health Monitor (Self-Healing) (52bb69be-f6d0-4ef8-b871-a38ff78f074d)
+2026-03-04 11:22:08 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:22:08 | Checking: GBP Auto-Converter (cffe3a97-1931-4efd-b76c-950e03d1eff2)
+2026-03-04 11:22:08 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:22:09 | Checking: Emergency Monitor (5-min) (2f1f9cec-adbb-4a0f-b61a-23fcfa43eb65)
+2026-03-04 11:22:09 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:22:10 | Checking: Trading System Health Check (b2d350f3-0200-475a-b75c-cafc6c5ff9cd)
+2026-03-04 11:22:10 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:22:10 | Checking: Squad Monitor - 15min Money Focus (b82a99b5-d0b2-4725-97c1-a127e639dede)
+2026-03-04 11:22:10 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:22:11 | Checking: Hourly Git Auto-Sync (78b8964c-52f0-4ad7-8edb-6534eab07d1e)
+2026-03-04 11:22:11 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:22:12 | Checking: Trader Market Scan (Midday) (dad8e6f9-ab04-4903-a494-c0ffaaa66bf8)
+2026-03-04 11:22:12 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:22:12 | Checking: Sherlock Afternoon Update (082f0fdf-e9ab-4073-befb-94b3b119383c)
+2026-03-04 11:22:12 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:22:13 | Checking: Sherlock Research (Afternoon) (cfdb2c59-0f29-470d-98ad-b8cb48b46133)
+2026-03-04 11:22:13 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:22:14 | Checking: Trader Market Scan (Evening) (508eedd2-82b9-4267-8775-a6affdac003d)
+2026-03-04 11:22:14 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:22:14 | Checking: Sherlock Research (Evening) (f78250ca-57a9-489a-b45f-29ee8fde43d0)
+2026-03-04 11:22:14 |   Status: error | Consecutive errors: 1
+2026-03-04 11:22:15 |   ⏳ In backoff period, skipping retry
+2026-03-04 11:22:15 | Checking: Daily Self-Improvement Review (59cee57b-ca5c-49c3-b92d-e633572a6a70)
+2026-03-04 11:22:15 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:22:15 | Checking: Daily Auto-Update (c5c577b7-d12a-4a7c-9ae9-7955a01b07f5)
+2026-03-04 11:22:15 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:22:16 | Checking: Daily Security Monitor Scan (0e7434dd-4493-4412-bf8e-a7590cadfdbc)
+2026-03-04 11:22:16 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:22:17 | Checking: Daily Brew Update & Upgrade (e9df09a5-2ac3-445d-a79b-2302a2d804ae)
+2026-03-04 11:22:17 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:22:17 | Checking: Daily Briefing (7am) (b25924f1-5d8c-48c6-91fa-f703ac7a3801)
+2026-03-04 11:22:17 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:22:18 | Checking: Sherlock Research (Morning) (3fd6d3f4-9c31-4348-8e35-5496b906e3af)
+2026-03-04 11:22:18 |   Status: error | Consecutive errors: 1
+2026-03-04 11:22:19 |   ⏳ In backoff period, skipping retry
+2026-03-04 11:22:19 | Checking: Sherlock Morning Sweep (6e091019-a76f-4006-b655-524b8df99a90)
+2026-03-04 11:22:19 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:22:19 | Checking: Daily Skill & Security Briefing (308810d1-f6e0-4776-ab19-11e0c0ec1518)
+2026-03-04 11:22:19 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:22:20 | Checking: Trader Market Scan (Morning) (5329c00d-ad8b-4a8f-a66e-7c465e8ac5a7)
+2026-03-04 11:22:20 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:22:21 | Checking: Weekly Trust Dashboard Report (1cbdd91c-f611-4b95-9ed0-eb72172db7b3)
+2026-03-04 11:22:21 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:22:21 | === Summary ===
+2026-03-04 11:22:21 | Jobs with errors: 2
+2026-03-04 11:22:21 | Auto-fixed: 0
+2026-03-04 11:22:21 | 🚨 ALERT: Cron jobs need attention:\n- Sherlock Research (Evening) (1 errors)\n- Sherlock Research (Morning) (1 errors)
+2026-03-04 11:22:21 | === Check Complete ===
+2026-03-04 11:27:07 | === Cron Health Check Started ===
+2026-03-04 11:27:08 | Checking: Cron Health Monitor (Self-Healing) (52bb69be-f6d0-4ef8-b871-a38ff78f074d)
+2026-03-04 11:27:08 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:27:08 | Checking: Trading System Health Check (b2d350f3-0200-475a-b75c-cafc6c5ff9cd)
+2026-03-04 11:27:08 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:27:09 | Checking: GBP Auto-Converter (cffe3a97-1931-4efd-b76c-950e03d1eff2)
+2026-03-04 11:27:09 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:27:10 | Checking: Squad Monitor - 15min Money Focus (b82a99b5-d0b2-4725-97c1-a127e639dede)
+2026-03-04 11:27:10 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:27:10 | Checking: Emergency Monitor (5-min) (2f1f9cec-adbb-4a0f-b61a-23fcfa43eb65)
+2026-03-04 11:27:10 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:27:11 | Checking: Hourly Git Auto-Sync (78b8964c-52f0-4ad7-8edb-6534eab07d1e)
+2026-03-04 11:27:11 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:27:12 | Checking: Trader Market Scan (Midday) (dad8e6f9-ab04-4903-a494-c0ffaaa66bf8)
+2026-03-04 11:27:12 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:27:12 | Checking: Sherlock Afternoon Update (082f0fdf-e9ab-4073-befb-94b3b119383c)
+2026-03-04 11:27:12 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:27:13 | Checking: Sherlock Research (Afternoon) (cfdb2c59-0f29-470d-98ad-b8cb48b46133)
+2026-03-04 11:27:13 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:27:14 | Checking: Trader Market Scan (Evening) (508eedd2-82b9-4267-8775-a6affdac003d)
+2026-03-04 11:27:14 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:27:14 | Checking: Sherlock Research (Evening) (f78250ca-57a9-489a-b45f-29ee8fde43d0)
+2026-03-04 11:27:14 |   Status: error | Consecutive errors: 1
+2026-03-04 11:27:15 |   🔄 Auto-retrying job (attempt with backoff)...
+2026-03-04 11:27:15 |   ✅ Retry initiated
+2026-03-04 11:27:15 | Checking: Daily Self-Improvement Review (59cee57b-ca5c-49c3-b92d-e633572a6a70)
+2026-03-04 11:27:15 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:27:16 | Checking: Daily Auto-Update (c5c577b7-d12a-4a7c-9ae9-7955a01b07f5)
+2026-03-04 11:27:16 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:27:16 | Checking: Daily Security Monitor Scan (0e7434dd-4493-4412-bf8e-a7590cadfdbc)
+2026-03-04 11:27:16 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:27:17 | Checking: Daily Brew Update & Upgrade (e9df09a5-2ac3-445d-a79b-2302a2d804ae)
+2026-03-04 11:27:17 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:27:18 | Checking: Daily Briefing (7am) (b25924f1-5d8c-48c6-91fa-f703ac7a3801)
+2026-03-04 11:27:18 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:27:18 | Checking: Sherlock Research (Morning) (3fd6d3f4-9c31-4348-8e35-5496b906e3af)
+2026-03-04 11:27:18 |   Status: error | Consecutive errors: 1
+2026-03-04 11:27:19 |   🔄 Auto-retrying job (attempt with backoff)...
+2026-03-04 11:27:19 |   ✅ Retry initiated
+2026-03-04 11:27:19 | Checking: Sherlock Morning Sweep (6e091019-a76f-4006-b655-524b8df99a90)
+2026-03-04 11:27:19 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:27:19 | Checking: Daily Skill & Security Briefing (308810d1-f6e0-4776-ab19-11e0c0ec1518)
+2026-03-04 11:27:19 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:27:20 | Checking: Trader Market Scan (Morning) (5329c00d-ad8b-4a8f-a66e-7c465e8ac5a7)
+2026-03-04 11:27:20 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:27:21 | Checking: Weekly Trust Dashboard Report (1cbdd91c-f611-4b95-9ed0-eb72172db7b3)
+2026-03-04 11:27:21 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:27:21 | === Summary ===
+2026-03-04 11:27:21 | Jobs with errors: 2
+2026-03-04 11:27:21 | Auto-fixed: 2
+2026-03-04 11:27:21 | === Check Complete ===
+2026-03-04 11:32:04 | === Cron Health Check Started ===
+2026-03-04 11:32:05 | Checking: Cron Health Monitor (Self-Healing) (52bb69be-f6d0-4ef8-b871-a38ff78f074d)
+2026-03-04 11:32:05 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:32:06 | Checking: GBP Auto-Converter (cffe3a97-1931-4efd-b76c-950e03d1eff2)
+2026-03-04 11:32:06 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:32:06 | Checking: Emergency Monitor (5-min) (2f1f9cec-adbb-4a0f-b61a-23fcfa43eb65)
+2026-03-04 11:32:06 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:32:07 | Checking: Trading System Health Check (b2d350f3-0200-475a-b75c-cafc6c5ff9cd)
+2026-03-04 11:32:07 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:32:08 | Checking: Squad Monitor - 15min Money Focus (b82a99b5-d0b2-4725-97c1-a127e639dede)
+2026-03-04 11:32:08 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:32:08 | Checking: Hourly Git Auto-Sync (78b8964c-52f0-4ad7-8edb-6534eab07d1e)
+2026-03-04 11:32:08 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:32:09 | Checking: Trader Market Scan (Midday) (dad8e6f9-ab04-4903-a494-c0ffaaa66bf8)
+2026-03-04 11:32:09 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:32:10 | Checking: Sherlock Afternoon Update (082f0fdf-e9ab-4073-befb-94b3b119383c)
+2026-03-04 11:32:10 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:32:10 | Checking: Sherlock Research (Afternoon) (cfdb2c59-0f29-470d-98ad-b8cb48b46133)
+2026-03-04 11:32:10 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:32:11 | Checking: Trader Market Scan (Evening) (508eedd2-82b9-4267-8775-a6affdac003d)
+2026-03-04 11:32:11 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:32:12 | Checking: Sherlock Research (Evening) (f78250ca-57a9-489a-b45f-29ee8fde43d0)
+2026-03-04 11:32:12 |   Status: error | Consecutive errors: 1
+2026-03-04 11:32:12 |   ⏳ In backoff period, skipping retry
+2026-03-04 11:32:12 | Checking: Daily Self-Improvement Review (59cee57b-ca5c-49c3-b92d-e633572a6a70)
+2026-03-04 11:32:12 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:32:13 | Checking: Daily Auto-Update (c5c577b7-d12a-4a7c-9ae9-7955a01b07f5)
+2026-03-04 11:32:13 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:32:14 | Checking: Daily Security Monitor Scan (0e7434dd-4493-4412-bf8e-a7590cadfdbc)
+2026-03-04 11:32:14 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:32:14 | Checking: Daily Brew Update & Upgrade (e9df09a5-2ac3-445d-a79b-2302a2d804ae)
+2026-03-04 11:32:14 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:32:15 | Checking: Daily Briefing (7am) (b25924f1-5d8c-48c6-91fa-f703ac7a3801)
+2026-03-04 11:32:15 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:32:15 | Checking: Sherlock Research (Morning) (3fd6d3f4-9c31-4348-8e35-5496b906e3af)
+2026-03-04 11:32:15 |   Status: error | Consecutive errors: 1
+2026-03-04 11:32:16 |   ⏳ In backoff period, skipping retry
+2026-03-04 11:32:16 | Checking: Sherlock Morning Sweep (6e091019-a76f-4006-b655-524b8df99a90)
+2026-03-04 11:32:16 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:32:17 | Checking: Daily Skill & Security Briefing (308810d1-f6e0-4776-ab19-11e0c0ec1518)
+2026-03-04 11:32:17 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:32:17 | Checking: Trader Market Scan (Morning) (5329c00d-ad8b-4a8f-a66e-7c465e8ac5a7)
+2026-03-04 11:32:17 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:32:18 | Checking: Weekly Trust Dashboard Report (1cbdd91c-f611-4b95-9ed0-eb72172db7b3)
+2026-03-04 11:32:18 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:32:19 | === Summary ===
+2026-03-04 11:32:19 | Jobs with errors: 2
+2026-03-04 11:32:19 | Auto-fixed: 0
+2026-03-04 11:32:19 | === Check Complete ===
+2026-03-04 11:37:05 | === Cron Health Check Started ===
+2026-03-04 11:37:07 | Checking: Cron Health Monitor (Self-Healing) (52bb69be-f6d0-4ef8-b871-a38ff78f074d)
+2026-03-04 11:37:07 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:37:08 | Checking: Trading System Health Check (b2d350f3-0200-475a-b75c-cafc6c5ff9cd)
+2026-03-04 11:37:08 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:37:08 | Checking: GBP Auto-Converter (cffe3a97-1931-4efd-b76c-950e03d1eff2)
+2026-03-04 11:37:08 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:37:09 | Checking: Emergency Monitor (5-min) (2f1f9cec-adbb-4a0f-b61a-23fcfa43eb65)
+2026-03-04 11:37:09 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:37:10 | Checking: Squad Monitor - 15min Money Focus (b82a99b5-d0b2-4725-97c1-a127e639dede)
+2026-03-04 11:37:10 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:37:10 | Checking: Sherlock Check-in (3603e639-520b-4ba7-9aab-f4686f8ee5de)
+2026-03-04 11:37:10 |   Status: unknown | Consecutive errors: 0
+2026-03-04 11:37:11 | Checking: Hourly Git Auto-Sync (78b8964c-52f0-4ad7-8edb-6534eab07d1e)
+2026-03-04 11:37:11 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:37:11 | Checking: Squad Heartbeat (30-min) (65d79ad0-8ef9-4f2f-8e53-6d9c75fdd151)
+2026-03-04 11:37:11 |   Status: unknown | Consecutive errors: 0
+2026-03-04 11:37:12 | Checking: Trader Market Scan (Midday) (dad8e6f9-ab04-4903-a494-c0ffaaa66bf8)
+2026-03-04 11:37:12 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:37:13 | Checking: Sherlock Afternoon Update (082f0fdf-e9ab-4073-befb-94b3b119383c)
+2026-03-04 11:37:13 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:37:13 | Checking: Sherlock Research (Afternoon) (cfdb2c59-0f29-470d-98ad-b8cb48b46133)
+2026-03-04 11:37:13 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:37:14 | Checking: Trader Market Scan (Evening) (508eedd2-82b9-4267-8775-a6affdac003d)
+2026-03-04 11:37:14 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:37:15 | Checking: Sherlock Research (Evening) (f78250ca-57a9-489a-b45f-29ee8fde43d0)
+2026-03-04 11:37:15 |   Status: error | Consecutive errors: 1
+2026-03-04 11:37:15 |   🔄 Auto-retrying job (attempt with backoff)...
+2026-03-04 11:37:15 |   ✅ Retry initiated
+2026-03-04 11:37:15 | Checking: Daily Self-Improvement Review (59cee57b-ca5c-49c3-b92d-e633572a6a70)
+2026-03-04 11:37:15 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:37:16 | Checking: Daily Auto-Update (c5c577b7-d12a-4a7c-9ae9-7955a01b07f5)
+2026-03-04 11:37:16 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:37:17 | Checking: Daily Security Monitor Scan (0e7434dd-4493-4412-bf8e-a7590cadfdbc)
+2026-03-04 11:37:17 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:37:17 | Checking: Daily Brew Update & Upgrade (e9df09a5-2ac3-445d-a79b-2302a2d804ae)
+2026-03-04 11:37:17 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:37:18 | Checking: Daily Briefing (7am) (b25924f1-5d8c-48c6-91fa-f703ac7a3801)
+2026-03-04 11:37:18 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:37:19 | Checking: Sherlock Research (Morning) (3fd6d3f4-9c31-4348-8e35-5496b906e3af)
+2026-03-04 11:37:19 |   Status: error | Consecutive errors: 1
+2026-03-04 11:37:19 |   🔄 Auto-retrying job (attempt with backoff)...
+2026-03-04 11:37:19 |   ✅ Retry initiated
+2026-03-04 11:37:19 | Checking: Sherlock Morning Sweep (6e091019-a76f-4006-b655-524b8df99a90)
+2026-03-04 11:37:19 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:37:20 | Checking: Daily Skill & Security Briefing (308810d1-f6e0-4776-ab19-11e0c0ec1518)
+2026-03-04 11:37:20 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:37:21 | Checking: Trader Market Scan (Morning) (5329c00d-ad8b-4a8f-a66e-7c465e8ac5a7)
+2026-03-04 11:37:21 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:37:21 | Checking: Weekly Trust Dashboard Report (1cbdd91c-f611-4b95-9ed0-eb72172db7b3)
+2026-03-04 11:37:21 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:37:22 | === Summary ===
+2026-03-04 11:37:22 | Jobs with errors: 2
+2026-03-04 11:37:22 | Auto-fixed: 2
+2026-03-04 11:37:22 | === Check Complete ===
+2026-03-04 11:42:05 | === Cron Health Check Started ===
+2026-03-04 11:42:05 | Checking: Cron Health Monitor (Self-Healing) (52bb69be-f6d0-4ef8-b871-a38ff78f074d)
+2026-03-04 11:42:05 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:42:06 | Checking: GBP Auto-Converter (cffe3a97-1931-4efd-b76c-950e03d1eff2)
+2026-03-04 11:42:06 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:42:07 | Checking: Squad Monitor - 15min Money Focus (b82a99b5-d0b2-4725-97c1-a127e639dede)
+2026-03-04 11:42:07 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:42:07 | Checking: Emergency Monitor (5-min) (2f1f9cec-adbb-4a0f-b61a-23fcfa43eb65)
+2026-03-04 11:42:07 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:42:08 | Checking: Trading System Health Check (b2d350f3-0200-475a-b75c-cafc6c5ff9cd)
+2026-03-04 11:42:08 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:42:09 | Checking: Sherlock Check-in (3603e639-520b-4ba7-9aab-f4686f8ee5de)
+2026-03-04 11:42:09 |   Status: unknown | Consecutive errors: 0
+2026-03-04 11:42:09 | Checking: Hourly Git Auto-Sync (78b8964c-52f0-4ad7-8edb-6534eab07d1e)
+2026-03-04 11:42:09 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:42:10 | Checking: Squad Heartbeat (30-min) (65d79ad0-8ef9-4f2f-8e53-6d9c75fdd151)
+2026-03-04 11:42:10 |   Status: unknown | Consecutive errors: 0
+2026-03-04 11:42:11 | Checking: Trader Market Scan (Midday) (dad8e6f9-ab04-4903-a494-c0ffaaa66bf8)
+2026-03-04 11:42:11 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:42:11 | Checking: Sherlock Afternoon Update (082f0fdf-e9ab-4073-befb-94b3b119383c)
+2026-03-04 11:42:11 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:42:12 | Checking: Sherlock Research (Afternoon) (cfdb2c59-0f29-470d-98ad-b8cb48b46133)
+2026-03-04 11:42:12 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:42:12 | Checking: Trader Market Scan (Evening) (508eedd2-82b9-4267-8775-a6affdac003d)
+2026-03-04 11:42:12 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:42:13 | Checking: Sherlock Research (Evening) (f78250ca-57a9-489a-b45f-29ee8fde43d0)
+2026-03-04 11:42:13 |   Status: error | Consecutive errors: 1
+2026-03-04 11:42:14 |   ⏳ In backoff period, skipping retry
+2026-03-04 11:42:14 | Checking: Daily Self-Improvement Review (59cee57b-ca5c-49c3-b92d-e633572a6a70)
+2026-03-04 11:42:14 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:42:14 | Checking: Daily Auto-Update (c5c577b7-d12a-4a7c-9ae9-7955a01b07f5)
+2026-03-04 11:42:14 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:42:15 | Checking: Daily Security Monitor Scan (0e7434dd-4493-4412-bf8e-a7590cadfdbc)
+2026-03-04 11:42:15 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:42:16 | Checking: Daily Brew Update & Upgrade (e9df09a5-2ac3-445d-a79b-2302a2d804ae)
+2026-03-04 11:42:16 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:42:16 | Checking: Daily Briefing (7am) (b25924f1-5d8c-48c6-91fa-f703ac7a3801)
+2026-03-04 11:42:16 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:42:17 | Checking: Sherlock Research (Morning) (3fd6d3f4-9c31-4348-8e35-5496b906e3af)
+2026-03-04 11:42:17 |   Status: error | Consecutive errors: 1
+2026-03-04 11:42:18 |   ⏳ In backoff period, skipping retry
+2026-03-04 11:42:18 | Checking: Sherlock Morning Sweep (6e091019-a76f-4006-b655-524b8df99a90)
+2026-03-04 11:42:18 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:42:18 | Checking: Daily Skill & Security Briefing (308810d1-f6e0-4776-ab19-11e0c0ec1518)
+2026-03-04 11:42:18 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:42:19 | Checking: Trader Market Scan (Morning) (5329c00d-ad8b-4a8f-a66e-7c465e8ac5a7)
+2026-03-04 11:42:19 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:42:20 | Checking: Weekly Trust Dashboard Report (1cbdd91c-f611-4b95-9ed0-eb72172db7b3)
+2026-03-04 11:42:20 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:42:20 | === Summary ===
+2026-03-04 11:42:20 | Jobs with errors: 2
+2026-03-04 11:42:20 | Auto-fixed: 0
+2026-03-04 11:42:20 | === Check Complete ===
+2026-03-04 11:47:07 | === Cron Health Check Started ===
+2026-03-04 11:47:08 | Checking: Cron Health Monitor (Self-Healing) (52bb69be-f6d0-4ef8-b871-a38ff78f074d)
+2026-03-04 11:47:08 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:47:08 | Checking: Trading System Health Check (b2d350f3-0200-475a-b75c-cafc6c5ff9cd)
+2026-03-04 11:47:08 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:47:09 | Checking: GBP Auto-Converter (cffe3a97-1931-4efd-b76c-950e03d1eff2)
+2026-03-04 11:47:09 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:47:10 | Checking: Auto-Execute Stops/TP (5-min) (0c26c269-eba1-4764-914e-48531d74373b)
+2026-03-04 11:47:10 |   Status: unknown | Consecutive errors: 0
+2026-03-04 11:47:10 | Checking: Emergency Monitor (5-min) (2f1f9cec-adbb-4a0f-b61a-23fcfa43eb65)
+2026-03-04 11:47:10 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:47:11 | Checking: Sherlock Check-in (3603e639-520b-4ba7-9aab-f4686f8ee5de)
+2026-03-04 11:47:11 |   Status: unknown | Consecutive errors: 0
+2026-03-04 11:47:12 | Checking: Position Monitor Check (9185242d-0ee3-4a3c-bbaf-0393e7550aef)
+2026-03-04 11:47:12 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:47:12 | Checking: Squad Monitor - 15min Money Focus (b82a99b5-d0b2-4725-97c1-a127e639dede)
+2026-03-04 11:47:12 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:47:13 | Checking: Hourly Git Auto-Sync (78b8964c-52f0-4ad7-8edb-6534eab07d1e)
+2026-03-04 11:47:13 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:47:14 | Checking: Squad Heartbeat (30-min) (65d79ad0-8ef9-4f2f-8e53-6d9c75fdd151)
+2026-03-04 11:47:14 |   Status: unknown | Consecutive errors: 0
+2026-03-04 11:47:14 | Checking: Continuous Market Scanner (30-min) (0a60a477-efff-4952-98f4-3d5cadcfd292)
+2026-03-04 11:47:14 |   Status: unknown | Consecutive errors: 0
+2026-03-04 11:47:15 | Checking: Funding Rate Scanner (a903a88f-19af-42af-912b-a9ba3656c1c6)
+2026-03-04 11:47:15 |   Status: unknown | Consecutive errors: 0
+2026-03-04 11:47:15 | Checking: Trader Market Scan (Midday) (dad8e6f9-ab04-4903-a494-c0ffaaa66bf8)
+2026-03-04 11:47:15 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:47:16 | Checking: Sherlock Afternoon Update (082f0fdf-e9ab-4073-befb-94b3b119383c)
+2026-03-04 11:47:16 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:47:17 | Checking: Sherlock Research (Afternoon) (cfdb2c59-0f29-470d-98ad-b8cb48b46133)
+2026-03-04 11:47:17 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:47:17 | Checking: Trader Market Scan (Evening) (508eedd2-82b9-4267-8775-a6affdac003d)
+2026-03-04 11:47:17 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:47:18 | Checking: Sherlock Research (Evening) (f78250ca-57a9-489a-b45f-29ee8fde43d0)
+2026-03-04 11:47:18 |   Status: error | Consecutive errors: 1
+2026-03-04 11:47:19 |   🔄 Auto-retrying job (attempt with backoff)...
+2026-03-04 11:47:19 |   ✅ Retry initiated
+2026-03-04 11:47:19 | Checking: Daily Self-Improvement Review (59cee57b-ca5c-49c3-b92d-e633572a6a70)
+2026-03-04 11:47:19 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:47:19 | Checking: Daily Auto-Update (c5c577b7-d12a-4a7c-9ae9-7955a01b07f5)
+2026-03-04 11:47:19 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:47:20 | Checking: Daily Security Monitor Scan (0e7434dd-4493-4412-bf8e-a7590cadfdbc)
+2026-03-04 11:47:20 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:47:21 | Checking: Daily Brew Update & Upgrade (e9df09a5-2ac3-445d-a79b-2302a2d804ae)
+2026-03-04 11:47:21 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:47:21 | Checking: Daily Briefing (7am) (b25924f1-5d8c-48c6-91fa-f703ac7a3801)
+2026-03-04 11:47:21 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:47:22 | Checking: Sherlock Research (Morning) (3fd6d3f4-9c31-4348-8e35-5496b906e3af)
+2026-03-04 11:47:22 |   Status: error | Consecutive errors: 1
+2026-03-04 11:47:23 |   🔄 Auto-retrying job (attempt with backoff)...
+2026-03-04 11:47:23 |   ✅ Retry initiated
+2026-03-04 11:47:23 | Checking: Sherlock Morning Sweep (6e091019-a76f-4006-b655-524b8df99a90)
+2026-03-04 11:47:23 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:47:23 | Checking: Daily Skill & Security Briefing (308810d1-f6e0-4776-ab19-11e0c0ec1518)
+2026-03-04 11:47:23 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:47:24 | Checking: Trader Market Scan (Morning) (5329c00d-ad8b-4a8f-a66e-7c465e8ac5a7)
+2026-03-04 11:47:24 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:47:25 | Checking: Weekly Trust Dashboard Report (1cbdd91c-f611-4b95-9ed0-eb72172db7b3)
+2026-03-04 11:47:25 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:47:25 | === Summary ===
+2026-03-04 11:47:25 | Jobs with errors: 2
+2026-03-04 11:47:25 | Auto-fixed: 2
+2026-03-04 11:47:25 | === Check Complete ===
+2026-03-04 11:52:33 | === Cron Health Check Started ===
+2026-03-04 11:52:34 | Checking: Cron Health Monitor (Self-Healing) (52bb69be-f6d0-4ef8-b871-a38ff78f074d)
+2026-03-04 11:52:34 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:52:34 | Checking: GBP Auto-Converter (cffe3a97-1931-4efd-b76c-950e03d1eff2)
+2026-03-04 11:52:34 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:52:35 | Checking: Position Monitor Check (9185242d-0ee3-4a3c-bbaf-0393e7550aef)
+2026-03-04 11:52:35 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:52:36 | Checking: Auto-Execute Stops/TP (5-min) (0c26c269-eba1-4764-914e-48531d74373b)
+2026-03-04 11:52:36 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:52:36 | Checking: Emergency Monitor (5-min) (2f1f9cec-adbb-4a0f-b61a-23fcfa43eb65)
+2026-03-04 11:52:36 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:52:37 | Checking: Trading System Health Check (b2d350f3-0200-475a-b75c-cafc6c5ff9cd)
+2026-03-04 11:52:37 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:52:38 | Checking: Hourly Git Auto-Sync (78b8964c-52f0-4ad7-8edb-6534eab07d1e)
+2026-03-04 11:52:38 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:52:38 | Checking: Squad Heartbeat (30-min) (65d79ad0-8ef9-4f2f-8e53-6d9c75fdd151)
+2026-03-04 11:52:38 |   Status: unknown | Consecutive errors: 0
+2026-03-04 11:52:39 | Checking: Sherlock Check-in (3603e639-520b-4ba7-9aab-f4686f8ee5de)
+2026-03-04 11:52:39 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:52:40 | Checking: Continuous Market Scanner (30-min) (0a60a477-efff-4952-98f4-3d5cadcfd292)
+2026-03-04 11:52:40 |   Status: unknown | Consecutive errors: 0
+2026-03-04 11:52:40 | Checking: Squad Monitor - 30min Money Focus (b82a99b5-d0b2-4725-97c1-a127e639dede)
+2026-03-04 11:52:40 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:52:41 | Checking: Funding Rate Scanner (a903a88f-19af-42af-912b-a9ba3656c1c6)
+2026-03-04 11:52:41 |   Status: unknown | Consecutive errors: 0
+2026-03-04 11:52:42 | Checking: Trader Market Scan (Midday) (dad8e6f9-ab04-4903-a494-c0ffaaa66bf8)
+2026-03-04 11:52:42 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:52:42 | Checking: Sherlock Afternoon Update (082f0fdf-e9ab-4073-befb-94b3b119383c)
+2026-03-04 11:52:42 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:52:43 | Checking: Sherlock Research (Afternoon) (cfdb2c59-0f29-470d-98ad-b8cb48b46133)
+2026-03-04 11:52:43 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:52:43 | Checking: Trader Market Scan (Evening) (508eedd2-82b9-4267-8775-a6affdac003d)
+2026-03-04 11:52:43 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:52:44 | Checking: Sherlock Research (Evening) (f78250ca-57a9-489a-b45f-29ee8fde43d0)
+2026-03-04 11:52:44 |   Status: error | Consecutive errors: 1
+2026-03-04 11:52:45 |   🔄 Auto-retrying job (attempt with backoff)...
+2026-03-04 11:52:45 |   ✅ Retry initiated
+2026-03-04 11:52:45 | Checking: Daily Self-Improvement Review (59cee57b-ca5c-49c3-b92d-e633572a6a70)
+2026-03-04 11:52:45 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:52:46 | Checking: Daily Auto-Update (c5c577b7-d12a-4a7c-9ae9-7955a01b07f5)
+2026-03-04 11:52:46 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:52:46 | Checking: Daily Security Monitor Scan (0e7434dd-4493-4412-bf8e-a7590cadfdbc)
+2026-03-04 11:52:46 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:52:47 | Checking: Daily Brew Update & Upgrade (e9df09a5-2ac3-445d-a79b-2302a2d804ae)
+2026-03-04 11:52:47 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:52:47 | Checking: Daily Briefing (7am) (b25924f1-5d8c-48c6-91fa-f703ac7a3801)
+2026-03-04 11:52:47 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:52:48 | Checking: Sherlock Research (Morning) (3fd6d3f4-9c31-4348-8e35-5496b906e3af)
+2026-03-04 11:52:48 |   Status: error | Consecutive errors: 1
+2026-03-04 11:52:49 |   🔄 Auto-retrying job (attempt with backoff)...
+2026-03-04 11:52:49 |   ✅ Retry initiated
+2026-03-04 11:52:49 | Checking: Sherlock Morning Sweep (6e091019-a76f-4006-b655-524b8df99a90)
+2026-03-04 11:52:49 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:52:49 | Checking: Daily Skill & Security Briefing (308810d1-f6e0-4776-ab19-11e0c0ec1518)
+2026-03-04 11:52:49 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:52:50 | Checking: Trader Market Scan (Morning) (5329c00d-ad8b-4a8f-a66e-7c465e8ac5a7)
+2026-03-04 11:52:50 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:52:51 | Checking: Weekly Trust Dashboard Report (1cbdd91c-f611-4b95-9ed0-eb72172db7b3)
+2026-03-04 11:52:51 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:52:51 | === Summary ===
+2026-03-04 11:52:51 | Jobs with errors: 2
+2026-03-04 11:52:51 | Auto-fixed: 2
+2026-03-04 11:52:51 | === Check Complete ===
+2026-03-04 11:57:35 | === Cron Health Check Started ===
+2026-03-04 11:57:36 | Checking: Cron Health Monitor (Self-Healing) (52bb69be-f6d0-4ef8-b871-a38ff78f074d)
+2026-03-04 11:57:36 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:57:36 | Checking: Trading System Health Check (b2d350f3-0200-475a-b75c-cafc6c5ff9cd)
+2026-03-04 11:57:36 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:57:37 | Checking: GBP Auto-Converter (cffe3a97-1931-4efd-b76c-950e03d1eff2)
+2026-03-04 11:57:37 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:57:38 | Checking: Auto-Execute Stops/TP (5-min) (0c26c269-eba1-4764-914e-48531d74373b)
+2026-03-04 11:57:38 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:57:38 | Checking: Emergency Monitor (5-min) (2f1f9cec-adbb-4a0f-b61a-23fcfa43eb65)
+2026-03-04 11:57:38 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:57:39 | Checking: Position Monitor Check (9185242d-0ee3-4a3c-bbaf-0393e7550aef)
+2026-03-04 11:57:39 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:57:40 | Checking: Hourly Git Auto-Sync (78b8964c-52f0-4ad7-8edb-6534eab07d1e)
+2026-03-04 11:57:40 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:57:40 | Checking: Squad Heartbeat (30-min) (65d79ad0-8ef9-4f2f-8e53-6d9c75fdd151)
+2026-03-04 11:57:40 |   Status: unknown | Consecutive errors: 0
+2026-03-04 11:57:41 | Checking: Sherlock Check-in (3603e639-520b-4ba7-9aab-f4686f8ee5de)
+2026-03-04 11:57:41 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:57:42 | Checking: Continuous Market Scanner (30-min) (0a60a477-efff-4952-98f4-3d5cadcfd292)
+2026-03-04 11:57:42 |   Status: unknown | Consecutive errors: 0
+2026-03-04 11:57:42 | Checking: Squad Monitor - 30min Money Focus (b82a99b5-d0b2-4725-97c1-a127e639dede)
+2026-03-04 11:57:42 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:57:43 | Checking: Funding Rate Scanner (a903a88f-19af-42af-912b-a9ba3656c1c6)
+2026-03-04 11:57:43 |   Status: unknown | Consecutive errors: 0
+2026-03-04 11:57:44 | Checking: Trader Market Scan (Midday) (dad8e6f9-ab04-4903-a494-c0ffaaa66bf8)
+2026-03-04 11:57:44 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:57:44 | Checking: Sherlock Afternoon Update (082f0fdf-e9ab-4073-befb-94b3b119383c)
+2026-03-04 11:57:44 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:57:45 | Checking: Sherlock Research (Afternoon) (cfdb2c59-0f29-470d-98ad-b8cb48b46133)
+2026-03-04 11:57:45 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:57:45 | Checking: Trader Market Scan (Evening) (508eedd2-82b9-4267-8775-a6affdac003d)
+2026-03-04 11:57:45 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:57:46 | Checking: Sherlock Research (Evening) (f78250ca-57a9-489a-b45f-29ee8fde43d0)
+2026-03-04 11:57:46 |   Status: error | Consecutive errors: 1
+2026-03-04 11:57:47 |   🔄 Auto-retrying job (attempt with backoff)...
+2026-03-04 11:57:47 |   ✅ Retry initiated
+2026-03-04 11:57:47 | Checking: Daily Self-Improvement Review (59cee57b-ca5c-49c3-b92d-e633572a6a70)
+2026-03-04 11:57:47 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:57:48 | Checking: Daily Auto-Update (c5c577b7-d12a-4a7c-9ae9-7955a01b07f5)
+2026-03-04 11:57:48 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:57:48 | Checking: Daily Security Monitor Scan (0e7434dd-4493-4412-bf8e-a7590cadfdbc)
+2026-03-04 11:57:48 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:57:49 | Checking: Daily Brew Update & Upgrade (e9df09a5-2ac3-445d-a79b-2302a2d804ae)
+2026-03-04 11:57:49 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:57:50 | Checking: Daily Briefing (7am) (b25924f1-5d8c-48c6-91fa-f703ac7a3801)
+2026-03-04 11:57:50 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:57:50 | Checking: Sherlock Research (Morning) (3fd6d3f4-9c31-4348-8e35-5496b906e3af)
+2026-03-04 11:57:50 |   Status: error | Consecutive errors: 1
+2026-03-04 11:57:51 |   🔄 Auto-retrying job (attempt with backoff)...
+2026-03-04 11:57:51 |   ✅ Retry initiated
+2026-03-04 11:57:51 | Checking: Sherlock Morning Sweep (6e091019-a76f-4006-b655-524b8df99a90)
+2026-03-04 11:57:51 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:57:52 | Checking: Daily Skill & Security Briefing (308810d1-f6e0-4776-ab19-11e0c0ec1518)
+2026-03-04 11:57:52 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:57:52 | Checking: Trader Market Scan (Morning) (5329c00d-ad8b-4a8f-a66e-7c465e8ac5a7)
+2026-03-04 11:57:52 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:57:53 | Checking: Weekly Trust Dashboard Report (1cbdd91c-f611-4b95-9ed0-eb72172db7b3)
+2026-03-04 11:57:53 |   Status: ok | Consecutive errors: 0
+2026-03-04 11:57:53 | === Summary ===
+2026-03-04 11:57:53 | Jobs with errors: 2
+2026-03-04 11:57:53 | Auto-fixed: 2
+2026-03-04 11:57:53 | === Check Complete ===

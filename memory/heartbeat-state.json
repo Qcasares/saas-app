@@ -1,5 +1,5 @@
 {
-  "lastCheck": "2026-03-04T10:47:00Z",
+  "lastCheck": "2026-03-04T11:30:00Z",
   "checks": {
     "cronHealth": {
       "status": "healthy",
@@ -9,28 +9,48 @@
     "agentJobs": {
       "emergency-monitor": {
         "jobId": "2f1f9cec-adbb-4a0f-b61a-23fcfa43eb65",
-        "lastRun": "2026-03-04T10:45:00Z",
+        "lastRun": "2026-03-04T11:30:00Z",
         "status": "healthy",
         "consecutiveFailures": 0
       },
       "squad-monitor": {
         "jobId": "b82a99b5-d0b2-4725-97c1-a127e639dede",
-        "lastRun": "2026-03-04T10:44:00Z",
+        "lastRun": "2026-03-04T11:30:00Z",
         "status": "healthy",
         "consecutiveFailures": 0
       },
       "gbp-converter": {
         "jobId": "cffe3a97-1931-4efd-b76c-950e03d1eff2",
-        "lastRun": "2026-03-04T10:45:00Z",
+        "lastRun": "2026-03-04T11:30:00Z",
         "status": "healthy",
         "consecutiveFailures": 0
       },
       "trading-health-check": {
         "jobId": "b2d350f3-0200-475a-b75c-cafc6c5ff9cd",
-        "lastRun": "2026-03-04T10:44:00Z",
+        "lastRun": "2026-03-04T11:30:00Z",
         "status": "healthy",
         "consecutiveFailures": 0
+      },
+      "trader-morning": {
+        "jobId": "5329c00d-ad8b-4a8f-a66e-7c465e8ac5a7",
+        "status": "scheduled",
+        "nextRun": "2026-03-05T09:00:00Z"
+      },
+      "trader-midday": {
+        "jobId": "dad8e6f9-ab04-4903-a494-c0ffaaa66bf8",
+        "status": "scheduled",
+        "nextRun": "2026-03-04T13:00:00Z"
       }
+    },
+    "trading": {
+      "positions": 3,
+      "available_usd": 9.81,
+      "total_portfolio": 50.52,
+      "activeTrades": [
+        "FAI-USDC",
+        "NEAR-USDC",
+        "VVV-USDC"
+      ]
     }
   },
   "resources": {
@@ -46,6 +66,8 @@
   "fixesApplied": [
     "2026-03-04: GBP auto-converter fixed - now using USDC-GBP pair",
     "2026-03-04: Trading jobs re-enabled",
-    "2026-03-04: Team monitor jobs stabilized"
+    "2026-03-04: Team monitor jobs stabilized",
+    "2026-03-04: VVV trade executed on USDC pair",
+    "2026-03-04: Discovered account can only trade USDC pairs (not USD)"
   ]
 }

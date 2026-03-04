@@ -1,0 +1,126 @@
+{
+  "timestamp": "2026-03-04T11:02:08.800619",
+  "overall_status": "CRITICAL",
+  "checks": [
+    {
+      "name": "dependency_coinbase-advanced-py",
+      "status": "CRITICAL",
+      "message": "\u274c coinbase-advanced-py is NOT installed (Coinbase exchange API)",
+      "timestamp": "2026-03-04T11:02:08.690051",
+      "details": {
+        "install_command": "pip install coinbase-advanced-py"
+      }
+    },
+    {
+      "name": "dependency_requests",
+      "status": "HEALTHY",
+      "message": "\u2705 requests is installed (HTTP requests)",
+      "timestamp": "2026-03-04T11:02:08.765596",
+      "details": {}
+    },
+    {
+      "name": "dependency_pandas",
+      "status": "WARNING",
+      "message": "\u274c pandas is NOT installed (Data analysis (optional but recommended))",
+      "timestamp": "2026-03-04T11:02:08.765628",
+      "details": {
+        "install_command": "pip install pandas"
+      }
+    },
+    {
+      "name": "env_COINBASE_API_KEY",
+      "status": "CRITICAL",
+      "message": "\u274c COINBASE_API_KEY is NOT set (Coinbase API authentication)",
+      "timestamp": "2026-03-04T11:02:08.765636",
+      "details": {
+        "action": "Export COINBASE_API_KEY=your_value"
+      }
+    },
+    {
+      "name": "env_COINBASE_API_SECRET",
+      "status": "CRITICAL",
+      "message": "\u274c COINBASE_API_SECRET is NOT set (Coinbase API authentication)",
+      "timestamp": "2026-03-04T11:02:08.765639",
+      "details": {
+        "action": "Export COINBASE_API_SECRET=your_value"
+      }
+    },
+    {
+      "name": "file_active_positions",
+      "status": "HEALTHY",
+      "message": "\u2705 active_positions exists (1144 bytes)",
+      "timestamp": "2026-03-04T11:02:08.765656",
+      "details": {
+        "path": "trading/active-positions.json",
+        "size_bytes": 1144
+      }
+    },
+    {
+      "name": "file_market_prices",
+      "status": "HEALTHY",
+      "message": "\u2705 market_prices exists (1849 bytes)",
+      "timestamp": "2026-03-04T11:02:08.765666",
+      "details": {
+        "path": "trading/MARKET-ANALYSIS.json",
+        "size_bytes": 1849
+      }
+    },
+    {
+      "name": "file_executions",
+      "status": "HEALTHY",
+      "message": "\u2705 executions exists (8081 bytes)",
+      "timestamp": "2026-03-04T11:02:08.765675",
+      "details": {
+        "path": "trading/executions.json",
+        "size_bytes": 8081
+      }
+    },
+    {
+      "name": "freshness_market_prices",
+      "status": "HEALTHY",
+      "message": "\u2705 market_prices is fresh (4.0 min old)",
+      "timestamp": "2026-03-04T11:02:08.765731",
+      "details": {
+        "age_minutes": 3.95159815,
+        "max_age": 15
+      }
+    },
+    {
+      "name": "git_status",
+      "status": "WARNING",
+      "message": "\u26a0\ufe0f  20 uncommitted change(s) in workspace",
+      "timestamp": "2026-03-04T11:02:08.798325",
+      "details": {
+        "uncommitted_files": 20
+      }
+    },
+    {
+      "name": "disk_space",
+      "status": "HEALTHY",
+      "message": "\u2705 Disk usage: 68%",
+      "timestamp": "2026-03-04T11:02:08.800456",
+      "details": {
+        "usage_pct": 68
+      }
+    },
+    {
+      "name": "recent_errors",
+      "status": "WARNING",
+      "message": "\u26a0\ufe0f  3 failure(s) in last 24 hours",
+      "timestamp": "2026-03-04T11:02:08.800615",
+      "details": {
+        "error_breakdown": {
+          "400 Client Error: Bad Request {\"error\":\"INVALID_ARGUMENT\",\"error_details\":\"account is not available\",\"message\":\"account is not available\"}": 1,
+          "No supported GBP trading pair": 1,
+          "unknown": 1
+        }
+      }
+    }
+  ],
+  "summary": {
+    "healthy": 6,
+    "warning": 3,
+    "critical": 3,
+    "total": 12
+  }
+}

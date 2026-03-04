@@ -10,8 +10,9 @@
   "position_sizing": "fixed_risk",
   "max_correlated_positions": 1,
   "trading_hours": "24/7",
-  "account_balance_usd": 36.58,
+  "account_balance_usd": 37.45,
   "trading_mode": "SIMULATION_UNTIL_FUNDED",
+  "simulation_target_usd": 500,
   "funding_threshold_usd": 100,
   "last_updated": "2026-03-04T08:45:00Z"
 }

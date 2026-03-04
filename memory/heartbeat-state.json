@@ -1,66 +1,35 @@
 {
-  "lastCheck": "2026-03-04T07:45:00Z",
+  "lastCheck": "2026-03-04T10:47:00Z",
   "checks": {
     "cronHealth": {
-      "status": "degraded",
-      "failures": [
-        "b2d350f3-0200-475a-b75c-cafc6c5ff9cd",
-        "b82a99b5-d0b2-4725-97c1-a127e639dede",
-        "2f1f9cec-adbb-4a0f-b61a-23fcfa43eb65",
-        "6cf8b621-7fff-407c-ad29-98aee1a1ecf9",
-        "99e129c1-7e97-4382-a261-e1c6a2d53c8c",
-        "f78250ca-57a9-489a-b45f-29ee8fde43d0"
-      ],
-      "lastFailure": "2026-03-04T07:40:00Z"
+      "status": "healthy",
+      "failures": [],
+      "lastFailure": null
     },
     "agentJobs": {
-      "trading-health-check": {
-        "jobId": "b2d350f3-0200-475a-b75c-cafc6c5ff9cd",
-        "lastRun": null,
-        "nextScheduled": null,
-        "consecutiveFailures": 2,
-        "status": "error",
-        "lastRuntime": null
+      "emergency-monitor": {
+        "jobId": "2f1f9cec-adbb-4a0f-b61a-23fcfa43eb65",
+        "lastRun": "2026-03-04T10:45:00Z",
+        "status": "healthy",
+        "consecutiveFailures": 0
       },
       "squad-monitor": {
         "jobId": "b82a99b5-d0b2-4725-97c1-a127e639dede",
-        "lastRun": null,
-        "nextScheduled": null,
-        "consecutiveFailures": 3,
-        "status": "error",
-        "lastRuntime": null
+        "lastRun": "2026-03-04T10:44:00Z",
+        "status": "healthy",
+        "consecutiveFailures": 0
       },
-      "emergency-monitor": {
-        "jobId": "2f1f9cec-adbb-4a0f-b61a-23fcfa43eb65",
-        "lastRun": null,
-        "nextScheduled": null,
-        "consecutiveFailures": 1,
-        "status": "error",
-        "lastRuntime": null
+      "gbp-converter": {
+        "jobId": "cffe3a97-1931-4efd-b76c-950e03d1eff2",
+        "lastRun": "2026-03-04T10:45:00Z",
+        "status": "healthy",
+        "consecutiveFailures": 0
       },
-      "continuous-scanner": {
-        "jobId": "6cf8b621-7fff-407c-ad29-98aee1a1ecf9",
-        "lastRun": null,
-        "nextScheduled": null,
-        "consecutiveFailures": 1,
-        "status": "timeout",
-        "lastRuntime": null
-      },
-      "security-review": {
-        "jobId": "99e129c1-7e97-4382-a261-e1c6a2d53c8c",
-        "lastRun": null,
-        "nextScheduled": null,
-        "consecutiveFailures": 1,
-        "status": "timeout",
-        "lastRuntime": null
-      },
-      "sherlock-evening": {
-        "jobId": "f78250ca-57a9-489a-b45f-29ee8fde43d0",
-        "lastRun": null,
-        "nextScheduled": null,
-        "consecutiveFailures": 1,
-        "status": "error",
-        "lastRuntime": null
+      "trading-health-check": {
+        "jobId": "b2d350f3-0200-475a-b75c-cafc6c5ff9cd",
+        "lastRun": "2026-03-04T10:44:00Z",
+        "status": "healthy",
+        "consecutiveFailures": 0
       }
     }
   },
@@ -71,16 +40,12 @@
   },
   "alerts": {
     "yellow": [],
-    "orange": [
-      "squad-monitor: 3 consecutive failures",
-      "trading-health-check: 2 consecutive failures"
-    ],
+    "orange": [],
     "red": []
   },
-  "autoRecovery": {
-    "enabled": true,
-    "lastRun": "2026-03-04T07:45:00Z",
-    "retriesAttempted": 0,
-    "retriesSuccessful": 0
-  }
+  "fixesApplied": [
+    "2026-03-04: GBP auto-converter fixed - now using USDC-GBP pair",
+    "2026-03-04: Trading jobs re-enabled",
+    "2026-03-04: Team monitor jobs stabilized"
+  ]
 }

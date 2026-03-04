@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Auto-convert GBP to USDC when detected. No confirmation needed per policy."""
+"""Auto-convert GBP to USDC when detected. Uses USDC-GBP pair."""
 import os
 import sys
 import json
@@ -11,29 +11,68 @@ sys.path.insert(0, '/Users/quentincasares/.openclaw/workspace/skills/trader/scri
 def main():
     try:
         from coinbase_trader import CoinbaseTrader
+        import uuid
+        
+        # Force live mode
+        os.environ['TRADER_SIMULATION'] = 'false'
         trader = CoinbaseTrader(simulation=False)
         
         accounts = trader.get_accounts()
         gbp_account = next((a for a in accounts if a['currency'] == 'GBP'), None)
         
-        if not gbp_account or gbp_account['available'] <= 1.0:
+        if not gbp_account or gbp_account['available'] <= 0.01:
             print("No GBP to convert")
             return
         
         gbp_balance = gbp_account['available']
+        
+        # Skip if negative balance (from previous trades)
+        if gbp_balance <= 0:
+            print(f"GBP balance is {gbp_balance:.4f}, skipping")
+            return
+        
         print(f"GBP detected: £{gbp_balance:.2f}")
         
-        # Execute conversion (GBP → USD → USDC or direct if available)
-        # Note: This uses the trader's place_market_order if supported
-        # For now, log the intent and alert
+        # Get current price
+        product = trader.client.get_product('USDC-GBP')
+        price = float(product.price)
         
-        conversion = {
-            "timestamp": datetime.now().isoformat(),
-            "type": "gbp_auto_convert",
-            "gbp_amount": gbp_balance,
-            "status": "triggered",
-            "note": "Auto-conversion per policy - no confirmation needed"
-        }
+        # Calculate USDC to buy (use 99% to account for fees/spread)
+        gbp_to_use = gbp_balance * 0.99
+        usdc_amount = gbp_to_use / price
+        
+        # Place limit order 0.5% above market to ensure fill
+        limit_price = price * 1.005
+        
+        print(f"Converting: £{gbp_to_use:.2f} → ~{usdc_amount:.2f} USDC")
+        print(f"Rate: 1 USDC = £{price:.4f}")
+        
+        order = trader.client.limit_order_gtc(
+            product_id='USDC-GBP',
+            side='BUY',
+            base_size=str(round(usdc_amount, 6)),
+            limit_price=str(round(limit_price, 4)),
+            client_order_id=str(uuid.uuid4())
+        )
+        
+        if order.success:
+            print(f"✅ Conversion successful!")
+            conversion = {
+                "timestamp": datetime.now().isoformat(),
+                "type": "gbp_to_usdc",
+                "gbp_amount": gbp_to_use,
+                "expected_usdc": usdc_amount,
+                "rate": price,
+                "status": "executed"
+            }
+        else:
+            print(f"❌ Conversion failed")
+            conversion = {
+                "timestamp": datetime.now().isoformat(),
+                "type": "gbp_to_usdc",
+                "gbp_amount": gbp_balance,
+                "status": "failed"
+            }
         
         # Log to executions
         exec_path = Path('/Users/quentincasares/.openclaw/workspace/trading/executions.json')
@@ -49,12 +88,10 @@ def main():
         with open(exec_path, 'w') as f:
             json.dump(existing, f, indent=2)
         
-        print(f"✅ GBP auto-convert logged: £{gbp_balance:.2f}")
-        
-        # Alert will be handled by the main agent (no direct messaging here)
-        
     except Exception as e:
         print(f"Error: {e}")
+        import traceback
+        traceback.print_exc()
         sys.exit(1)
 
 if __name__ == '__main__':

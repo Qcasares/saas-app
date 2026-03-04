@@ -1,3 +1,5 @@
 {"timestamp": "2026-03-02T19:17:04.387030", "simulation": true, "product_id": "BTC-USD", "side": "BUY", "amount": 50.0, "amount_type": "quote", "status": "simulated"}
 {"timestamp": "2026-03-03T10:05:21.696479", "simulation": true, "type": "limit_order", "product_id": "FAI-USD", "side": "BUY", "base_size": 3448.2758620689656, "limit_price": 0.0029}
 {"timestamp": "2026-03-03T10:05:22.509751", "simulation": true, "type": "limit_order", "product_id": "NEAR-USD", "side": "BUY", "base_size": 7.369196757553427, "limit_price": 1.357}
+{"timestamp": "2026-03-04T10:40:38.733739", "simulation": true, "product_id": "USDC-GBP", "side": "SELL", "amount": 9.954722489005375, "amount_type": "base", "status": "simulated"}
+{"timestamp": "2026-03-04T10:42:55.340131", "simulation": true, "product_id": "USDC-GBP", "side": "BUY", "amount": 9.954722489005375, "amount_type": "quote", "status": "simulated"}

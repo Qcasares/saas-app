@@ -176,5 +176,115 @@
     "orders": [],
     "status": "failed",
     "error": "400 Client Error: Bad Request {\"error\":\"INVALID_ARGUMENT\",\"error_details\":\"account is not available\",\"message\":\"account is not available\"}"
+  },
+  {
+    "timestamp": "2026-03-04T10:15:03.309368",
+    "type": "gbp_auto_convert",
+    "gbp_amount": 9.954722489005375,
+    "status": "triggered",
+    "note": "Auto-conversion per policy - no confirmation needed"
+  },
+  {
+    "timestamp": "2026-03-04T10:20:23.604176",
+    "type": "gbp_auto_convert",
+    "gbp_amount": 9.954722489005375,
+    "status": "triggered",
+    "note": "Auto-conversion per policy - no confirmation needed"
+  },
+  {
+    "timestamp": "2026-03-04T10:29:26.708771",
+    "type": "gbp_auto_convert",
+    "gbp_amount": 9.954722489005375,
+    "status": "triggered",
+    "note": "Auto-conversion per policy - no confirmation needed"
+  },
+  {
+    "timestamp": "2026-03-04T10:29:34.525449",
+    "type": "gbp_auto_convert",
+    "gbp_amount": 9.954722489005375,
+    "status": "triggered",
+    "note": "Auto-conversion per policy - no confirmation needed"
+  },
+  {
+    "timestamp": "2026-03-04T10:35:25.270353",
+    "type": "gbp_auto_convert",
+    "gbp_amount": 9.954722489005375,
+    "status": "triggered",
+    "note": "Auto-conversion per policy - no confirmation needed"
+  },
+  {
+    "timestamp": "2026-03-04T10:35:29.877887",
+    "type": "gbp_auto_convert",
+    "gbp_amount": 9.954722489005375,
+    "status": "failed",
+    "error": "No supported GBP trading pair",
+    "note": "GBP detected but no valid product ID for conversion"
+  },
+  {
+    "timestamp": "2026-03-04T10:40:38.734117",
+    "type": "gbp_auto_convert",
+    "gbp_amount": 9.954722489005375,
+    "product_id": "USDC-GBP",
+    "order": {
+      "simulation": true,
+      "product_id": "USDC-GBP",
+      "side": "SELL",
+      "amount": 9.954722489005375,
+      "amount_type": "base",
+      "status": "simulated"
+    },
+    "status": "executed"
+  },
+  {
+    "timestamp": "2026-03-04T10:42:55.340569",
+    "type": "gbp_to_usdc",
+    "gbp_amount": 9.954722489005375,
+    "product_id": "USDC-GBP",
+    "order": {
+      "simulation": true,
+      "product_id": "USDC-GBP",
+      "side": "BUY",
+      "amount": 9.954722489005375,
+      "amount_type": "quote",
+      "status": "simulated"
+    },
+    "expected_usdc": 13.32091862572645,
+    "status": "simulated"
+  },
+  {
+    "timestamp": "2026-03-04T10:43:49.776932",
+    "type": "gbp_to_usdc",
+    "gbp_amount": 9.954722489005375,
+    "product_id": "USDC-GBP",
+    "limit_price": 0.7480472999999999,
+    "base_size": 13.307611014711739,
+    "order_id": "N/A",
+    "order_status": "unknown",
+    "expected_usdc": 13.32091862572645,
+    "status": "executed"
+  },
+  {
+    "timestamp": "2026-03-04T10:45:43.748827",
+    "type": "gbp_to_usdc",
+    "gbp_amount": 1.734440287005376,
+    "product_id": "USDC-GBP",
+    "limit_price": 0.7479471999999999,
+    "base_size": 2.3189341266407255,
+    "order_id": "N/A",
+    "order_status": "unknown",
+    "expected_usdc": 2.3212530607673663,
+    "status": "executed"
+  },
+  {
+    "timestamp": "2026-03-04T10:58:31.110466",
+    "type": "gbp_to_usdc",
+    "gbp_amount": 1.734440287005376,
+    "status": "failed"
+  },
+  {
+    "timestamp": "2026-03-04T11:04:16.274234",
+    "type": "gbp_to_usdc",
+    "gbp_amount": 1.734440287005376,
+    "status": "failed"
   }
 ]

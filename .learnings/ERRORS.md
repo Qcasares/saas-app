@@ -1,203 +1,35 @@
-# Error Log
+## [ERR-20260304-002] coinbase_account_unfunded
 
-Tracking command failures, exceptions, and unexpected behaviors.
-
----
-
-*No errors logged yet. This is a good thing.*
-
-To add an error entry, use this format:
-
-## [ERR-YYYYMMDD-XXX] command_name
-
-**Logged**: ISO-8601 timestamp  
-**Priority**: high  
-**Status**: pending  
-**Area**: frontend | backend | infra | tests | docs | config
-
-### Summary
-Brief description of what failed
-
-### Error
-```
-Actual error output
-```
-
-### Context
-What was being attempted
-
-### Suggested Fix
-
-### Metadata
-- Reproducible: yes | no | unknown
-- Related Files: 
-
----
-
-## [SEC-20250207-001] clawhub-supply-chain-attack
-
-**Logged**: 2026-02-07T08:15:00Z  
-**Priority**: CRITICAL  
-**Status**: active  
-**Area**: security
-
-### Summary
-Major supply chain attack discovered: 341 malicious ClawHub skills targeting OpenClaw users with macOS malware (AMOS stealer, keyloggers, backdoors).
-
-### Threat Intelligence
-| Attribute | Details |
-|-----------|---------|
-| Campaign size | 341+ malicious skills |
-| Timeline | Jan 27 - Feb 2, 2026 |
-| First wave | 28 skills (Jan 27-29) |
-| Second wave | 386 skills (Jan 31-Feb 2) |
-| Targets | Claude Code, Moltbot users |
-| Payloads | Atomic macOS Stealer, keyloggers, backdoors |
-| Platform | macOS specifically targeted |
-
-### Sources
-- The Hacker News: https://thehackernews.com/2026/02/researchers-find-341-malicious-clawhub.html
-- Tom's Hardware: https://www.tomshardware.com/tech-industry/cyber-security/malicious-moltbot-skill-targets-crypto-users-on-clawhub
-- Security Affairs: https://securityaffairs.com/187562/malware/moltbot-skills-exploited-to-distribute-400-malware-packages-in-days.html
-- SC World: https://www.scworld.com/news/openclaw-agents-targeted-with-341-malicious-clawhub-skills
-
-### Our Status
-- 20 skills installed, audited Feb 6 — no malicious patterns detected
-- All skills installed BEFORE campaign timeline (Jan 27+)
-- No new skills installed since Feb 5
-- **Risk level: LOW** (for current install base)
-
-### Immediate Actions
-1. ✅ Verified installed skills against known attack timeline
-2. ✅ Confirmed no skills installed during attack window
-3. 🔄 Enhanced audit with new IOCs (in progress)
-4. ⏳ Monitoring for specific skill name patterns from reports
-
-### Recommended Next Steps
-- Review any skills installed after Jan 27, 2026
-- Monitor for ClawHub security advisories
-- Consider blocking ClawHub installs temporarily until ecosystem stabilizes
-- Set up automated skill audit on each install
-
-### Metadata
-- Related: Snyk ToxicSkills report (Feb 5)
-- Related Files: SECURITY-EXECUTIVE-SUMMARY.md, TRUST_TIERS.md
-- Tags: supply-chain, malware, macos, clawhub, critical
-
-## [ERR-20260226-001] browser-cli-anthropic-key
-
-**Logged**: 2026-02-26T18:52:37Z  
-**Priority**: high  
-**Status**: pending  
-**Area**: infra
-
-### Summary
-Stagehand browser CLI failed because ANTHROPIC_API_KEY was not set.
-
-### Error
-```
-Error: ANTHROPIC_API_KEY not set
-Run: openclaw agents auth add anthropic --token YOUR_API_KEY
-```
-
-### Context
-- Command: `browser navigate https://app.postiz.com/auth/register`
-- Environment: OpenClaw Mac mini
-
-### Suggested Fix
-Set Anthropic auth for the browser CLI or use an alternative browser tool.
-
-### Metadata
-- Reproducible: yes
-- Related Files: skills/agent-browser-stagehand/SKILL.md
-
----
-
-## [ERR-20260226-002] openclaw-browser-service-unreachable
-
-**Logged**: 2026-02-26T18:52:37Z  
-**Priority**: high  
-**Status**: pending  
-**Area**: infra
-
-### Summary
-OpenClaw browser control service unreachable when opening Postiz signup.
-
-### Error
-```
-Can't reach the OpenClaw browser control service. Restart the OpenClaw gateway (OpenClaw.app menubar, or `openclaw gateway`). Do NOT retry the browser tool — it will keep failing. (Error: getaddrinfo ENOTFOUND app.postiz.com)
-```
-
-### Context
-- Tool: browser (OpenClaw)
-- Action: open https://app.postiz.com/auth/register
-
-### Suggested Fix
-Restart OpenClaw gateway and verify DNS/network access to app.postiz.com.
-
-### Metadata
-- Reproducible: unknown
-- Related Files: openclaw.json (gateway)
-
----
-
-- 2026-02-28 08:09 | Heartbeat calendar check failed: 'accli' not found (Apple Calendar CLI not installed).
-- 2026-02-28 08:09 | Heartbeat email check failed: himalaya config missing at ~/Library/Application Support/himalaya/config.toml (and non-TTY prompt error).
-## [ERR-20260304-001] coinbase_price_fetch_shell
-
-**Logged**: 2026-03-04T07:10:00Z
-**Priority**: medium
+**Logged**: 2026-03-04T08:45:00Z
+**Priority**: critical
 **Status**: pending
 **Area**: infra
 
 ### Summary
-Shell command failed when fetching Coinbase prices due to zsh substitution/escaping issues.
+Coinbase account has insufficient funds for trading. Portfolio value $36.58, USDC balance $0.03.
 
 ### Error
-```
-zsh:1: bad substitution
-```
+Live trade execution failed: "account is not available"
 
 ### Context
-- Attempted: curl https://api.exchange.coinbase.com/products/BTC-USD/ticker | python3 -c "print(f'BTC: ${float(d["price"]):,.2f}')"
-- Shell: zsh
+- Attempted VVV-USD long position ($500 target)
+- Account has VVV, NEAR, FAI positions but no USDC
+- VVV price now $6.29 (entry $6.16 missed)
+
+### Account Status
+- Portfolio: $36.58
+- USDC: $0.03 (needs $500+ for target position)
+- Existing positions: FAI 1399 units, NEAR 3.558 units
 
 ### Suggested Fix
-Use a here-doc python script or avoid f-string with shell interpolation. Prefer writing to a temp script.
+1. Fund account with USDC for trading
+2. Set all trading to SIMULATION mode until funded
+3. Create alert when USDC balance > $100
+4. Update risk parameters to match actual balance
 
 ### Metadata
 - Reproducible: yes
-- Related Files: none
-- Tags: shell, zsh, quoting
-
----
-
-## [ERR-20260304-002] missing-timeout-command
-
-**Logged**: 2026-03-04T07:47:00Z
-**Priority**: medium
-**Status**: pending
-**Area**: infra
-
-### Summary
-`timeout` command not found in zsh on macOS when testing monitor script.
-
-### Error
-```
-zsh:1: command not found: timeout
-```
-
-### Context
-- Command: `timeout 30 python3 skills/sherlock-trader-bridge/scripts/monitor_positions.py --once --mode simulation`
-- Shell: zsh
-- Host: macOS
-
-### Suggested Fix
-Use `gtimeout` (coreutils) or replace with a Python-based timeout wrapper.
-
-### Metadata
-- Reproducible: yes
-- Related Files: skills/sherlock-trader-bridge/scripts/monitor_positions.py
-- Tags: macos, shell, timeout
+- Related Files: trading/RISK-PARAMETERS.json
+- Tags: coinbase, funding, live-trading
 
 ---

@@ -1,0 +1,66 @@
+{
+  "bitcoin": {
+    "symbol": "BTC",
+    "price": 71168,
+    "volume": 57163179069,
+    "change_24h": -2.8682,
+    "market_cap": 1424996617581,
+    "timestamp": "2026-03-05T21:40:36.598674"
+  },
+  "ethereum": {
+    "symbol": "ETH",
+    "price": 2079.91,
+    "volume": 24299490197,
+    "change_24h": -3.46251,
+    "market_cap": 251383379342,
+    "timestamp": "2026-03-05T21:40:36.598695"
+  },
+  "ripple": {
+    "symbol": "XRP",
+    "price": 1.41,
+    "volume": 3096894321,
+    "change_24h": -2.74967,
+    "market_cap": 86107484495,
+    "timestamp": "2026-03-05T21:40:36.598701"
+  },
+  "solana": {
+    "symbol": "SOL",
+    "price": 89.38,
+    "volume": 5069612890,
+    "change_24h": -3.32449,
+    "market_cap": 51052817739,
+    "timestamp": "2026-03-05T21:40:36.598706"
+  },
+  "dogecoin": {
+    "symbol": "DOGE",
+    "price": 0.094027,
+    "volume": 1644036308,
+    "change_24h": -7.74788,
+    "market_cap": 14422721064,
+    "timestamp": "2026-03-05T21:40:36.598711"
+  },
+  "cardano": {
+    "symbol": "ADA",
+    "price": 0.269997,
+    "volume": 601790339,
+    "change_24h": -3.34096,
+    "market_cap": 9950337670,
+    "timestamp": "2026-03-05T21:40:36.598716"
+  },
+  "chainlink": {
+    "symbol": "LINK",
+    "price": 9.25,
+    "volume": 438548576,
+    "change_24h": -1.93079,
+    "market_cap": 6557670090,
+    "timestamp": "2026-03-05T21:40:36.598720"
+  },
+  "avalanche-2": {
+    "symbol": "AVAX",
+    "price": 9.47,
+    "volume": 291450829,
+    "change_24h": -0.76093,
+    "market_cap": 4095052702,
+    "timestamp": "2026-03-05T21:40:36.598725"
+  }
+}

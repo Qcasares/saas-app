@@ -5,7 +5,7 @@
 ---
 
 ## Schedule
-**Every 30 minutes** (08:00–22:00 Europe/London)
+**Every 15 minutes** (24/7)
 
 ---
 

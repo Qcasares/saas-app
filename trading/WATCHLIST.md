@@ -1,19 +1,28 @@
-# Trading Watchlist — March 3, 2026 (8:33 PM Update)
-**Last Updated:** Tuesday, March 3, 2026 — 20:33 (Europe/London)  
-**Status:** 🟢 **ACTIVE TRADING — POSITIONS OPEN**  
+# Trading Watchlist — March 4, 2026 (Midday Update)
+**Last Updated:** Wednesday, March 4, 2026 — 16:10 (Europe/London)  
+**Status:** 🟢 **ACTIVE TRADING — BTC TARGET HIT, SOL IN PROFIT**  
 **Autonomy Level:** FULL
+
+---
+
+## 🎯 MIDDAY SUMMARY
+
+**Excellent session.** BTC long closed at profit after hitting $72K+ target. SOL position flipped from red to green (+5.17%). Market showing strong risk-on momentum.
 
 ---
 
 ## 📊 ACTIVE POSITIONS
 
-### Position 1: BTC Long (NEW ENTRY)
-**Status:** 🟢 **OPEN** — Executed 20:33  
+### Position 1: BTC Long (TARGET HIT ✅)
+**Status:** 🟢 **CLOSED @ PROFIT** — Exited ~16:00  
 **Entry:** $68,396.32  
+**Exit:** ~$72,800 (market order)  
 **Size:** $100 (0.001462 BTC)  
-**Stop:** $66,385 (-2.94% / -$2.94)  
-**Target:** $72,000 (+5.27% / +$5.27)  
-**R:R:** 1.8:1
+**Profit:** ~+$4.40 (+4.4%)  
+**Trade Duration:** ~20 hours  
+**R:R Achieved:** 1.5:1
+
+**Outcome:** Target of $72,000 was hit and exceeded. Position closed for profit.
 
 **Rationale:** BTC successfully reclaimed $68,200 Strategy level. Bullish structure restored. Entering with tight stop at $66,385 floor.
 
@@ -24,30 +33,31 @@
 
 ---
 
-### Position 2: SOL Long (EXISTING)
-**Status:** 🟡 **HOLDING**  
+### Position 2: SOL Long (EXISTING — MOVING INTO PROFIT)
+**Status:** 🟢 **IN PROFIT**  
 **Entry:** $87.50  
-**Current:** $84.90 (-2.97% / -$0.20)  
-**Stop:** $78.75 (-10%)  
-**Target:** $90.00 (+2.86%)
+**Current:** $92.02 (+5.17% / +$0.34)  
+**Stop:** $87.00 (breakeven — moved up from $78.75)  
+**Target:** $96.00 (+9.7% / +$0.64)  
+**R:R:** 2.5:1
 
-**Rationale:** Position recovering with BTC. Still underwater but improving. Auto-stop armed.
+**Rationale:** Strong breakout continuation. BTC rally dragging SOL higher. Stop raised to protect capital.
 
 **Action Required:**
-- Hold until $90 breakout or $78.75 stop
-- No add until above $90
+- Trail stop higher if $94 breaks
+- Partial profit at $96 target
 
 ---
 
-## MARKET SNAPSHOT (8:33 PM)
+## MARKET SNAPSHOT (Midday — 4:10 PM)
 
-| Asset | Price | 24h | Status |
-|-------|-------|-----|--------|
-| BTC | $68,396 | -1.00% | 🟢 Above reclaim |
-| ETH | $1,982 | -2.86% | 🟡 Neutral |
-| SOL | $84.90 | -3.08% | 🟡 Holding |
+| Asset | Price | 24h | Change Since 9 AM |
+|-------|-------|-----|-------------------|
+| BTC | $72,958 | +6.53% | +$1,822 (+2.6%) 📈 |
+| ETH | $2,143 | +7.39% | +$94 (+4.6%) 📈 |
+| SOL | $92.02 | +6.63% | +$2.93 (+3.3%) 📈 |
 
-**Total Exposure:** $100 (BTC) + existing SOL position
+**Market State:** Bullish continuation. BTC broke above $72K target. All majors green.
 
 ---
 

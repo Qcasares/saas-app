@@ -14,7 +14,35 @@
 
 ---
 
-## 1. AI Agent Trends — March 2026
+## Afternoon Update — March 4, 2026 (16:08 GMT)
+
+### Tech News Highlights
+
+**Apple Product Launch Wave:**
+- **MacBook Neo announced** at $599 — entry-level Mac targeting education/budget market (HN: 403 pts, 392 comments)
+- **M5 MacBook Air/Pro refresh** — new chips announced earlier in week
+- Significant product cycle concentration from Apple, likely competing with Windows AI PC push
+
+**AI Funding & Enterprise:**
+- **OpenAI closes $110B funding round** at $730B valuation — confirmed from multiple sources
+- **Anthropic CEO statement:** AI will eliminate 50% of lawyers, consultants, and finance professionals within 12 months — provocative but attention-grabbing prediction
+- **NVIDIA GTC 2026** upcoming — major AI hardware announcements expected
+
+**Semiconductor/Auto:**
+- **Trio-Tech (TRT)** secures $2.5M production order for automotive chip reliability testing — signal of continued auto semiconductor investment
+
+### Developer Ecosystem (GitHub Trending)
+
+**Top Movers Afternoon Batch:**
+| Repository | Stars | Description |
+|------------|-------|-------------|
+| KeygraphHQ/shannon | 29,300 | Autonomous AI hacker for web app exploit detection (96% success rate on XBOW Benchmark) |
+| msitarzewski/agency-agents | 4,926 | Complete AI agency toolkit — specialized agents with personalities |
+| CodebuffAI/codebuff | 3,489 | Terminal code generation tool |
+| agentscope-ai/ReMe | 1,531 | Memory management kit for agents |
+| aquasecurity/trivy | trending | Security scanner for containers/K8s/code |
+
+**Pattern:** Agent infrastructure tooling dominating — memory, security, code generation, autonomous testing. The 
 
 ### Key Findings
 

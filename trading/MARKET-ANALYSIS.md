@@ -1,19 +1,19 @@
-# Market Analysis - 2026-03-04 12:55
+# Market Analysis - 2026-03-04 16:10
 
 ## Live Prices (Coinbase)
 
-- **BTC-USD**: $71,136.01 (+5.50% 24h)
-- **ETH-USD**: $2,049.25 (+4.14% 24h)
-- **SOL-USD**: $89.09 (+5.68% 24h)
-- **SOL-GBP**: $66.65 (+5.21% 24h)
-- **BTC-GBP**: $53,255.93 (+5.23% 24h)
+- **BTC-USD**: $72,957.78 (+6.53% 24h)
+- **ETH-USD**: $2,142.92 (+7.39% 24h)
+- **SOL-USD**: $92.02 (+6.63% 24h)
+- **SOL-GBP**: $68.79 (+6.09% 24h)
+- **BTC-GBP**: $54,516.00 (+6.06% 24h)
 
 ## Trends (6H)
 
-- **SOL-USD**: NEUTRAL ↔️ (-0.20%)
-- **BTC-USD**: NEUTRAL ↔️ (+0.10%)
-- **ETH-USD**: NEUTRAL ↔️ (+0.03%)
+- **SOL-USD**: NEUTRAL ↔️ (+0.91%)
+- **BTC-USD**: NEUTRAL ↔️ (+0.85%)
+- **ETH-USD**: NEUTRAL ↔️ (+0.93%)
 
 ## Portfolio Alerts
 
-- **SOL**: $89.09 | P&L: +1.81%
+- **SOL**: $92.02 | P&L: +5.17%

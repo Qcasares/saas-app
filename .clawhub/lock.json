@@ -192,6 +192,10 @@
     "liang-tavily-search": {
       "version": "1.0.1",
       "installedAt": 1772571273951
+    },
+    "openclaw-tavily-search": {
+      "version": "0.1.0",
+      "installedAt": 1772746229902
     }
   }
 }

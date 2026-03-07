@@ -308,11 +308,27 @@
     "status": "executed"
   },
   {
-    "timestamp": "2026-03-04T11:18:49.965360",
-    "type": "gbp_to_usdc",
-    "gbp_amount": 0.01684298177632224,
-    "expected_usdc": 0.02255957912713935,
-    "rate": 0.7466,
-    "status": "executed"
+    "signal_id": "sig-20260303-004",
+    "asset": "NEAR-USDC",
+    "direction": "EXIT",
+    "timestamp": "2026-03-06T11:27:00Z",
+    "mode": "paper",
+    "orders": [
+      {
+        "simulation": true,
+        "type": "market_order",
+        "product_id": "NEAR-USDC",
+        "side": "SELL",
+        "base_size": 3.558,
+        "price": 1.26,
+        "status": "executed"
+      }
+    ],
+    "status": "executed",
+    "position_value": 4.93,
+    "exit_value": 4.48,
+    "pnl_usd": -0.45,
+    "pnl_pct": -9.13,
+    "exit_reason": "stop_loss_triggered"
   }
 ]

@@ -318,3 +318,33 @@
 [2026-03-04 12:49:59 ] ✅ HOLD: $10.44 buffer to stop
 [2026-03-04 12:55:05 ] CHECK: SOL at $89.09 | P&L: 1.82% | Stop: $78.75
 [2026-03-04 12:55:05 ] ✅ HOLD: $10.34 buffer to stop
+[2026-03-06 07:09:07 ] CHECK: SOL at $88.16 | P&L: 0.75% | Stop: $78.75
+[2026-03-06 07:09:07 ] ✅ HOLD: $9.41 buffer to stop
+[2026-03-06 07:11:20 ] CHECK: SOL at $88.15 | P&L: 0.74% | Stop: $78.75
+[2026-03-06 07:11:20 ] ✅ HOLD: $9.40 buffer to stop
+[2026-03-06 07:25:40 ] CHECK: SOL at $88.40 | P&L: 1.02% | Stop: $78.75
+[2026-03-06 07:25:40 ] ✅ HOLD: $9.65 buffer to stop
+[2026-03-06 07:52:03 ] CHECK: SOL at $88.71 | P&L: 1.38% | Stop: $78.75
+[2026-03-06 07:52:03 ] ✅ HOLD: $9.96 buffer to stop
+[2026-03-06 09:31:12 ] CHECK: SOL at $87.42 | P&L: -0.09% | Stop: $78.75
+[2026-03-06 09:31:12 ] ✅ HOLD: $8.67 buffer to stop
+[2026-03-06 11:45:21 ] CHECK: SOL at $87.56 | P&L: 0.07% | Stop: $78.75
+[2026-03-06 11:45:21 ] ✅ HOLD: $8.81 buffer to stop
+[2026-03-06 12:00:50 ] CHECK: SOL at $87.24 | P&L: -0.30% | Stop: $78.75
+[2026-03-06 12:00:50 ] ✅ HOLD: $8.49 buffer to stop
+[2026-03-06 12:52:59 ] CHECK: SOL at $86.50 | P&L: -1.14% | Stop: $78.75
+[2026-03-06 12:52:59 ] ✅ HOLD: $7.75 buffer to stop
+[2026-03-06 13:15:27 ] CHECK: SOL at $86.55 | P&L: -1.09% | Stop: $78.75
+[2026-03-06 13:15:27 ] ✅ HOLD: $7.80 buffer to stop
+[2026-03-06 16:50:23 ] CHECK: SOL at $84.67 | P&L: -3.23% | Stop: $78.75
+[2026-03-06 16:50:23 ] ✅ HOLD: $5.92 buffer to stop
+[2026-03-06 18:59:23 ] CHECK: SOL at $85.37 | P&L: -2.43% | Stop: $78.75
+[2026-03-06 18:59:23 ] ✅ HOLD: $6.62 buffer to stop
+[2026-03-06 21:19:02 ] CHECK: SOL at $84.85 | P&L: -3.03% | Stop: $78.75
+[2026-03-06 21:19:02 ] ✅ HOLD: $6.10 buffer to stop
+[2026-03-06 21:41:48 ] CHECK: SOL at $84.55 | P&L: -3.37% | Stop: $78.75
+[2026-03-06 21:41:48 ] ✅ HOLD: $5.80 buffer to stop
+[2026-03-07 02:00:10 ] CHECK: SOL at $84.71 | P&L: -3.19% | Stop: $78.75
+[2026-03-07 02:00:10 ] ✅ HOLD: $5.96 buffer to stop
+[2026-03-07 02:59:42 ] CHECK: SOL at $84.66 | P&L: -3.25% | Stop: $78.75
+[2026-03-07 02:59:42 ] ✅ HOLD: $5.91 buffer to stop

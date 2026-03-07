@@ -1,0 +1,26 @@
+{
+  "name": "morning-scan",
+  "agent_id": "trader",
+  "mode": "run",
+  "timeout": 600,
+  "description": "Complete morning market scan with parallel subagent execution",
+  "subagents": ["morning-scanner", "morning-analyst", "morning-risk-check"],
+  "orchestration": "parallel",
+  "merge_strategy": "unified_watchlist",
+  "task": "Execute comprehensive morning market scan. Spawn three parallel subagents: (1) Scanner - fetch prices, funding rates, liquidations from Coinbase; (2) Analyst - technical analysis, pattern detection, support/resistance levels; (3) Risk-check - portfolio heat, correlation analysis, position sizing validation. Merge outputs into unified WATCHLIST.md update. Alert on high-conviction setups meeting all pre-trade criteria. Reference SOUL.md discipline framework and trader-config.json risk limits.",
+  "outputs": [
+    "trading/MARKET-ANALYSIS.md",
+    "trading/MARKET-ANALYSIS.json",
+    "trading/WATCHLIST.md"
+  ],
+  "dependencies": {
+    "intel_max_age_minutes": 120,
+    "required_files": ["intel/DAILY-INTEL.md"],
+    "block_if_stale": true
+  },
+  "schedule": "0 9 * * *",
+  "escalation": {
+    "on_failure": "alert_telegram",
+    "on_timeout": "force_kill_and_alert"
+  }
+}

@@ -10,14 +10,18 @@ import time
 from datetime import datetime
 from typing import Dict, Any, Optional, List
 
-# Add virtual environment path for coinbase SDK
-site_pkg = os.path.expanduser(f'~/.openclaw/workspace/.venv/lib/python{sys.version_info.major}.{sys.version_info.minor}/site-packages')
-sys.path.insert(0, site_pkg)
-
+# Try importing coinbase SDK from system or venv
 try:
     from coinbase.rest import RESTClient
 except ImportError:
-    raise ImportError("coinbase-advanced-py not installed. Run: pip install coinbase-advanced-py")
+    # Fallback to venv path
+    site_pkg = os.path.expanduser(f'~/.openclaw/workspace/.venv/lib/python{sys.version_info.major}.{sys.version_info.minor}/site-packages')
+    if os.path.exists(site_pkg):
+        sys.path.insert(0, site_pkg)
+    try:
+        from coinbase.rest import RESTClient
+    except ImportError:
+        raise ImportError("coinbase-advanced-py not installed. Run: pip install coinbase-advanced-py")
 
 class CoinbaseTrader:
     """Coinbase Advanced Trade API wrapper for automated trading"""
@@ -29,12 +33,16 @@ class CoinbaseTrader:
         Args:
             simulation: If True, orders are logged but not executed
         """
-        self.api_key = os.getenv('COINBASE_API_KEY', '577c27e6-22e2-4901-af7e-9caa79720505')
-        self.api_secret = os.getenv('COINBASE_API_SECRET', '''-----BEGIN EC PRIVATE KEY-----
-MHcCAQEEIGOJIL1WBIFeIicwJXjRI4SilzVTgFND5QsmitSxGbs2oAoGCCqGSM49
-AwEHoUQDQgAE/LWTBBv4u88l04i4Gf0w1sefeog1d5KQHLz6CHbfXRyq+0LNiEHR
-QETdTMbw+CLPKS8shhwkponw897MKIjjFg==
------END EC PRIVATE KEY-----''')
+        # Load from environment - strip any surrounding quotes
+        self.api_key = os.getenv('COINBASE_API_KEY', '').strip().strip('"').strip("'")
+        api_secret_raw = os.getenv('COINBASE_API_SECRET', '')
+        # Clean up the secret key - remove quotes and normalize newlines
+        self.api_secret = api_secret_raw.strip().strip('"').strip("'").replace('\\n', '\n')
+        
+        if not self.api_key or not self.api_secret:
+            print("⚠️ Warning: COINBASE_API_KEY or COINBASE_API_SECRET not set")
+            print("   Running in simulation mode only")
+            simulation = True
         self.simulation = simulation or os.getenv('TRADER_SIMULATION', 'true').lower() == 'true'
         
         # Initialize official SDK client

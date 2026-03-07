@@ -1,0 +1,18 @@
+[
+  {
+    "timestamp": "2026-03-06T17:27:00Z",
+    "type": "directive",
+    "source": "user",
+    "directive": "AGGRESSIVE_PROFIT_MODE",
+    "changes": {
+      "risk_per_trade": "3-5%",
+      "max_positions": "5-8",
+      "deployment_target": "90%+",
+      "strategy": "scalping",
+      "hold_time": "minutes to hours",
+      "leverage": "2-10x",
+      "daily_return_target": "3-5%"
+    },
+    "stored_in": "trading/AGGRESSIVE-PROFIT-DIRECTIVE.md"
+  }
+]

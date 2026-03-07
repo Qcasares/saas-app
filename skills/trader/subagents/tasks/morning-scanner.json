@@ -1,0 +1,11 @@
+{
+  "name": "morning-scanner",
+  "agent_id": "trader",
+  "mode": "run",
+  "timeout": 180,
+  "description": "Market data acquisition - prices, funding, liquidations",
+  "task": "Fetch comprehensive market data from Coinbase API. Collect: (1) Live prices for all approved pairs in trader-config.json; (2) 24h volume and price change; (3) Funding rates if available; (4) Liquidation data from CoinGlass or similar. Write structured output to trading/MARKET-ANALYSIS.json with timestamp. Focus on speed and accuracy - this is the data foundation for all downstream analysis.",
+  "outputs": ["trading/MARKET-ANALYSIS.json"],
+  "tools_allowed": ["coinbase_api", "web_fetch", "file_write"],
+  "tools_forbidden": ["execute_trade", "position_modify", "alert_send"]
+}

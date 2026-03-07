@@ -1,6 +1,7 @@
 {
-  "version": "1.1",
-  "mode": "simulation",
+  "version": "1.2",
+  "mode": "paper",
+  "simulation": true,
   "models": {
     "analysis": "claude-sonnet-4",
     "execution": "kimi-coding/k2p5",
@@ -14,7 +15,16 @@
   "risk_limits": {
     "max_position_pct": 0.01,
     "daily_loss_limit_pct": 0.03,
-    "approved_pairs": ["BTC-USD", "ETH-USD", "SOL-USD", "BTC-USDC", "ETH-USDC", "XRP-USD", "VVV-USD", "DOGE-USD", "SUI-USD", "ZEC-USD", "LINK-USD", "NEAR-USD", "ADA-USD", "HBAR-USD", "LTC-USD", "TAO-USD", "HYPE-USD", "AVAX-USD", "PENGU-USD", "XLM-USD", "BCH-USD", "ROBO-USD", "ONDO-USD", "FAI-USD", "AAVE-USD", "UNI-USD", "ZRO-USD", "PEPE-USD", "DOT-USD", "BONK-USD", "FARTCOIN-USD", "PUMP-USD", "AERO-USD", "MON-USD", "BNB-USD", "ENA-USD", "PERP-USD", "POL-USD", "KITE-USD", "ICP-USD"],
+    "approved_pairs": [
+      "BTC-USD", "ETH-USD", "SOL-USD", "BTC-USDC", "ETH-USDC",
+      "XRP-USD", "VVV-USD", "DOGE-USD", "SUI-USD", "ZEC-USD",
+      "LINK-USD", "NEAR-USD", "ADA-USD", "HBAR-USD", "LTC-USD",
+      "TAO-USD", "HYPE-USD", "AVAX-USD", "PENGU-USD", "XLM-USD",
+      "BCH-USD", "ROBO-USD", "ONDO-USD", "FAI-USD", "AAVE-USD",
+      "UNI-USD", "ZRO-USD", "PEPE-USD", "DOT-USD", "BONK-USD",
+      "FARTCOIN-USD", "PUMP-USD", "AERO-USD", "MON-USD", "BNB-USD",
+      "ENA-USD", "PERP-USD", "POL-USD", "KITE-USD", "ICP-USD"
+    ],
     "approval_threshold_usd": 500
   },
   "strategy": {
@@ -35,7 +45,9 @@
   },
   "api": {
     "provider": "coinbase",
-    "key_id": "577c27e6-22e2-4901-af7e-9caa79720505",
-    "status": "active"
+    "key_id": "99142b0e-a721-4635-ba05-6bb81c75aae9",
+    "key_type": "cdp",
+    "status": "active",
+    "permissions": ["view", "trade"]
   }
 }

@@ -1,0 +1,29 @@
+{
+  "signal_id": "sig-20260306-1654",
+  "asset": "SOL-USD",
+  "direction": "LONG",
+  "timestamp": "2026-03-06T16:54:00Z",
+  "mode": "paper",
+  "orders": [
+    {
+      "simulation": true,
+      "type": "market_order",
+      "product_id": "SOL-USD",
+      "side": "BUY",
+      "base_size": 1.403,
+      "price": 142.60,
+      "status": "executed"
+    },
+    {
+      "type": "stop_loss_pending",
+      "price": 138.20,
+      "status": "pending"
+    }
+  ],
+  "status": "executed",
+  "position_value": 200.00,
+  "risk_usd": 6.18,
+  "risk_pct": 2.0,
+  "setup": "4H_breakout_continuation",
+  "note": "Autonomous entry per authority directive. Wide stop for retest room."
+}

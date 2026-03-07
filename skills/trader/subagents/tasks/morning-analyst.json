@@ -1,0 +1,12 @@
+{
+  "name": "morning-analyst",
+  "agent_id": "trader",
+  "mode": "run",
+  "timeout": 240,
+  "description": "Technical analysis and pattern detection",
+  "task": "Perform technical analysis on market data. Read trading/MARKET-ANALYSIS.json from scanner subagent. Analyze: (1) Support/resistance levels on 4H and Daily timeframes; (2) Trend direction and strength; (3) Volume profile anomalies; (4) Pattern detection (breakouts, reversals, consolidation); (5) Correlation with BTC/ETH. Identify setups with minimum 1:2 risk-reward. Write technical commentary to trading/MARKET-ANALYSIS.md. Create WATCHLIST.md entries for valid setups meeting all pre-trade criteria from SOUL.md framework.",
+  "inputs": ["trading/MARKET-ANALYSIS.json"],
+  "outputs": ["trading/MARKET-ANALYSIS.md", "trading/WATCHLIST.md"],
+  "tools_allowed": ["file_read", "file_write", "memory_search"],
+  "tools_forbidden": ["execute_trade", "position_modify", "alert_send", "web_search"]
+}

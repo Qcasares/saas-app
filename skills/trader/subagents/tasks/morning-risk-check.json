@@ -1,0 +1,12 @@
+{
+  "name": "morning-risk-check",
+  "agent_id": "trader",
+  "mode": "run",
+  "timeout": 120,
+  "description": "Portfolio risk assessment and position validation",
+  "task": "Execute portfolio risk analysis. Read trader-config.json for risk limits. Check: (1) Current position heat vs max_position_pct; (2) Daily P&L vs daily_loss_limit; (3) Correlation between open positions; (4) Concentration risk; (5) Available buying power. Validate that any new trades would stay within 1-2% risk per trade rule. Write risk summary to trading/RISK-ASSESSMENT.json. If limits approached, flag in WATCHLIST.md with ⚠️ RISK LIMIT warning. Never allow recommendations that breach configured limits.",
+  "inputs": ["trading/MARKET-ANALYSIS.json", "skills/trader/config/trader-config.json"],
+  "outputs": ["trading/RISK-ASSESSMENT.json"],
+  "tools_allowed": ["file_read", "file_write"],
+  "tools_forbidden": ["execute_trade", "position_modify", "alert_send", "web_search", "web_fetch"]
+}

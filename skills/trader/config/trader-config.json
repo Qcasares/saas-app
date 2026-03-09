@@ -1,7 +1,7 @@
 {
   "version": "1.2",
-  "mode": "paper",
-  "simulation": true,
+  "mode": "live",
+  "simulation": false,
   "models": {
     "analysis": "claude-sonnet-4",
     "execution": "kimi-coding/k2p5",
@@ -45,7 +45,7 @@
   },
   "api": {
     "provider": "coinbase",
-    "key_id": "99142b0e-a721-4635-ba05-6bb81c75aae9",
+    "key_id": "432cda88-4de6-4a58-ae8c-1dea14119479",
     "key_type": "cdp",
     "status": "active",
     "permissions": ["view", "trade"]

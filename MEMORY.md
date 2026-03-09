@@ -216,5 +216,30 @@ cat memory/heartbeat-state.json | jq '.memoryConfig'
 
 ---
 
-*Last updated: 2026-02-05 by KingKong 🦍*
-*Memory version: 2.0 | Modes: local + ensue (pending API key)*
+## Trading Autonomy
+
+**Authorization Date:** 2026-03-08  
+**Status:** ✅ **ACTIVE**
+
+### Permissions
+- Full authority to research and analyze crypto markets
+- Execute trades on Coinbase Advanced Trade API without prior approval
+- Deploy automated strategies and swarms for trading operations
+- Configure cron jobs and risk parameters within limits
+
+### Constraints (Immutable)
+- Max 2% risk per trade
+- 3% daily loss limit (hard stop)
+- $5 position cap (small account protection)
+- Mandatory stop-losses on all positions
+- Approved pairs only
+
+### Documentation
+- Full details: `memory/trading-autonomy-2026-03-08.md`
+- Trade logs: `trading/logs/`
+- Strategy config: `skills/trader/config/trader-config.json`
+
+---
+
+*Last updated: 2026-03-08 by KingKong 🦍*
+*Memory version: 2.1 | Trading: AUTONOMOUS*

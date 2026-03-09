@@ -24,46 +24,60 @@ Surface urgent/unread items.
 
 ## 2. Agent Job Registry
 
+**Last Updated:** 2026-03-08 (matching actual cron jobs)
+
 | Agent | Job | ID | Schedule | Max Runtime |
 |-------|-----|-----|----------|-------------|
-| Oracle | Market Intel (Morning) | `3fd6d3f4-9c31-4348-8e35-5496b906e3af` | 8 AM | 10 min |
-| Oracle | Market Intel (Afternoon) | `cfdb2c59-0f29-470d-98ad-b8cb48b46133` | 2 PM | 10 min |
-| Oracle | Market Intel (Evening) | `f78250ca-57a9-489a-b45f-29ee8fde43d0` | 6 PM | 10 min |
-| Herald | Commentary (Morning) | `0ec98999-04c7-4e31-ba6d-8f74cf762648` | 9 AM | 5 min |
-| Herald | Commentary (Evening) | `898af5b4-c619-41d8-b4c4-4c48fac87e2d` | 5 PM | 5 min |
-| Ledger | Weekly Digest | `f068cd53-946b-41c9-9b24-2f617c77c246` | Sun 6 PM | 15 min |
-| Forge | Infrastructure | `2c25d4cd-e8b5-4634-87fd-e7b328bcc64c` | 10 AM | 20 min |
-| Trader | Market Scan (Morning) | `5329c00d-ad8b-4a8f-a66e-7c465e8ac5a7` | 9 AM | 10 min |
+| Sherlock | Research (Morning) | `3fd6d3f4-9c31-4348-8e35-5496b906e3af` | 8 AM | 5 min |
+| Sherlock | Research (Afternoon) | `cfdb2c59-0f29-470d-98ad-b8cb48b46133` | 2 PM | 3 min |
+| Sherlock | Research (Evening) | `f78250ca-57a9-489a-b45f-29ee8fde43d0` | 6 PM | 5 min |
 | Trader | Market Scan (Midday) | `dad8e6f9-ab04-4903-a494-c0ffaaa66bf8` | 1 PM | 10 min |
 | Trader | Market Scan (Evening) | `508eedd2-82b9-4267-8775-a6affdac003d` | 5 PM | 10 min |
-| Trader | End of Day Review | `dfb19c64-25de-4708-8b4d-25fe135bf2ab` | 9 PM | 10 min |
+| Trader | Position Monitor | `fc536fc7-8e26-4da7-811a-412415bd9402` | Every 10 min | 5 min |
+| Trader | Hourly Scan | `6ec7205d-5e22-4250-a4cb-201a605f0914` | Hourly | 5 min |
+| Trader | Strategy | `8612e7a2-a4e9-4f73-ae80-881aed415bc1` | Every 4h | 10 min |
+| Trader | Daily Report | `32f4cf6f-49ac-449c-9a6c-0b4667558684` | 9 PM | 5 min |
+| System | Team Heartbeat | `team-heartbeat-001` | Every 30 min | 3 min |
+| System | Market Alerts | `team-market-alert-001` | 8 AM, 2 PM, 6 PM | 3 min |
+| System | Health Monitor | `52bb69be-f6d0-4ef8-b871-a38ff78f074d` | Every 5 min | 2 min |
+| System | Trading Health | `b2d350f3-0200-475a-b75c-cafc6c5ff9cd` | Every 10 min | 2 min |
+| System | GBP Auto-Convert | `cffe3a97-1931-4efd-b76c-950e03d1eff2` | Every 5 min | 2 min |
+| System | Auto-Execute TP/SL | `0c26c269-eba1-4764-914e-48531d74373b` | Every 5 min | 2 min |
+| System | Funding Scanner | `a903a88f-19af-42af-912b-a9ba3656c1c6` | Hourly | 2 min |
+| System | Git Auto-Sync | `78b8964c-52f0-4ad7-8edb-6534eab07d1e` | Hourly | 2 min |
+| System | Daily Auto-Update | `c5c577b7-d12a-4a7c-9ae9-7955a01b07f5` | 4 AM | 1 min |
+| System | Security Scan | `0e7434dd-4493-4412-bf8e-a7590cadfdbc` | 6 AM | 1 min |
+| System | Brew Update | `e9df09a5-2ac3-445d-a79b-2302a2d804ae` | 6 AM | 10 min |
+| System | Briefing | `b25924f1-5d8c-48c6-91fa-f703ac7a3801` | 7 AM | 2 min |
+| System | Skill Briefing | `308810d1-f6e0-4776-ab19-11e0c0ec1518` | 9 AM | 3 min |
+| System | Sherlock Check-in | `3603e639-520b-4ba7-9aab-f4686f8ee5de` | Every 15 min | 2 min |
+| System | Self-Improvement | `59cee57b-ca5c-49c3-b92d-e633572a6a70` | 10 PM | 2 min |
+| System | Trust Dashboard | `1cbdd91c-f611-4b95-9ed0-eb72172db7b3` | Sun 10 AM | 3 min |
 
 ---
 
 ## 3. Recovery Commands
 
+### Known Issues (as of 2026-03-08)
+- **Daily Briefing (7am)** — `b25924f1-5d8c-48c6-91fa-f703ac7a3801` — timeout error, 1 consecutive failure
+- **Sherlock Afternoon** — `cfdb2c59-0f29-470d-98ad-b8cb48b46133` — API error, 1 consecutive failure
+- **Weekly Trust Dashboard** — `1cbdd91c-f611-4b95-9ed0-eb72172db7b3` — timeout error, 1 consecutive failure
+
 ### Force-Run Stale Jobs
 ```bash
-# Oracle (Market Intel)
+# Sherlock Research
 openclaw cron run 3fd6d3f4-9c31-4348-8e35-5496b906e3af --force  # Morning
 openclaw cron run cfdb2c59-0f29-470d-98ad-b8cb48b46133 --force  # Afternoon
 openclaw cron run f78250ca-57a9-489a-b45f-29ee8fde43d0 --force  # Evening
 
-# Herald (Commentary)
-openclaw cron run 0ec98999-04c7-4e31-ba6d-8f74cf762648 --force  # Morning
-openclaw cron run 898af5b4-c619-41d8-b4c4-4c48fac87e2d --force  # Evening
-
-# Ledger (Weekly Digest)
-openclaw cron run f068cd53-946b-41c9-9b24-2f617c77c246 --force  # Weekly
-
-# Forge (Infrastructure)
-openclaw cron run 2c25d4cd-e8b5-4634-87fd-e7b328bcc64c --force  # Daily
-
-# Trader (Crypto Day Trader)
-openclaw cron run 5329c00d-ad8b-4a8f-a66e-7c465e8ac5a7 --force  # Morning
+# Trader
 openclaw cron run dad8e6f9-ab04-4903-a494-c0ffaaa66bf8 --force  # Midday
 openclaw cron run 508eedd2-82b9-4267-8775-a6affdac003d --force  # Evening
-openclaw cron run dfb19c64-25de-4708-8b4d-25fe135bf2ab --force  # EOD Review
+openclaw cron run fc536fc7-8e26-4da7-811a-412415bd9402 --force  # Position Monitor
+
+# Failed Jobs (manual intervention)
+openclaw cron run b25924f1-5d8c-48c6-91fa-f703ac7a3801 --force  # Daily Briefing
+openclaw cron run 1cbdd91c-f611-4b95-9ed0-eb72172db7b3 --force  # Trust Dashboard
 ```
 
 ### Restart Gateway (if needed)
@@ -413,5 +427,5 @@ Recovery: Run `openclaw cron run cfdb2c59... --force`
 
 ---
 
-*Last updated: 2026-03-01 by KingKong 🦍*
-*Protocol version: 2.1 | Agents: 7 | Escalation: 3-tier | Trader: conservative*
+*Last updated: 2026-03-08 by KingKong 🦍*
+*Protocol version: 2.2 | Jobs: 25 | Security: hardened*
